@@ -68,7 +68,7 @@ image {
 
 /* Header */
 .header {
-   background-image: url(../img/image.jpg);
+   background-image: url(../img/header.webp);
    /* opacity: .78; */
 } 
 .header {
@@ -163,7 +163,7 @@ image {
 
 /* === Contacto === */
 .contacto-bg {
-   background-image: url(../img/logo3.jpg);
+   background-image: url(../img/logo2.webp);
    height: 60rem;
    background-size: cover;
    background-repeat: no-repeat;
