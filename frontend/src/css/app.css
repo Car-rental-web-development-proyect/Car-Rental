@@ -273,7 +273,7 @@ a{
   font-size: 1.4rem;
   color:var(--grisOscuro);
   margin: 2rem 0 0;
-  width: 90%;
+  width: 95%;
   height: auto;
 }
 
@@ -283,11 +283,11 @@ fieldset {
 }
 
 legend {
-  font-size: 2rem;
+  font-size: 2.7rem;
   color: var(--Grisazulado);
 }
 label {
-  font-weight: var(--bold);
+  font-weight: var(--dark);
   text-transform: uppercase;
   display: block;
 }
