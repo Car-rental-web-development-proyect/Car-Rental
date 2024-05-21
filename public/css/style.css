@@ -95,29 +95,6 @@ image {
    background-color: var(--secundario);
    width: 100%;
 }
-/* .slider {
-   width: 100%;
-   margin: auto;
-   overflow: hidden;
-}
-
-.slider ul {
-   display: flex;
-   padding: 0;
-   width: 400%;
-}
-
-.slider li {
-   width: 100%;
-   list-style: none;
-}
-.slider img {
-   width: 100%;
-   height: auto;
-   max-width: 100%;
-   max-height: 60rem;
-   object-fit: cover;
-} */
 
 /* Barra de navegacion */
 @media (min-width: 768px) {

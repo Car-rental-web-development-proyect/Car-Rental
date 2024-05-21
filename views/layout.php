@@ -22,14 +22,6 @@
 <body>
    
    <header class="header slider">
-      <!-- <ul>
-         <li>
-            <img src="./img/logo.jpg" alt="">
-            <img src="./img/logo2.jpg" alt="">
-            <img src="./img/logo3.jpg" alt="">
-            <img src="./img/logo4.jpg" alt="">
-         </li>
-      </ul> -->
       <div class="contenedor bg">
          <div class="barra">
             <a href="./index.html" class="logo">
