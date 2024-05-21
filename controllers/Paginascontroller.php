@@ -6,7 +6,7 @@ use MVC\Router;
 
 class Paginascontroller {
     public static function index(Router $router){
-        $router->render('home');
+        $router->render('paginas/index');
     }
     public static function home(Router $router){
         echo 'Desde echo';
