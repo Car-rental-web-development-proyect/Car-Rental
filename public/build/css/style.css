@@ -1,0 +1,171 @@
+:root {
+   --fuenteHeading: 'Noto Sans';
+   --fuenteDecorativa: 'Poetsen One';
+   
+   --primario: #FF3D00; /* Naranja */
+   --secundario: #FFBC11; /* Amarillo */
+   --azulClaro: #0A837F; /* Azul agua claro */
+   --azulFuerte: #076461; /* Naranja */
+   --verdeFuerte: #002C2B; /* Naranja */
+   --blanco: #ffffff;
+   
+   --delgada: 2.8rem;
+   --regular : 3.2rem;
+   --bold: 4rem;
+   --black: 4.8rem;
+}
+
+html {
+   box-sizing: border-box;
+   font-size: 62.2%;
+}
+
+*,*::before, *::after {
+   box-sizing: inherit; /* Heredamos elemento padre de border-box*/
+}
+
+body {
+   font-family: var(--fuenteHeading);
+   font-size: 1.6rem;
+   line-height: 2;
+}
+
+
+/* === Globales === */
+.contenedor {
+   width: min(90%, 120rem);
+   margin: 0 auto;
+}
+
+.centrar-texto {
+   text-align: center;
+}
+a {
+   text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+   font-family: var(--);
+   line-height: 1.2;
+}
+
+h1 {
+   font-size: 6.8rem;
+}
+
+h2 {
+   font-size: 4rem;
+}
+
+h3 {
+   font-size: 3.2rem;
+}
+
+h4 {
+   font-size: 2.8rem;
+}
+
+image {
+   width: 100%;
+}
+
+
+.header__texto {
+   text-align: center;
+   color: var(--blanco);
+   margin-top: 5rem;
+   font-family: var(--fuenteDecorativa);
+}
+
+@media (min-width: 768px) {
+   .header__texto {
+      margin-top: 15rem; 
+   }
+}
+.bg {
+   background-color: var(--secundario);
+   width: 100%;
+}
+
+/* Barra de navegacion */
+@media (min-width: 768px) {
+   .barra {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+   }
+}
+.barra {
+   padding-top: 1rem;
+}
+
+.logo {
+   color: var(--verdeFuerte);
+}
+.logo__nombre {
+   text-align: center;
+   font-weight: normal;
+}
+.logo__bold  {
+   font-weight: bold;
+}
+
+
+@media (min-width: 768px) {
+   .navegacion {
+      display: flex;
+      gap: 2rem;
+   }
+}
+
+.navegacion__enlace {
+   display: block;
+   color: var(--verdeFuerte);
+   text-align: center;
+   /* padding-top: 3rem; */
+}
+
+/* === Contenido Principal === */
+
+
+/* === Contacto === */
+.contacto-bg {
+   background-image: url(../img/logo2.webp);
+   height: 60rem;
+   background-size: cover;
+   background-repeat: no-repeat;
+   
+}
+
+.formulario {
+   background-color: var(--blanco);
+   margin: -5rem auto 0 auto;
+   width: 95%;
+   border-radius: .2rem;
+   padding: 5rem;
+}
+
+.campo { /* Bloque */
+   display: flex;
+   margin-bottom: 3.5rem;
+}
+.campo__label { /* BLOQUE: campo | ELEMENTO: __label */
+   flex: 0 0 9rem; /* NO se hace grande, NO se hace pequeño, pero tiene 90pix de BASE*/
+   text-align: right;
+   padding-right: 2rem;
+}
+.campo__field {
+   flex: 1;
+   border: 1px solid #D3D3D3; /* color gris */
+}
+.campo__field--textarea {
+   height: 20rem;
+}
+
+/** footer **/
+.footer {
+   background-color: var(--secundario);
+   padding-bottom: 3rem;
+   margin-top: 4rem;
+}

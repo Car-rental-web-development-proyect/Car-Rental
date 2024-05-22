@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- preload -->
-    <link rel="preload" href="./css/style.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preload" href="./build/css/style.css">
+    <link rel="stylesheet" href="./build/css/style.css">
 
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./build/css/login.css">
 
-    <link rel="preload" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="preload" href="./build/css/normalize.css">
+    <link rel="stylesheet" href="./build/css/normalize.css">
 
     <link rel="shortcurt icon" href="#">
     <!-- fonts -->

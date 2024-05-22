@@ -1,0 +1,82 @@
+/**Formularios**/
+
+
+.formulario{
+    font-size: 1.4rem;
+    color:var(--grisOscuro);
+    margin: 2rem 0 0;
+    width: 90%;
+    height: auto;
+  }
+  
+  fieldset {
+    display: grid;
+    align-items: center;
+  }
+  
+  legend {
+    font-size: 2rem;
+    color: var(--Grisazulado);
+  }
+  label {
+    font-weight: var(--bold);
+    text-transform: uppercase;
+    display: block;
+  }
+  
+  .boton-margin {
+    margin: 2rem 2rem; 
+  }
+
+/**Botones**/
+.boton-primario-block {
+  display:block;
+  font-family: var(--fuenteHeading);
+  background-color: var(--primario);
+  text-align: center;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  color: black;
+  font-weight: var(--regular);
+  margin-bottom: 2rem;
+  border-radius: 5%;
+  border: solid 0.08px rgb(193, 184, 184);
+}
+
+@media(min-width: 768px){
+  .boton-primario-block{
+    display: inline-block;
+  }
+}
+
+.boton-primario-block:hover{
+  cursor: pointer;
+  background-color:var(--primario);
+  opacity: 0.9;
+}
+
+.boton-secundario-block {
+  display:block;
+  font-family: var(--fuenteHeading);
+  background-color: var(--secundario);
+  text-align: center;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  color: black;
+  font-weight: var(--regular);
+  margin-bottom: 2rem;
+  border-radius: 5%;
+  border: solid 0.08px rgb(193, 184, 184);
+}
+
+@media(min-width: 768px){
+  .boton-secundario-block{
+    display: inline-block;
+  }
+}
+
+.boton-secundario-block:hover{
+  cursor: pointer;
+  background-color:var(--secundario);
+  opacity: 0.9;
+}
