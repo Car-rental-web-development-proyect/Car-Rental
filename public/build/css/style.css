@@ -126,6 +126,83 @@ image {
    /* padding-top: 3rem; */
 }
 
+/* ----------- SLIDER -------------- */
+.contenedor-slider {
+   width: 100%;
+   background-color: red;
+   height: 70rem;
+}
+
+.slider {
+   margin: auto;
+   position: relative;
+   height: 100%;
+}
+
+.list {
+   position: absolute;
+   display: flex;
+   width: max-content;
+   height: 100%;
+   transition: 1s;
+}
+
+.item {
+   height: 100%;
+}
+
+.buttons {
+   position: absolute;
+   top: 45%;
+   left: 5%;
+   width: 90%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.buttons button {
+   width: 5rem;
+   height: 50px;
+   border-radius: 50%;
+   background-color: #fff5;
+   color: white;
+   border: none;
+   font-family: monospace;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+.dots {
+   position: absolute;
+   bottom: 1rem;
+   color: white;
+   left: 0;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+}
+
+.dots li {
+   list-style: none;
+   width: 10px;
+   height: 10px;
+   background-color: white;
+   margin: 20px;
+   border-radius: 20px;
+   transition: 1s;
+   cursor: pointer;
+}
+.dots li.active {
+   width: 30px;
+}
+
+.item:nth-child(1) { background-color: green;}
+.item:nth-child(2) { background-color: black;}
+.item:nth-child(3) { background-color: blue;}
+.item:nth-child(4) { background-color: purple;}
+
 /* === Contenido Principal === */
 
 

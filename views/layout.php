@@ -43,7 +43,30 @@
 
       <div class="contenedor-slider">
          <div class="slider">
-            
+            <div class="list">
+               <div class="item">
+                  
+               </div>
+               <div class="item">
+                  
+               </div>
+               <div class="item">
+                  
+               </div>
+               <div class="item">
+                  
+               </div>
+            </div>
+            <div class="buttons">
+               <button id="prev"><</button>
+               <button id="next">></button>
+            </div>
+            <ul class="dots">
+               <li class="active"></li>
+               <li></li>
+               <li></li>
+               <li></li>
+            </ul>
          </div>
       </div>
    </header>
@@ -68,6 +91,8 @@
          </div>
       </div> <!-- .contenedor -->
    </footer>
+
+   <script src="./build/js/index.js"></script>
 
 </body>
 </html>
