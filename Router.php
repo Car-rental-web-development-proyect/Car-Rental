@@ -31,6 +31,7 @@ class Router {
         }
     }
 
+   // Coloca una vista determinada 
     public function render($view, $datos = []) {
         foreach($datos as $key => $value){
             $$key = $value;                     
