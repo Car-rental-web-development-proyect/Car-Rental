@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- preload -->
-    <link rel="preload" href="./css/style.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preload" href="./build/css/style.css">
+    <link rel="stylesheet" href="./build/css/style.css">
 
-    <link rel="preload" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./build/css/login.css">
+
+    <link rel="preload" href="./build/css/normalize.css">
+    <link rel="stylesheet" href="./build/css/normalize.css">
 
     <link rel="shortcurt icon" href="#">
     <!-- fonts -->
@@ -21,10 +23,10 @@
 </head>
 <body>
    
-   <header class="header slider">
+   <header class="header inicio">
       <div class="contenedor bg">
          <div class="barra">
-            <a href="./index.html" class="logo">
+            <a href="/" class="logo">
                <h1 class="logo__nombre">Bee<span class="logo__bold">Car</span></h1>
             </a>
 
@@ -39,10 +41,10 @@
          </div>
       </div> <!-- .contenedor -->
 
-      <div class="header__texto">
-         <h2>BeeCar - Tu Aliado en movilidad</h2>
-         <p>Rentar un auto es la forma más segura de viajar.
-            ¡Es tu propio espacio!</p>
+      <div class="contenedor-slider">
+         <div class="slider">
+            
+         </div>
       </div>
    </header>
 
