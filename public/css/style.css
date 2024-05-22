@@ -9,6 +9,10 @@
    --verdeFuerte: #002C2B; /* Naranja */
    --blanco: #ffffff;
    
+   --delgada: 2.8rem;
+   --regular : 3.2rem;
+   --bold: 4rem;
+   --black: 4.8rem;
 }
 
 html {
@@ -63,19 +67,6 @@ h4 {
 
 image {
    width: 100%;
-}
-
-
-/* Header */
-.header {
-   background-image: url(../img/header.webp);
-   /* opacity: .78; */
-} 
-.header {
-   height: 60rem;
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center center;
 }
 
 

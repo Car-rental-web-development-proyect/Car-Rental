@@ -8,6 +8,8 @@
     <link rel="preload" href="./css/style.css">
     <link rel="stylesheet" href="./css/style.css">
 
+    <link rel="stylesheet" href="./css/login.css">
+
     <link rel="preload" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/normalize.css">
 
@@ -24,7 +26,7 @@
    <header class="header slider">
       <div class="contenedor bg">
          <div class="barra">
-            <a href="./index.html" class="logo">
+            <a href="/" class="logo">
                <h1 class="logo__nombre">Bee<span class="logo__bold">Car</span></h1>
             </a>
 
@@ -38,12 +40,6 @@
 
          </div>
       </div> <!-- .contenedor -->
-
-      <div class="header__texto">
-         <h2>BeeCar - Tu Aliado en movilidad</h2>
-         <p>Rentar un auto es la forma más segura de viajar.
-            ¡Es tu propio espacio!</p>
-      </div>
    </header>
 
     <?php echo $contenido ?>
