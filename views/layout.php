@@ -23,7 +23,7 @@
 </head>
 <body>
    
-   <header class="header slider">
+   <header class="header inicio">
       <div class="contenedor bg">
          <div class="barra">
             <a href="/" class="logo">
@@ -40,6 +40,12 @@
 
          </div>
       </div> <!-- .contenedor -->
+
+      <div class="contenedor-slider">
+         <div class="slider">
+            
+         </div>
+      </div>
    </header>
 
     <?php echo $contenido ?>
