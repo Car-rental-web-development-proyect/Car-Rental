@@ -8,8 +8,7 @@ class ActiveRecord{
 
   protected static $errores = [];
 
-  // Conexion a DB
-
+  // Conexion a DB 
   public static function setDB($database){
     self::$db = $database;
   }
@@ -56,6 +55,13 @@ class ActiveRecord{
     }
 
     return $atributos;
+  }
+
+  // Manejo de errores 
+  public function ValidarCampos() {    
+            
+    static::$errores = [];
+    return static::$errores;
   }
 
 
