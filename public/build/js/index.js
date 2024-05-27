@@ -57,4 +57,4 @@ dots.forEach((li, key) => {
     })
 })
 
-// let cambiarAutoSlider = setInterval(() => {next.click()}, 4000)
+let cambiarAutoSlider = setInterval(() => {next.click()}, 4000)
