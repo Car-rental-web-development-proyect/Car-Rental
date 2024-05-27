@@ -45,7 +45,11 @@
          <div class="slider">
             <div class="list">
                <div class="item">
-                  
+                  <div class="info">
+                     <h2>Increíbles coches para tu beneficio</h2>
+                     <p>Descubre un nuevo modelo de auto con características avanzadas y diseño elegante para tus viajes. Aprovecha nuestra oferta especial de lanzamiento</p>
+                     <button class="boton-secundario-block boton-margin">¡Ver Mas!</button>
+                  </div>
                </div>
                <div class="item">
                   
