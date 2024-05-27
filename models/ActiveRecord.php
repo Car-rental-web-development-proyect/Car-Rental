@@ -32,6 +32,29 @@ class ActiveRecord{
 
   }
 
+  public function actualizar() {
+    
+    // Sanitizar los datos
+    $atributos = $this->sanitizarDatos();
+
+    $valores = [];
+    foreach($atributos as $key => $value) {
+        $valores[] = "{$key}='{$value}'";
+    }
+
+    $query = " UPDATE " . static::$tabla ." SET ";  // referencia a clase
+    $query .= join(', ', $valores);
+
+    if(static::$tabla == 'vehiculos') {
+        $query .= " WHERE veh_id = " . self::$db->escape_string($this->veh_id);
+    } 
+    $query .= " LIMIT 1 ";
+
+    $resultado = self::$db->query($query);
+    // colocar if 
+    
+  }
+
   public function sanitizarDatos(){ 
     $atributos = $this->atributos();
     $sanitizado = [];

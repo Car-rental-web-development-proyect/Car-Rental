@@ -18,6 +18,55 @@ class Vehiculos extends ActiveRecord{
     public $veh_disponibles;
     public $veh_costodia;
 
+    public function __construct($args = []){
+        $this->veh_id = $args['veh_id'] ?? null;
+        $this->veh_nombre = $args['veh_nombre'] ?? '';
+        $this->veh_color = $args['veh_color'] ?? '';
+        $this->veh_pasajeros = $args['veh_pasajeros'] ?? '';
+        $this->veh_maletas = $args['veh_maletas'] ?? '';
+        $this->veh_manejo = $args['veh_manejo'] ?? '';
+        $this->veh_combustible = $args['veh_combustible'] ?? '';
+        $this->veh_disponibles = $args['veh_disponibles'] ?? '';
+        $this->veh_costodia = $args['veh_costodia'] ?? '';
+    }
+
+    public function Registrar(){
+        if(!is_null($this->veh_id)){ //Si no es NULL, la accion es actualizar 
+
+        }else{
+            $this->registrar(); //Si es NULL, la accion es registrar 
+        }
+    }
+
+    public function ValidarCampos(){
+        if(!$this->veh_nombre){
+            self::$errores[] = "Campo Vacio"; 
+        }
+        if(!$this->veh_color){
+            self::$errores[] = "Campo Vacio"; 
+        }
+        if(!$this->veh_pasajeros){
+            self::$errores[] = "Campo Vacio"; 
+        }
+        if(!$this->veh_maletas){
+            self::$errores[] = "Campo Vacio"; 
+        }
+        if(!$this->veh_manejo){
+            self::$errores[] = "Campo Vacio"; 
+        }
+        if(!$this->veh_combustible){
+            self::$errores[] = "Campo Vacio"; 
+        }
+        if(!$this->veh_disponibles){
+            self::$errores[] = "Campo Vacio"; 
+        }
+        if(!$this->veh_costodia){
+            self::$errores[] = "Campo Vacio"; 
+        }
+    }
+
+    
+
 }
 
 ?>
