@@ -138,19 +138,3 @@ s
   background-color:var(--secundario);
   opacity: 0.9;
 }
-
-textarea{
-  height: 15rem;
-}
-
-.bg-green {
-  background-color: rgb(90, 240, 147);
-}
-
-.bg-red-600 {
-  display: block;
-  width: 95%;
-  background-color: red;
-  color: white;
-  text-align: center;
-}

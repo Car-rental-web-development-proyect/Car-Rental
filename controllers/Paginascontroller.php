@@ -6,7 +6,12 @@ use MVC\Router;
 
 class Paginascontroller {
     public static function index(Router $router){
-        $router->render('paginas/index');
+
+        $inicio = True;
+
+        $router->render('paginas/index', [
+            'inicio' => $inicio
+        ]);
     }
     
     public static function contacto(Router $router) {

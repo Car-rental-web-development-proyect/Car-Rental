@@ -32,7 +32,7 @@ body {
 
 /* === Globales === */
 .contenedor {
-   width: min(90%, 120rem);
+   width: min(80%, 120rem);
    margin: 0 auto;
 }
 
@@ -64,8 +64,8 @@ h4 {
    font-size: 2.8rem;
 }
 
-image {
-   max-width: 100%;
+img {
+   width: 100%;
 }
 
 p {
@@ -128,8 +128,245 @@ p {
    /* padding-top: 3rem; */
 }
 
+/* ----------- SLIDER -------------- */
+
+
+.contenedor-slider {
+   width: 100%;
+   height: 70rem;
+   display: none;
+}
+
+.inicio {
+   display: block;
+}
+
+.slider {
+   margin: auto;
+   position: relative;
+   height: 100%;
+   overflow: hidden;
+}
+
+.list {
+   position: absolute;
+   display: flex;
+   width: max-content;
+   height: 100%;
+   transition: 1s;
+}
+
+.item {
+   height: 100%;
+   position: relative;
+
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   display: flex;
+   align-items: center;
+}
+
+.shadowbox {
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.4);
+
+   display: flex;
+   align-items: center;
+}
+
+.info {
+   color: white;
+   width: 60%;
+
+   margin: 0 auto;
+}
+
+@media(min-width: 860px) {
+   .info {
+      position: absolute;
+      
+      width: 30%;
+      top: 15rem;
+      left: 18rem;
+      color: white;
+   }
+
+   .item {
+      background-position: left;
+   }
+}
+
+.info button {
+   margin: 0;
+   color: white;
+   font-family: var(--fuenteHeading);
+   font-weight: bold;
+   border-width: 0;
+}
+
+.buttons {
+   position: absolute;
+   top: 45%;
+   left: 5%;
+   width: 90%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.buttons button {
+   width: 5rem;
+   height: 50px;
+   border-radius: 50%;
+   background-color: rgba(255, 188, 17, 0.6);
+   color: white;
+   border: none;
+   font-family: monospace;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+.dots {
+   position: absolute;
+   bottom: 1rem;
+   color: white;
+   left: 0;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+}
+
+.dots li {
+   list-style: none;
+   width: 10px;
+   height: 10px;
+   background-color: white;
+   margin: 20px;
+   border-radius: 20px;
+   transition: 1s;
+   cursor: pointer;
+}
+.dots li.active {
+   width: 30px;
+}
+
+.item:nth-child(1) { background-image: url('../src/img/slider1.webp');}
+.item:nth-child(2) { background-image: url('../src/img/slider2.webp');}
+.item:nth-child(3) { background-image: url('../src/img/slider3.webp');}
+.item:nth-child(4) { background-image: url('../src/img/slider4.webp'); background-position: top;}
+
 /* === Contenido Principal === */
 
+/* ------------------- QUIENES SOMOS ------------------------------- */
+@media(min-width: 860px) {
+   .quienes-somos {
+      display: flex;
+      gap: 10rem;
+   }
+   .quienessomos_imagen {
+      display: flex;
+      align-items: center;
+   }
+   .quienessomos_info {
+      width: 70%;
+   }
+   
+}
+
+.quienes-somos {
+   padding: 5rem 0 5rem 0;
+}
+.quienessomos_imagen {
+   width: 100%;
+}
+.quienessomos_info {
+   text-align: justify;
+}
+
+/* ------------------- SLIDER DE COCHES -------------------------- */
+
+.contenedor-flota {
+   background-color: #e0e0e0;
+   padding: 5rem 0 10rem 0;
+}
+.contenedor-flota h3 {
+   text-align: center;
+}
+
+@media(min-width: 860px) {
+   .cards-autos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+@media(min-width: 1200px) {
+   .cards-autos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+.cards-autos {
+   display: grid;
+   gap: 2rem;
+}
+
+.card-auto {
+   background-color: white;
+   -webkit-box-shadow: 15px 17px 24px -8px rgba(0,0,0,0.41);
+   -moz-box-shadow: 15px 17px 24px -8px rgba(0,0,0,0.41);
+   box-shadow: 15px 17px 24px -8px rgba(0,0,0,0.41);
+
+}
+
+.card-info {
+   width: 80%;
+   margin: 0 auto;
+   padding: 3rem 0 2rem 0;
+   
+   font-family: var(--fuenteHeading);
+}
+.card-info h4 {
+   font-size: 2.4rem;
+}
+.card-info h4 {
+   margin: 0;
+}
+.card-info button {
+   width: 100%;
+   border: 0;
+}
+
+.caracteristicas {
+   display: flex;
+   align-items: start;
+   justify-content: center;
+   list-style: none;
+   padding: 0;
+   gap: 1rem;
+   padding: 2rem 0 2rem 0;
+}
+
+.caracteristicas li {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   height: 100%;
+   font-size: 1.2rem;
+}
+
+.caracteristicas img {
+   height: 3rem;
+}
+
+.caracteristicas p {
+   margin: 0.5rem 0 0 0;
+}
 
 /* === Contacto === */
 .contacto-bg {
