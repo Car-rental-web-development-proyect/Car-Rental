@@ -1,6 +1,4 @@
 /**Formularios**/
-
-
 .formulario{
     font-size: 1.4rem;
     color:var(--grisOscuro);
@@ -22,11 +20,40 @@
     font-weight: var(--bold);
     text-transform: uppercase;
     display: block;
+    padding: 0.5rem;
   }
   
   .boton-margin {
     margin: 2rem 2rem; 
   }
+
+  .flex {
+    display: block;
+    width: 95%;
+    margin: 0 0 0 0;
+  }
+
+  .form {
+    width: 110%
+  }
+
+ 
+
+  .flex-gap{
+    display: block;
+    width: 93%;
+    }
+
+   @media(min-width: 768px){
+    .flex-gap{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap:3rem;
+      width: 90%;
+      align-items: center;
+      }
+  }
+  
 
 /**Botones**/
 .boton-primario-block {
@@ -34,13 +61,15 @@
   font-family: var(--fuenteHeading);
   background-color: var(--primario);
   text-align: center;
-  padding: 1rem 3rem;
+  padding: 1rem 1rem;
   text-transform: uppercase;
   color: black;
   font-weight: var(--regular);
+  margin-top: 2rem;
   margin-bottom: 2rem;
   border-radius: 5%;
   border: solid 0.08px rgb(193, 184, 184);
+  align-items: center;
 }
 
 @media(min-width: 768px){
@@ -60,6 +89,35 @@
   font-family: var(--fuenteHeading);
   background-color: var(--secundario);
   text-align: center;
+  padding: 1rem 1rem;
+  text-transform: uppercase;
+  color: black;
+  font-weight: var(--regular);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 5%;
+  border: solid 0.08px rgb(193, 184, 184);
+}
+
+@media(min-width: 768px){
+  .boton-secundario-block{
+    display: inline-block;
+     margin-top: 2rem;
+     margin-bottom: 2rem;
+  }
+}
+
+.boton-secundario-block:hover{
+  cursor: pointer;
+  background-color:var(--secundario);
+  opacity: 0.9;
+}
+
+.boton-borrar-block {
+  display:block;
+  font-family: var(--fuenteHeading);
+  background-color: rgb(193, 184, 184);
+  text-align: center;
   padding: 1rem 3rem;
   text-transform: uppercase;
   color: black;
@@ -74,9 +132,25 @@
     display: inline-block;
   }
 }
-
+s
 .boton-secundario-block:hover{
   cursor: pointer;
   background-color:var(--secundario);
   opacity: 0.9;
+}
+
+textarea{
+  height: 15rem;
+}
+
+.bg-green {
+  background-color: rgb(90, 240, 147);
+}
+
+.bg-red-600 {
+  display: block;
+  width: 95%;
+  background-color: red;
+  color: white;
+  text-align: center;
 }

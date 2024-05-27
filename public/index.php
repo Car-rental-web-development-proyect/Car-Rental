@@ -13,4 +13,8 @@ $router->get('/', [Paginascontroller::class, 'index']);
 
 $router->get('/login', [Usuarioscontroller::class, 'login']);
 
+$router->get('/registrarse', [Usuarioscontroller::class, 'registrarse']);
+
+$router->get('/registrarAuto', [Usuarioscontroller::class, 'registrarAuto']);
+
 $router->comprobarRutas();

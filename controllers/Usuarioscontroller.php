@@ -9,4 +9,12 @@ class Usuarioscontroller {
         $router->render('auth/login');
     }
 
+    public static function registrarse(Router $router){
+        $router->render('auth/registrarse');
+    }
+
+    public static function registrarAuto(Router $router){
+        $router->render('auth/registrarAuto');
+    }
+
 }

@@ -1,29 +1,42 @@
+
 <main class="contenedor">
-    <h1>Login</h1>
+    <h1 class="centrar-texto">Login</h1>
       
     
-    <div class="contenedor">
       <input type="submit" value="Volver" class="boton-secundario-block boton-margin">
-      <form class="formulario" method="POST" action="login.html">
+      <form class="contenedor" id="formulario" class="formulario" method="POST" action="login.html">
 
     
       <fieldset>
         <legend>Inicia sesión</legend>
         <!--Usuario-->
-        <label for="usuario">Usuario</label>
-        <input type="text" id="usuario" name="usuario" placeholder="Ingrese su usuario" value="">
+        <div class="contenedor">
+           <label  for="usuario">Usuario</label>
+            <input class="flex" type="text" id="usuario" name="usuario" placeholder="Ingrese su usuario" value="">
+        </div>
+       
         <!--Correo-->
-        <label for="correo">Correo</label>
-        <input type="email" id="correo" name="correo" placeholder="example@example.com" value="">
+        <div class="contenedor">
+          <label for="correo">Correo</label>
+          <input class="flex" type="email" id="correo" name="correo" placeholder="example@example.com" value="">
+        </div>
+        
+        <div class="contenedor">
+          <label for="password">Contraseña</label>
+          <input class="flex" type="password" id="password" name="password" value="">
+        </div>
         <!--Password-->
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password" value="">
+
+        <div class="contenedor flex-gap">
+          
+          <button type="submit" class="boton-primario-block flex-gap">Iniciar sesion</button>
+          <button type="submit" class="boton-secundario-block flex-gap">Registrarse</button>
+          
+        </div>
+        
       </fieldset>
+
+      
     </form>
-    
-      <input type="submit" value="Iniciar Sesion" class="boton-secundario-block boton-margin">
-      <input type="submit" value="Registrarse" class="boton-primario-block boton-margin">
-    
-    </div>
-    
+    <script src="./build/js/login.js"></script>
 </main>
