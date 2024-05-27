@@ -30,7 +30,6 @@ body {
    line-height: 2;
 }
 
-
 /* === Globales === */
 .contenedor {
    width: min(90%, 120rem);
@@ -45,7 +44,7 @@ a {
 }
 
 h1, h2, h3, h4 {
-   font-family: var(--);
+   font-family: var(--fuenteHeading);
    line-height: 1.2;
 }
 
@@ -66,9 +65,12 @@ h4 {
 }
 
 image {
-   width: 100%;
+   max-width: 100%;
 }
 
+p {
+   font-size: 2rem;
+}
 
 .header__texto {
    text-align: center;
@@ -131,7 +133,7 @@ image {
 
 /* === Contacto === */
 .contacto-bg {
-   background-image: url(../img/logo2.webp);
+   background-image: url(../src/img/contacto.webp);
    height: 60rem;
    background-size: cover;
    background-repeat: no-repeat;
@@ -168,4 +170,138 @@ image {
    background-color: var(--secundario);
    padding-bottom: 3rem;
    margin-top: 4rem;
+}
+
+
+
+/* ===== reservas =====  */
+.reservas-bg {
+   background-image: url(../src/img/reserva.webp);
+   height: 60rem;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+}
+
+.formulario-Reservas {
+   margin: 5rem auto 2rem auto;
+   /* background-color: var(--primario); */
+   background-color:  #e5e7e9 ;
+   border-radius: 5rem;
+   box-shadow: 0px 3px 7px 0px gray;
+   padding: 3rem 0;
+
+   @media (min-width: 768px) {
+       display: flex;
+       justify-content: space-between;
+       max-width: 150rem;
+       padding: 0;
+   }
+}
+
+.formulario-Reservas_campo {
+   padding: 1rem 2rem;
+   display: flex;
+   flex-direction: column;
+}
+@media (min-width: 768px) {
+   .formulario-Reservas_campo:nth-child(1) {
+      padding-left: 5rem;
+   }
+}
+
+.formulario-Reservas_campo:hover {
+   /* background-color: #F0F0F0; */
+   /* background-color:  #f4d03f ; */
+   background-color:  #d0d3d4 ;
+   border-radius: 5rem;
+   box-shadow: 0px 6px 20px rgb(0 0 0 / 40%); /* horizontal | 6px arriba-abajo y rgb para transparencia*/
+}
+
+.formulario-Reservas_label {
+   font-size: 1.2rem;
+   font-weight: bold;
+   text-align: center;
+}
+
+.formulario-Reservas_input {
+   border: none;
+   width: 100%;
+   color: gray;
+}
+
+/* boton  */
+.formulario-Reservas_submit {
+   display: block; /* Para tomar todo el espacio que tenga disponible */
+   height: 4rem;
+   border: none;
+   border-radius: 2rem;
+   /* background-image: radial-gradient( cicle, lighten(var(--azulFuerte,5%) 0%, var(--azulFuerte 100%))) ; es un gradiant circular */
+   background-image: radial-gradient( cicle, rgb(255,56,92) 0%, red) ; /* es un gradiant circular */
+   color: black;
+   font-weight: bold;
+   padding: 0 2rem 0 2rem;
+   background-color:  #f8c471;
+   text-transform: uppercase;
+   font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+   .detalles-promocion {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      column-gap: 2rem;
+      padding-top: 4rem;
+   }
+   .descuento-img {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+   }
+   .descuento-texto {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+   }
+}
+img { /* Antes .descuento-img */
+   width: 100%;
+   display: block;
+   height: auto;
+}
+.descuento-texto {
+   margin-top: -2.8rem;
+}
+/* .descuento-img {
+   /* background-image: url(../src/img/descuento_Camioneta.webp); */
+/*   background-image: url(../src/img/destinations.webp);
+   height: 60rem;
+   background-repeat: no-repeat;
+   /* border-radius: 15rem; */
+  /* width:100%;
+} */
+.descuento-texto_parrafo{
+   font-weight: bold;
+}
+
+/* Seccion de por que rentar con nosotros */
+.bloques {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   column-gap: 2rem;
+}
+@media (min-width: 768px) {
+   .bloques {
+      grid-template-columns: repeat(4, 1fr);
+   }
+}
+.bloque {
+   text-align: center;
+}
+.bloque__img {
+   width: 50%;
+   margin-left: 7rem;
+}
+.comprar_titulo {
+   text-align: center;
+   font-family: var(--fuenteDecorativa);
+   text-transform: uppercase; 
 }
