@@ -33,7 +33,7 @@ body {
 
 /* === Globales === */
 .contenedor {
-   width: min(90%, 120rem);
+   width: min(80%, 120rem);
    margin: 0 auto;
 }
 
@@ -65,7 +65,7 @@ h4 {
    font-size: 2.8rem;
 }
 
-image {
+img {
    width: 100%;
 }
 
@@ -259,6 +259,112 @@ image {
 
 /* === Contenido Principal === */
 
+/* ------------------- QUIENES SOMOS ------------------------------- */
+@media(min-width: 860px) {
+   .quienes-somos {
+      display: flex;
+      gap: 10rem;
+   }
+   .quienessomos_imagen {
+      display: flex;
+      align-items: center;
+   }
+   .quienessomos_info {
+      width: 70%;
+   }
+   
+}
+
+.quienes-somos {
+   padding: 5rem 0 5rem 0;
+}
+.quienessomos_imagen {
+   width: 100%;
+}
+.quienessomos_info {
+   text-align: justify;
+}
+
+/* ------------------- SLIDER DE COCHES -------------------------- */
+
+.contenedor-flota {
+   background-color: #e0e0e0;
+   padding: 5rem 0 10rem 0;
+}
+.contenedor-flota h3 {
+   text-align: center;
+}
+
+@media(min-width: 860px) {
+   .cards-autos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+@media(min-width: 1200px) {
+   .cards-autos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+.cards-autos {
+   display: grid;
+   gap: 2rem;
+}
+
+.card-auto {
+   background-color: white;
+   -webkit-box-shadow: 15px 17px 24px -8px rgba(0,0,0,0.41);
+   -moz-box-shadow: 15px 17px 24px -8px rgba(0,0,0,0.41);
+   box-shadow: 15px 17px 24px -8px rgba(0,0,0,0.41);
+
+}
+
+.card-info {
+   width: 80%;
+   margin: 0 auto;
+   padding: 3rem 0 2rem 0;
+   
+   font-family: var(--fuenteHeading);
+}
+.card-info h4 {
+   font-size: 2.4rem;
+}
+.card-info h4 {
+   margin: 0;
+}
+.card-info button {
+   width: 100%;
+   border: 0;
+}
+
+.caracteristicas {
+   display: flex;
+   align-items: start;
+   justify-content: center;
+   list-style: none;
+   padding: 0;
+   gap: 1rem;
+   padding: 2rem 0 2rem 0;
+}
+
+.caracteristicas li {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   height: 100%;
+   font-size: 1.2rem;
+}
+
+.caracteristicas img {
+   height: 3rem;
+}
+
+.caracteristicas p {
+   margin: 0.5rem 0 0 0;
+}
 
 /* === Contacto === */
 .contacto-bg {
