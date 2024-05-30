@@ -1,10 +1,11 @@
 <?php
 function connDB() : mysqli {
-    $conn = new mysqli('localhost:8889','root','root','beecar');
+    $conn = new mysqli('localhost','root','colocaTuContraseñadeWorkbrench','beecar');
     if(!$conn){
-        echo "Error: no se puedo conectar DB";
+        echo "Error: no se logro conectar DB";
+        exit;
     }
-    exit;
+    
     return $conn;
 }
 
