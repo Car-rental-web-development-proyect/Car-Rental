@@ -63,6 +63,7 @@ class Vehiculos extends ActiveRecord{
         if(!$this->veh_costodia){
             self::$errores[] = "Campo Vacio"; 
         }
+        return self::$errores;
     }
 
     

@@ -53,6 +53,8 @@ class Usuarios extends ActiveRecord {
         if(!$this->usu_password){
             self::$errores[] = "Campo Vacio"; 
         }
+        
+        return self::$errores;
 
     }
 
