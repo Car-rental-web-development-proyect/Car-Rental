@@ -23,6 +23,10 @@ class Paginascontroller {
       $router->render('reservas');
     }
 
+    public static function condiciones(Router $router){
+      $router->render('condiciones');
+    }
+
     public static function vehiculo(Router $router) {
 
       $todosLosVehiculos = Vehiculos::mostrar();
