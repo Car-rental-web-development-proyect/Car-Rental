@@ -22,8 +22,8 @@ class Reservacion extends ActiveRecord{
     public function __construct($args = [])
     {
         $this->tar_id = $args['tar_id'] ?? NULL;
-        $this->res_oficinaRenta = $args['res_oficinaRenta'] ?? '';
-        $this->res_oficinaEntrega = $args['res_oficinaEntrega'] ?? '';
+        $this->res_oficinaRenta = $args['res_oficinaRenta'] ?? NULL;
+        $this->res_oficinaEntrega = $args['res_oficinaEntrega'] ?? NULL;
         $this->res_fechaRenta = date('Y-m-d'); // anteriormente tenia Y/m/d
         $this->res_horaRenta = date('H:i:s');
         $this->res_fechaEntrega = date('Y-m-d');

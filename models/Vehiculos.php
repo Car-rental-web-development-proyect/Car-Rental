@@ -39,7 +39,7 @@ class Vehiculos extends ActiveRecord{
     }
 
     public function ValidarCampos(){
-        if(!$this->veh_nombre){
+        if(!$this->veh_modelo){
             self::$errores[] = "Campo Vacio"; 
         }
         if(!$this->veh_color){
