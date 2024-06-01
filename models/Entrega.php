@@ -5,11 +5,12 @@ namespace Model;
 class Entrega extends ActiveRecord{
 
     protected static $tabla = 'entrega';
-    protected static $columnasDB = ['ent_id','ent_res_id','ent_fechaReal','ent_multa','ent_danos','ent_costoTotal'];
+    protected static $columnasDB = ['ent_id','ent_res_id','ent_age_id','ent_fechaReal','ent_multa','ent_danos','ent_costoTotal'];
 
     //Columnas 
     public $ent_id;
     public $ent_res_id;
+    public $ent_age_id;
     public $ent_fechaReal;
     public $ent_multa;
     public $ent_danos;
@@ -19,6 +20,7 @@ class Entrega extends ActiveRecord{
     public function __construct($args = []){
         $this->ent_id = $args['ent_id'] ?? NULL;
         $this->ent_res_id = $args['ent_res_id'] ?? NULL; 
+        $this->ent_age_id = $args['ent_age_id'] ?? NULL; 
         $this->ent_fechaReal= date('Y-m-d');
         $this->ent_multa= $args['ent_multa'] ?? NULL;
         $this->ent_danos = $args['ent_danos'] ?? '';
@@ -35,6 +37,10 @@ class Entrega extends ActiveRecord{
 
     public function ValidarCampos(){
         if(!$this->ent_res_id){
+            self::$errores[] = "Campo Vacio"; 
+        }
+
+        if(!$this->ent_age_id){
             self::$errores[] = "Campo Vacio"; 
         }
 
