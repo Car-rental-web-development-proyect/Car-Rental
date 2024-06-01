@@ -1,7 +1,7 @@
 <?php
 namespace Model; 
 
-class ActiveRecord{
+class ActiveRecord {
   protected static $db;
   protected static $columnasDb = [];
   protected static $tabla = ''; 
@@ -71,20 +71,6 @@ class ActiveRecord{
     return static::$errores;
   }
 
-
-
-
-  public function sanitizarDatos(){ 
-    $atributos = $this->atributos();
-    $sanitizado = [];
-
-    foreach($atributos as $key => $value ){ 
-        $sanitizado[$key] = self::$db->escape_string($value); //Elimina caracteres especiales
-    }
-
-    return $sanitizado;
-  }
-
   // recopilacion de atributos en DB
   public function atributos() {
     $atributos = [];
@@ -138,10 +124,6 @@ class ActiveRecord{
 
     return $objeto;
   }
-
-
-
-
 
 }
 

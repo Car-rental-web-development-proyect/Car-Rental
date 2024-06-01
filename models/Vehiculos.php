@@ -5,11 +5,11 @@ namespace Model;
 class Vehiculos extends ActiveRecord{
 
     protected static $tabla = 'vehiculos';
-    protected static $columnasDB = ['veh_id','veh_nombre','veh_color','veh_pasajeros','veh_maletas','veh_manejo','veh_combustible','veh_disponibles','veh_costodia'];
+    protected static $columnasDB = ['veh_id','veh_modelo','veh_color','veh_pasajeros','veh_maletas','veh_manejo','veh_combustible','veh_disponibles','veh_costodia'];
 
     //Columnas 
     public $veh_id;
-    public $veh_nombre;
+    public $veh_modelo;
     public $veh_color;
     public $veh_pasajeros;
     public $veh_maletas;
@@ -20,7 +20,7 @@ class Vehiculos extends ActiveRecord{
 
     public function __construct($args = []){
         $this->veh_id = $args['veh_id'] ?? null;
-        $this->veh_nombre = $args['veh_nombre'] ?? '';
+        $this->veh_modelo = $args['veh_modelo'] ?? '';
         $this->veh_color = $args['veh_color'] ?? '';
         $this->veh_pasajeros = $args['veh_pasajeros'] ?? '';
         $this->veh_maletas = $args['veh_maletas'] ?? '';
