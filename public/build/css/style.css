@@ -32,7 +32,7 @@ body {
 
 /* === Globales === */
 .contenedor {
-   width: min(80%, 120rem);
+   width: min(90%, 120rem);
    margin: 0 auto;
 }
 
@@ -413,11 +413,7 @@ p {
 
 /* ===== reservas =====  */
 .reservas-bg {
-   background-image: url(../src/img/reserva.webp);
-   height: 60rem;
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center center;
+   
 }
 
 .formulario-Reservas {
@@ -428,20 +424,19 @@ p {
    box-shadow: 0px 3px 7px 0px gray;
    padding: 3rem 0;
 
-   @media (min-width: 768px) {
+   @media (min-width: 800px) {
        display: flex;
        justify-content: space-between;
        max-width: 150rem;
        padding: 0;
    }
 }
-
 .formulario-Reservas_campo {
    padding: 1rem 2rem;
    display: flex;
    flex-direction: column;
 }
-@media (min-width: 768px) {
+@media (min-width: 800px) {
    .formulario-Reservas_campo:nth-child(1) {
       padding-left: 5rem;
    }
@@ -483,7 +478,8 @@ p {
    font-size: 1.5rem;
 }
 
-@media (min-width: 768px) {
+/* Grid para imagen de promocion y texto */
+@media (min-width: 800px) {
    .detalles-promocion {
       display: grid;
       grid-template-columns: 2fr 1fr;
@@ -499,46 +495,81 @@ p {
       grid-row: 1 / 2;
    }
 }
+
+/* @media (min-width: 468px) {
+    .detalles-promocion{
+      grid-template-columns: 2fr 1fr;
+    }
+} */
+
 img { /* Antes .descuento-img */
    width: 100%;
    display: block;
    height: auto;
 }
 .descuento-texto {
-   margin-top: -2.8rem;
+   margin-top: -2.9rem;
 }
-/* .descuento-img {
-   /* background-image: url(../src/img/descuento_Camioneta.webp); */
-/*   background-image: url(../src/img/destinations.webp);
-   height: 60rem;
-   background-repeat: no-repeat;
-   /* border-radius: 15rem; */
-  /* width:100%;
-} */
 .descuento-texto_parrafo{
    font-weight: bold;
 }
 
+
 /* Seccion de por que rentar con nosotros */
+.comprar {
+   margin-top: 2rem;
+   padding: .02rem;
+   width: min(80%, 180rem);
+   margin: 0 auto;
+   
+}
+.comprar_titulo {
+   text-align: center;
+   font-family: var(--fuenteDecorativa);
+   text-transform: uppercase;
+   margin-top: 10rem;
+   margin-bottom: 5rem;
+}
 .bloques {
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   column-gap: 2rem;
+   grid-template-columns: repeat(1, 1fr);
+   column-gap: 5rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 468px) {
+   .bloques {
+      grid-template-columns: repeat(2, 1fr);
+   } 
+}
+
+@media (min-width: 800px) {
    .bloques {
       grid-template-columns: repeat(4, 1fr);
    }
 }
 .bloque {
    text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   transition: .8s;
+   padding: .9rem 1rem;
+   margin-bottom: 3rem;
+   background: #F0F0F0;
+   box-shadow: 0 0 2rem .2rem rgba(0, 0, 0, .2);
 }
 .bloque__img {
-   width: 50%;
-   margin-left: 7rem;
+   max-width: 50%;
+   margin: 0 auto;
+   padding-top: 1rem;
 }
-.comprar_titulo {
-   text-align: center;
-   font-family: var(--fuenteDecorativa);
-   text-transform: uppercase; 
+.bloque:hover {
+   background-color: #FFC940;
+   transform:scale(1.2);
+   z-index: 2;
+}
+.bloque h3 {
+   font-size: 2.5rem;
+}
+.bloque img {
+   width: 30%;
 }
