@@ -24,7 +24,7 @@ class Paginascontroller {
     }
 
     public static function reservas(Router $router) {
-      $router->render('reservas');
+      $router->render('paginas/reservas');
     }
 
 }

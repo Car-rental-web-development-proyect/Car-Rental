@@ -5,8 +5,6 @@ function connDB() : mysqli {
         echo "Error: no se logro conectar DB";
         exit;
     }
-    
     return $conn;
 }
-
 ?>

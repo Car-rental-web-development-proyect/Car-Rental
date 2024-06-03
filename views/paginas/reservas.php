@@ -1,19 +1,39 @@
 <main>
    <div class="reservas-bg">
-      <img src="/build/src/img/reserva.webp" alt="reserva">
-   </div>
-   
+      <img src="/build/src/img/reserva02.webp" alt="reserva-img">
+   </div>   
+
    <section class="seccion">
       <form action="" class="formulario-Reservas contenedor">
 
-         <div class="formulario-Reservas_campo">
+         <!-- <div class="formulario-Reservas_campo">
             <label class="formulario-Reservas_label" for="estado"">Estado</label>
             <input class="formulario-Reservas_input" type="option" id="estado" placeholder="Estado">
+         </div> -->
+
+         <div class="formulario-Reservas_campo">
+            <label class="formulario-Reservas_label" for="estado"">Estado</label>
+            <select class="formulario__combobox" id="selecionar_estado">
+               <option value="" disabled selected>Estado</option>
+               <option value="Estado1">Estado 1</option>
+               <option value="Estado2">Estado 2</option>
+               <option value="Estado3">Estado 3</option>
+            </select>
          </div>
+
+         <!-- <div class="formulario-Reservas_campo">
+            <label class="formulario-Reservas_label" for="ciudad"">Ciudad</label>
+            <input class="formulario-Reservas_input" type="text" id="ciudad" placeholder="Ciudad">
+         </div> -->
 
          <div class="formulario-Reservas_campo">
             <label class="formulario-Reservas_label" for="ciudad"">Ciudad</label>
-            <input class="formulario-Reservas_input" type="text" id="ciudad" placeholder="Ciudad">
+            <select class="formulario__combobox" id="selecionar_ciudad">
+               <option value="" disabled selected>Ciudad</option>
+               <option value="Ciudad1">Ciudad 1</option>
+               <option value="Ciudad2">Ciudad 2</option>
+               <option value="Ciudad3">Ciudad 3</option>
+            </select>
          </div>
 
          <div class="formulario-Reservas_campo">
@@ -38,7 +58,7 @@
 
          <div class="formulario-Reservas_campo">
             <label class="formulario-Reservas_label" for="pasajeros"">Pasajeros</label>
-            <input class="formulario-Reservas_input" type="number" id="pasajeros">
+            <input class="formulario-Reservas_input" type="number" id="pasajeros" min="1">
          </div>
 
          <div class="formulario-Reservas_campo">
@@ -61,7 +81,6 @@
    </section>
 
    <section class="comprar">
-      <!-- <div class="contenedor"> -->
          <h3 class="comprar_titulo">¿Por qué rentar con nosotros?</h3>
 
          <div class="bloques">
@@ -88,7 +107,6 @@
                <h3 class="bloque__titulo">Llega siempre a tus destinos</h3>
                <p>Autos equipados con las innovaciones tecnologias del momento</p>
             </div> <!-- .bloque -->
-            </div>
-         <!-- </div> -->
+         </div>
    </section>
 </main>
