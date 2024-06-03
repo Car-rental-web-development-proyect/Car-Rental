@@ -16,11 +16,11 @@ class Paginascontroller {
     }
     
     public static function contacto(Router $router) {
-      $router->render('contacto');
+      $router->render('paginas/contacto');
     }
 
     public static function agencias(Router $router) {
-      $router->render('agencias');
+      $router->render('paginas/agencias');
     }
 
     public static function reservas(Router $router) {
