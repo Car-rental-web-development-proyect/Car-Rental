@@ -647,7 +647,7 @@ img { /* Antes .descuento-img */
 .ofertas__heading {
    text-align: center;
    font-family: var(--fuenteDecorativa);
-   font-size: 4.2rem;
+   font-size: 4.2vh;
    color: red;
    margin-bottom: 6rem;
 }
@@ -655,6 +655,7 @@ img { /* Antes .descuento-img */
    font-size: 6rem;
    text-transform: uppercase;
    color: rgb(255, 128, 1);
+   font-size: 4.8vh;
 }
 .ofertas__grid {
    display: grid;
