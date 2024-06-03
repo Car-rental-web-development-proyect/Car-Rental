@@ -29,14 +29,14 @@ class Paginascontroller {
     }
 
     public static function condiciones(Router $router){
-      $router->render('condiciones');
+      $router->render('paginas/condiciones');
     }
-
+   
+    public static function vehiculo_vista(Router $router) {
+      $router->render('paginas/flota_vehiculos');
+    }
     public static function vehiculo(Router $router) {
-
       $todosLosVehiculos = Vehiculos::mostrar();
-      
-
       $router->render('paginas/vehiculos', [
         'vehiculos' => $todosLosVehiculos
       ]);

@@ -98,14 +98,12 @@ p {
 }
 
 /* -------------------- NAV -----------------------*/
-
-
 .nav-fijo{
    position: fixed;
    z-index: 5;
    transition: 0.7s;
+   top: 0;
 }
-
 
 @media (min-width: 768px) {
    .barra {
@@ -146,7 +144,6 @@ p {
 
 
 /* ----------- SLIDER -------------- */
-
 
 .contenedor-slider {
    width: 100%;
@@ -362,7 +359,7 @@ p {
    border: 0;
 }
 
-.caracteristicas {
+/* .caracteristicas {
    display: flex;
    align-items: start;
    justify-content: center;
@@ -370,8 +367,26 @@ p {
    padding: 0;
    gap: 1rem;
    padding: 2rem 0 2rem 0;
+   flex-wrap: wrap;
 }
 
+@media (min-width: 980px) {
+   .caracteristicas {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+   .caracteristicas li {
+      flex-basis: (33.3% - 1rem);
+      margin-bottom: 1rem;
+      text-align: center;
+   }
+} */
+.caracteristicas {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+
+}
 .caracteristicas li {
    display: flex;
    flex-direction: column;
@@ -392,7 +407,9 @@ p {
    font-size: 1.2rem;
 }
 
-/* === Contacto === */
+/* ==================================================  */
+/*                   C O N T A C T O                   */
+/* ==================================================  */
 .contacto-bg {
    background-image: url(../src/img/contacto.webp);
    height: 60rem;
@@ -435,7 +452,9 @@ p {
 
 
 
-/* ===== reservas =====  */
+/* ==================================================  */
+/*                   R E S E R V A S                   */
+/* ==================================================  */
 .reservas-bg img {
    margin: 0 auto;
 } 
@@ -469,13 +488,16 @@ p {
    box-shadow: 0px 3px 7px 0px gray;
    padding: 3rem 0;
 
-   @media (min-width: 800px) {
-       display: flex;
-       justify-content: space-between;
-       max-width: 150rem;
-       padding: 0;
+}
+@media (min-width: 1200px) {
+   .formulario-Reservas {
+      display: flex;
+      justify-content: space-between;
+      max-width: 150rem;
+      padding: 0;
    }
 }
+
 .formulario-Reservas_campo {
    padding: 1rem 2rem;
    display: flex;
@@ -514,10 +536,12 @@ p {
    background-image: radial-gradient( cicle, rgb(255,56,92) 0%, red) ; /* es un gradiant circular */
    color: black;
    font-weight: bold;
-   padding: 0 2rem 0 2rem;
+   /* padding: 0 2rem 0 2rem; */
+   padding: 0 2rem;
    background-color:  #f8c471;
    text-transform: uppercase;
    font-size: 1.5rem;
+   margin-top: 0.8rem;
 }
 
 .formulario__combobox {
@@ -624,7 +648,7 @@ img { /* Antes .descuento-img */
 
 
 /** =======================================================  **/
-/**                      O f e r t a s                       **/
+/**                      O F E R T A S                       **/
 /** =======================================================  **/
 .card {
    display: flex;
@@ -647,6 +671,7 @@ img { /* Antes .descuento-img */
    text-align: center;
    padding: 2rem;
    width: 100%;
+   flex-direction: column;
 }
 .card__body h4 {
    font-size: 2rem;
@@ -759,4 +784,182 @@ img { /* Antes .descuento-img */
 }
 .ofertas__img:hover {
    transform: rotate(-4deg) scale(1.2);
+}
+
+.card__btn {
+   display: block; /* Para que en un dispositivo movil tome TODO el espacio disponible*/
+   font-family: var(--fuenteHeading);
+   color: var(--blanco);
+   background-color: #FFD960;
+   text-align: center;
+   padding: 1rem 3rem 1rem 3rem;
+   font-size: 1.8rem;
+   text-transform: uppercase;  /* Mayusculas*/
+   font-weight: bold;
+   margin-bottom: 2rem;
+
+   transition: .8s;
+   /* Para los botones de tipo submit: 
+       Ademas del pointer:*/
+   border: none;
+}
+.card__btn:hover {
+   background-color: var(--secundario);
+   transform:scale(1.2);
+   z-index: 2;
+}
+
+/** =======================================================  **/
+/**        C O N D I C I O N E S   D E  R E N T A            **/
+/** =======================================================  **/
+contenedor-con{
+   width: 100%;
+   padding-right: var(--bs-gutter-x, .75rem);
+   padding-left: var(--bs-gutter-x, .75rem);
+   margin-right: auto;
+   margin-left: auto;
+}
+
+.h2-condiciones{
+   color: white;
+   font-size: 75px;
+}  
+.page-title-area{
+   position: relative;
+   z-index: 3;
+   padding-top: 100px;
+   padding-bottom: 100px;
+   text-align: center;
+}
+.img-back{
+   background: url(./../src/img/volante-coche.webp);
+   background-position: 50%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+}
+
+@media (max-width: 768px) {
+   .page-title-area{
+       height: 430px;
+       
+   }
+   .h2-condiciones {
+      font-size: 50px;
+  }
+
+}
+
+@media (max-width: 480px) {
+   .h2-condiciones {
+       font-size: 30px;
+   }
+}
+
+.d-table-cell{
+   vertical-align: middle;
+}
+
+.d-table-cell{
+   display: table-cell !important;
+}
+.d-table{
+   display: table !important;
+}
+.d-table{   
+   width: 100%;;
+   height: 100%;
+}
+
+
+.privacy{
+   padding: 3vw 15vw;;
+}
+
+.p-titulo .titulo{
+   font-size: 40px;
+   font-weight: 400;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: normal;
+   letter-spacing: normal;
+   text-align: center;
+   color: #282828;
+   line-height: 1.12;
+   text-transform: none;
+}
+
+.pb-2{
+   padding-bottom: .5rem !important;
+}
+
+.condiciones{
+   margin-bottom: 1rem !important;
+}
+
+.condiciones-p{
+   margin-bottom: 1rem !important;
+}
+
+.sub-condiciones{
+   padding-left: 50px;
+}
+
+.es-letras{
+   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+   .p-titulo .titulo{
+      font-size: 30px;
+   }
+   .condiciones{
+      font-size:18px;
+   }
+   .condiciones-p{
+      font-size:18px;
+   }
+}
+
+@media (max-width: 480px) {
+
+   .p-titulo h1.titulo{
+      font-size: 25px;
+   }
+
+   .condiciones{
+      font-size:15px;
+   }
+   .condiciones-p{
+      font-size:15px;
+   }
+}
+
+ul{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   font-size: 2rem;
+}
+
+/** =======================================================  **/
+/**               V E H I C U L O S                          **/
+/** =======================================================  **/
+.vistaVehiculos {
+   padding: 0 0 5rem 0;
+}
+.form_vehiculos {
+   margin: 5rem auto !important; 
+   margin: 0 auto !important; 
+   padding: 0 !important;
+}
+@media (min-width: 1200px) {
+   .form-fijo {
+      position: fixed;
+      z-index: 1;
+      transition: .2s;
+      top: 9.2rem;
+      width: 100%;
+   }
 }

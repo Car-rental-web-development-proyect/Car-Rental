@@ -14,7 +14,9 @@ $router->get('/reservas', [Paginascontroller::class, 'reservas']);
 
 $router->get('/condiciones', [Paginascontroller::class, 'condiciones']);
 
-$router->get('/vehiculo', [Paginascontroller::class, 'vehiculo']);
+// $router->get('/vehiculo', [Paginascontroller::class, 'vehiculo']);
+$router->get('/flota_vehiculos', [Paginascontroller::class, 'vehiculo']);
+
 
 $router->get('/ofertas', [Paginascontroller::class, 'ofertas']);
 
