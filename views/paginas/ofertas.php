@@ -3,9 +3,35 @@
 </header> -->
 <main>
    <!-- <section class="seccion__oferta__img"></section> -->
+
    <div class="ofertas-bg">
       <img src="build/src/img/oferta_fin_de_semana.webp" alt="Imagen de fin de semana">
    </div>
+
+   <section>
+      <div class="card">
+         <img class="card__img" src="build/src/img/card1.webp" alt="imagen-card-1">
+         <div class="card__body">
+            <h4>¡Ahorra más en tu próxima renta de auto! Y disfruta más en tus vacaciones en familia</h4>
+         </div>
+      </div> <!-- .card -->
+
+      <div class="card">
+         <img class="card__img" src="build/src/img/card2.webp" alt="imagen-card-1">
+         <div class="card__body">
+            <h4>¡Viaja cómodamente sin romper el banco!</h4>
+         </div>
+      </div> <!-- .card -->
+      
+
+      <div class="card">
+         <img class="card__img" src="build/src/img/card3.webp" alt="imagen-card-1">
+         <div class="card__body">
+            <h4>¡Grandes promociones en alquiler de autos esta temporada!</h4>
+         </div>
+      </div> <!-- .card -->
+
+   </section>
 
    <section class="ofertas">
       <img class="ofertas__wave" src="build/src/img/wave.svg" alt="imagen wave">
