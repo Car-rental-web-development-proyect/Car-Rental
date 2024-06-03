@@ -11,7 +11,13 @@ $router = new Router();
 $router->get('/', [Paginascontroller::class, 'index']);
 $router->get('/contacto', [Paginascontroller::class, 'contacto']);
 $router->get('/reservas', [Paginascontroller::class, 'reservas']);
+
+$router->get('/condiciones', [Paginascontroller::class, 'condiciones']);
+
+$router->get('/vehiculo', [Paginascontroller::class, 'vehiculo']);
+
 $router->get('/ofertas', [Paginascontroller::class, 'ofertas']);
+
 
 $router->get('/login', [Usuarioscontroller::class, 'login']);
 

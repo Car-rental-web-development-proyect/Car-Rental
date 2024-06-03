@@ -2,6 +2,7 @@
 
 namespace Controllers;
 
+use Model\Vehiculos;
 use MVC\Router;
 
 class Paginascontroller {
@@ -25,5 +26,19 @@ class Paginascontroller {
 
     public static function ofertas(Router $router) {
       $router->render('paginas/ofertas');
+    }
+
+    public static function condiciones(Router $router){
+      $router->render('condiciones');
+    }
+
+    public static function vehiculo(Router $router) {
+
+      $todosLosVehiculos = Vehiculos::mostrar();
+      
+
+      $router->render('paginas/vehiculos', [
+        'vehiculos' => $todosLosVehiculos
+      ]);
     }
 }
