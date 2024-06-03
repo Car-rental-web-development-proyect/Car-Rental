@@ -3,18 +3,41 @@
 namespace Controllers;
 
 use MVC\Router;
+use Model\Usuarios;
 
 class Usuarioscontroller {
-    public static function login(Router $router){
+
+    public static function login(Router $router){    
         $router->render('auth/login');
     }
 
     public static function registrarse(Router $router){
-        $router->render('auth/registrarse');
+
+        $usuarios = new Usuarios();     
+        $errores = Usuarios::getErrores(); 
+
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+            $usuarios = new Usuarios($_POST['usuarios']);
+            
+            $errores = $usuarios->ValidarCampos();
+
+            if(empty($errores)){
+                $usuarios->Registrar();
+            }
+        }        
+        
+        $router->render('auth/registrarse',[
+            'errores' => $errores,
+            'usuarios' =>$usuarios
+        ]);
     }
 
-    public static function registrarAuto(Router $router){
-        $router->render('auth/registrarAuto');
+    public static function admin(Router $router){
+        $router->render('auth/admin');
+    }
+
+    public static function tarjeta(Router $router){
+        $router->render('auth/tarjeta');
     }
 
 }

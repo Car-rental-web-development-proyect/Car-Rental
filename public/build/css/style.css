@@ -30,6 +30,7 @@ body {
    line-height: 2;
 }
 
+
 /* === Globales === */
 .contenedor {
    width: min(90%, 120rem);
@@ -41,6 +42,13 @@ body {
 }
 a {
    text-decoration: none;
+}
+
+ul{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   font-size: 2rem;
 }
 
 h1, h2, h3, h4 {
@@ -87,9 +95,17 @@ p {
 .bg {
    background-color: var(--secundario);
    width: 100%;
+   
 }
 
-/* Barra de navegacion */
+/* -------------------- NAV -----------------------*/
+.nav-fijo{
+   position: fixed;
+   z-index: 5;
+   transition: 0.7s;
+   top: 0;
+}
+
 @media (min-width: 768px) {
    .barra {
       display: flex;
@@ -113,7 +129,6 @@ p {
    font-weight: bold;
 }
 
-
 @media (min-width: 768px) {
    .navegacion {
       display: flex;
@@ -128,8 +143,8 @@ p {
    /* padding-top: 3rem; */
 }
 
-/* ----------- SLIDER -------------- */
 
+/* ----------- SLIDER -------------- */
 
 .contenedor-slider {
    width: 100%;
@@ -297,6 +312,14 @@ p {
    text-align: center;
 }
 
+.cards-autos {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+}
+
 @media(min-width: 860px) {
    .cards-autos {
       display: grid;
@@ -310,17 +333,12 @@ p {
    }
 }
 
-.cards-autos {
-   display: grid;
-   gap: 2rem;
-}
 
 .card-auto {
    background-color: white;
    -webkit-box-shadow: 15px 17px 24px -8px rgba(0,0,0,0.41);
    -moz-box-shadow: 15px 17px 24px -8px rgba(0,0,0,0.41);
    box-shadow: 15px 17px 24px -8px rgba(0,0,0,0.41);
-
 }
 
 .card-info {
@@ -336,12 +354,13 @@ p {
 .card-info h4 {
    margin: 0;
 }
+
 .card-info button {
    width: 100%;
    border: 0;
 }
 
-.caracteristicas {
+/* .caracteristicas {
    display: flex;
    align-items: start;
    justify-content: center;
@@ -349,8 +368,26 @@ p {
    padding: 0;
    gap: 1rem;
    padding: 2rem 0 2rem 0;
+   flex-wrap: wrap;
 }
 
+@media (min-width: 980px) {
+   .caracteristicas {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+   .caracteristicas li {
+      flex-basis: (33.3% - 1rem);
+      margin-bottom: 1rem;
+      text-align: center;
+   }
+} */
+.caracteristicas {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+
+}
 .caracteristicas li {
    display: flex;
    flex-direction: column;
@@ -360,15 +397,20 @@ p {
    font-size: 1.2rem;
 }
 
-.caracteristicas img {
+.icono {
    height: 3rem;
 }
 
 .caracteristicas p {
    margin: 0.5rem 0 0 0;
+   
+   line-height: 2rem;
+   font-size: 1.2rem;
 }
 
-/* === Contacto === */
+/* ==================================================  */
+/*                   C O N T A C T O                   */
+/* ==================================================  */
 .contacto-bg {
    background-image: url(../src/img/contacto.webp);
    height: 60rem;
@@ -411,26 +453,52 @@ p {
 
 
 
-/* ===== reservas =====  */
+/* ==================================================  */
+/*                   R E S E R V A S                   */
+/* ==================================================  */
+.reservas-bg img {
+   margin: 0 auto;
+} 
 .reservas-bg {
-   
+   background-image: linear-gradient(to right, rgb(0, 63, 194) 50%, rgb(0, 63, 194) 50%);
+}
+ @media (min-width: 800px) {
+    .reservas-bg img {
+      content: url(../src/img/reserva.webp);
+      height: 100%;
+      width: auto;
+    }
+}
+@media (max-width: 1920px) {
+   .reservas-bg img {
+      content: url(../src/img/reserva.webp);
+      width: 100%;
+    }
+}
+@media (max-width: 800px) {
+   .reservas-bg img {
+      content: url(../src/img/reserva02.webp);
+      width: 100%;
+    }
 }
 
 .formulario-Reservas {
    margin: 5rem auto 2rem auto;
-   /* background-color: var(--primario); */
    background-color:  #e5e7e9 ;
    border-radius: 5rem;
    box-shadow: 0px 3px 7px 0px gray;
    padding: 3rem 0;
 
-   @media (min-width: 800px) {
-       display: flex;
-       justify-content: space-between;
-       max-width: 150rem;
-       padding: 0;
+}
+@media (min-width: 1200px) {
+   .formulario-Reservas {
+      display: flex;
+      justify-content: space-between;
+      max-width: 150rem;
+      padding: 0;
    }
 }
+
 .formulario-Reservas_campo {
    padding: 1rem 2rem;
    display: flex;
@@ -443,9 +511,7 @@ p {
 }
 
 .formulario-Reservas_campo:hover {
-   /* background-color: #F0F0F0; */
-   /* background-color:  #f4d03f ; */
-   background-color:  #d0d3d4 ;
+   background-color:  #d0d3d4;
    border-radius: 5rem;
    box-shadow: 0px 6px 20px rgb(0 0 0 / 40%); /* horizontal | 6px arriba-abajo y rgb para transparencia*/
 }
@@ -468,14 +534,21 @@ p {
    height: 4rem;
    border: none;
    border-radius: 2rem;
-   /* background-image: radial-gradient( cicle, lighten(var(--azulFuerte,5%) 0%, var(--azulFuerte 100%))) ; es un gradiant circular */
    background-image: radial-gradient( cicle, rgb(255,56,92) 0%, red) ; /* es un gradiant circular */
    color: black;
    font-weight: bold;
-   padding: 0 2rem 0 2rem;
+   /* padding: 0 2rem 0 2rem; */
+   padding: 0 2rem;
    background-color:  #f8c471;
    text-transform: uppercase;
    font-size: 1.5rem;
+   margin-top: 0.8rem;
+}
+
+.formulario__combobox {
+   border: none;
+   padding: 0.1rem;
+   border-radius: .3rem;
 }
 
 /* Grid para imagen de promocion y texto */
@@ -496,12 +569,6 @@ p {
    }
 }
 
-/* @media (min-width: 468px) {
-    .detalles-promocion{
-      grid-template-columns: 2fr 1fr;
-    }
-} */
-
 img { /* Antes .descuento-img */
    width: 100%;
    display: block;
@@ -521,7 +588,6 @@ img { /* Antes .descuento-img */
    padding: .02rem;
    width: min(80%, 180rem);
    margin: 0 auto;
-   
 }
 .comprar_titulo {
    text-align: center;
@@ -538,12 +604,18 @@ img { /* Antes .descuento-img */
 @media (min-width: 468px) {
    .bloques {
       grid-template-columns: repeat(2, 1fr);
-   } 
+   }
+   .sobrenosotros .bloques {
+      grid-template-columns: repeat(1, 1fr);
+   }
 }
 
 @media (min-width: 800px) {
    .bloques {
       grid-template-columns: repeat(4, 1fr);
+   }
+   .sobrenosotros .bloques {
+      grid-template-columns: repeat(3, 1fr);
    }
 }
 .bloque {
@@ -572,4 +644,323 @@ img { /* Antes .descuento-img */
 }
 .bloque img {
    width: 30%;
+}
+
+
+
+/** =======================================================  **/
+/**                      O F E R T A S                       **/
+/** =======================================================  **/
+.card {
+   display: flex;
+   background-color: #F0F0F0;
+   width: min(90%, 120rem);
+   margin: 7rem auto 0 auto;
+   box-shadow: 0 0 2rem .2rem rgba(0, 0, 0, .2);
+   border-radius: 3rem;
+   margin-top: 5rem;
+   flex-direction: column;
+}
+.card__img {
+   width: 100%;
+   object-fit: cover;
+}
+.card__body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding: 2rem;
+   width: 100%;
+   flex-direction: column;
+}
+.card__body h4 {
+   font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+    .card {
+      width: min(90%, 120rem);
+      flex-direction: row;
+    }
+    .card__img {
+      width: 50%;
+      object-fit: cover;
+      border-top-left-radius: 3rem;
+      border-bottom-left-radius: 3rem;
+   }
+   .card__body h4 {
+      font-size: 2.8rem;
+   }
+}
+
+.ofertas-bg {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 20%;
+   overflow: hidden;
+   margin: 0 auto;
+}
+@media (min-width: 460px) {
+    .ofertas-bg {
+      height: 60vh;
+      align-items: start;
+    }
+}
+@media (min-width: 800px) {
+    .ofertas-bg {
+      height: 60vh;
+      width: auto;  
+      align-items: center; 
+    }
+}
+.ofertas__contenido {
+   background-color: var(--secundario);
+   margin-top: -1rem;
+   padding: 6rem;
+}
+@media (min-width: 800px) {
+   .ofertas__contenido  {
+      margin-top: -4rem;
+   }
+}
+.ofertas__heading {
+   text-align: center;
+   font-family: var(--fuenteDecorativa);
+
+   font-size: 4.2vh;
+   color: red;
+   margin-bottom: 6rem;
+}
+.ofertas__heading--descripcion {
+   font-size: 6rem;
+   text-transform: uppercase;
+   color: rgb(255, 128, 1);
+   font-size: 4.8vh;
+}
+.ofertas__grid {
+   display: grid;
+   column-gap: 5rem;
+   grid-template-columns: repeat(1, 1fr);
+   width: 95%;
+}
+
+@media (min-width: 468px) {
+   .ofertas__grid {
+      width: min(80%, 180rem);
+   }
+}
+@media (min-width: 800px) {
+   .ofertas__grid {
+      grid-template-columns: repeat(2, 1fr);
+      width: min(50%, 180rem);;
+      column-gap: 8rem;
+      grid-template-areas: "oferta2 oferta2 oferta2"
+      "oferta1 oferta3 oferta3";
+   }
+
+   .ofertas__oferta:nth-child(1) {
+      grid-area: oferta1;
+   }
+   .ofertas__oferta:nth-child(2) {
+      grid-area: oferta2;
+   }
+   .ofertas__oferta:nth-child(3) {
+      grid-area: oferta3;
+   }
+}
+
+.ofertas__oferta {
+   text-align: center;
+}
+
+.ofertas__img {
+   /* transition: transform 300ms ease-in-out; */
+   transition-property: transform;
+   transition-duration: 300ms;
+   margin-bottom: 5rem;
+   max-width: 100%;
+}
+.ofertas__img:hover {
+   transform: rotate(-4deg) scale(1.2);
+}
+
+.card__btn {
+   display: block; /* Para que en un dispositivo movil tome TODO el espacio disponible*/
+   font-family: var(--fuenteHeading);
+   color: var(--blanco);
+   background-color: #FFD960;
+   text-align: center;
+   padding: 1rem 3rem 1rem 3rem;
+   font-size: 1.8rem;
+   text-transform: uppercase;  /* Mayusculas*/
+   font-weight: bold;
+   margin-bottom: 2rem;
+
+   transition: .8s;
+   /* Para los botones de tipo submit: 
+       Ademas del pointer:*/
+   border: none;
+}
+.card__btn:hover {
+   background-color: var(--secundario);
+   transform:scale(1.2);
+   z-index: 2;
+}
+
+/** =======================================================  **/
+/**        C O N D I C I O N E S   D E  R E N T A            **/
+/** =======================================================  **/
+contenedor-con{
+   width: 100%;
+   padding-right: var(--bs-gutter-x, .75rem);
+   padding-left: var(--bs-gutter-x, .75rem);
+   margin-right: auto;
+   margin-left: auto;
+}
+
+.h2-condiciones{
+   color: white;
+   font-size: 75px;
+}  
+.page-title-area{
+   position: relative;
+   z-index: 3;
+   padding-top: 100px;
+   padding-bottom: 100px;
+   text-align: center;
+}
+.img-back{
+   background: url(./../src/img/volante-coche.webp);
+   background-position: 50%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+}
+
+@media (max-width: 768px) {
+   .page-title-area{
+       height: 430px;
+       
+   }
+   .h2-condiciones {
+      font-size: 50px;
+  }
+
+}
+
+@media (max-width: 480px) {
+   .h2-condiciones {
+       font-size: 30px;
+   }
+}
+
+.d-table-cell{
+   vertical-align: middle;
+}
+
+.d-table-cell{
+   display: table-cell !important;
+}
+.d-table{
+   display: table !important;
+}
+.d-table{   
+   width: 100%;;
+   height: 100%;
+}
+
+
+.privacy{
+   padding: 3vw 15vw;;
+}
+
+.p-titulo .titulo{
+   font-size: 40px;
+   font-weight: 400;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: normal;
+   letter-spacing: normal;
+   text-align: center;
+   color: #282828;
+   line-height: 1.12;
+   text-transform: none;
+}
+
+.pb-2{
+   padding-bottom: .5rem !important;
+}
+
+.condiciones{
+   margin-bottom: 1rem !important;
+}
+
+.condiciones-p{
+   margin-bottom: 1rem !important;
+}
+
+.sub-condiciones{
+   padding-left: 50px;
+}
+
+.es-letras{
+   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+   .p-titulo .titulo{
+      font-size: 30px;
+   }
+   .condiciones{
+      font-size:18px;
+   }
+   .condiciones-p{
+      font-size:18px;
+   }
+}
+
+@media (max-width: 480px) {
+
+   .p-titulo h1.titulo{
+      font-size: 25px;
+   }
+
+   .condiciones{
+      font-size:15px;
+   }
+   .condiciones-p{
+      font-size:15px;
+   }
+}
+
+ul{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   font-size: 2rem;
+}
+
+/** =======================================================  **/
+/**               V E H I C U L O S                          **/
+/** =======================================================  **/
+.vistaVehiculos {
+   padding: 0 0 5rem 0;
+}
+.form_vehiculos {
+   margin: 5rem auto !important; 
+   margin: 0 auto !important; 
+   padding: 0 !important;
+}
+@media (min-width: 1200px) {
+   .form-fijo {
+      position: fixed;
+      z-index: 1;
+      transition: .2s;
+      top: 9.2rem;
+      width: 100%;
+   }
 }
