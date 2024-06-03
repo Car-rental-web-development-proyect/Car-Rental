@@ -32,7 +32,7 @@
 <body>
    
    <header class="header">
-      <div class="contenedor bg">
+      <div class="contenedor bg nav">
          <div class="barra">
             <a href="/" class="logo">
                <h1 class="logo__nombre">Bee<span class="logo__bold">Car</span></h1>
