@@ -19,10 +19,15 @@ class Paginascontroller {
       $router->render('paginas/contacto');
     }
 
+    public static function agencias(Router $router) {
+      $router->render('paginas/agencias');
+    }
+
     public static function reservas(Router $router) {
       $router->render('paginas/reservas');
     }
 
+<<<<<<< HEAD
 
     public static function ofertas(Router $router) {
       $router->render('paginas/ofertas');
@@ -41,4 +46,6 @@ class Paginascontroller {
         'vehiculos' => $todosLosVehiculos
       ]);
     }
+=======
+>>>>>>> 277ec7d63c4f357c44eb556aa7e5365ba0b222d9
 }

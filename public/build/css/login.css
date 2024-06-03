@@ -138,3 +138,10 @@ s
   background-color:var(--secundario);
   opacity: 0.9;
 }
+
+.bg-red-600 {
+  background-color: rgb(240, 39, 39);
+  color: var(--blanco);
+  padding: 0 2rem 0 ;
+  margin-right: 4rem;
+}

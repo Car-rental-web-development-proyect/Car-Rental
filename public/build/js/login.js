@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function(){
   const inputUsuario = document.querySelector('#usuario');
   const inputCorreo = document.querySelector('#correo');
   const inputPassword = document.querySelector('#password');
-  const formulario = document.querySelector('#formulario')
+  const formulario = document.querySelector('#formulario');
 
   //Asignar Eventos
 

@@ -1,0 +1,41 @@
+.vehiculos table {
+    margin-top: 4rem;
+    width: 100%;
+    border-spacing: 0;
+}
+
+.vehiculos thead  {
+    background-color: var(--secundario);
+}
+
+.vehiculos th  {
+    color: white;
+    padding: 2rem;
+}
+
+.info-icono  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info-icono p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.info-icono img {
+    width: 2rem;
+}
+
+.imagen-tabla {
+    width: 10rem;
+}
+
+.vehiculos input  {
+    width: 100%;
+    margin: 0;
+    height: 4rem;
+}
+
+.vehiculos a  {
+    margin: 0;
+}
