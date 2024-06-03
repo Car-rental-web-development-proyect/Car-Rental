@@ -14,7 +14,6 @@ $router->get('/contacto', [Paginascontroller::class, 'contacto']);
 $router->get('/agencias', [Paginascontroller::class, 'agencias']);
 $router->get('/reservas', [Paginascontroller::class, 'reservas']);
 
-<<<<<<< HEAD
 $router->get('/condiciones', [Paginascontroller::class, 'condiciones']);
 
 // $router->get('/vehiculo', [Paginascontroller::class, 'vehiculo']);
@@ -24,8 +23,6 @@ $router->get('/flota_vehiculos', [Paginascontroller::class, 'vehiculo']);
 $router->get('/ofertas', [Paginascontroller::class, 'ofertas']);
 
 
-=======
->>>>>>> 277ec7d63c4f357c44eb556aa7e5365ba0b222d9
 $router->get('/login', [Usuarioscontroller::class, 'login']);
 $router->get('/registrarse', [Usuarioscontroller::class, 'registrarse']);
 $router->get('/admin', [Usuarioscontroller::class, 'admin']);
