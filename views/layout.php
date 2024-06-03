@@ -32,17 +32,17 @@
 <body>
    
    <header class="header">
-      <div class="contenedor bg">
+      <div class="contenedor bg nav">
          <div class="barra">
             <a href="/" class="logo">
                <h1 class="logo__nombre">Bee<span class="logo__bold">Car</span></h1>
             </a>
 
             <nav class="navegacion">
-               <a href="/reservas" class="navegacion__enlace">Consulta tu reserva</a>
-               <a href="#" class="navegacion__enlace">Condiciones de renta</a>
-               <a href="#" class="navegacion__enlace">Ofertas</a>
-               <a href="/agencias" class="navegacion__enlace">Agencias</a>
+               <a href="/reservas" class="navegacion__enlace">Realiza tu reserva</a>
+               <a href="/condiciones" class="navegacion__enlace">Condiciones de renta</a>
+               <a href="/ofertas" class="navegacion__enlace">Ofertas</a>
+               <a href="#" class="navegacion__enlace">Agencias</a>
                <a href="/contacto" class="navegacion__enlace">Contacto</a>
             </nav>
          </div>
@@ -110,8 +110,8 @@
             </a>
 
             <nav class="navegacion">
-               <a href="/reservas" class="navegacion__enlace">Consulta tu reserva</a>
-               <a href="#" class="navegacion__enlace">Condiciones de renta</a>
+               <a href="/reservas" class="navegacion__enlace">Realiza tu reserva</a>
+               <a href="/condiciones" class="navegacion__enlace">Condiciones de renta</a>
                <a href="/ofertas" class="navegacion__enlace">Ofertas</a>
                <a href="#" class="navegacion__enlace">Agencias</a>
                <a href="/contacto" class="navegacion__enlace">Contacto</a>
