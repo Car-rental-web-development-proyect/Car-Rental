@@ -1,8 +1,8 @@
 <main>
    <div class="reservas-bg">
-      <img src="/build/src/img/reserva.webp" alt="reserva">
-   </div>
-   
+      <img src="/build/src/img/reserva02.webp" alt="reserva-img">
+   </div>   
+
    <section class="seccion">
       <form action="" class="formulario-Reservas contenedor">
 
@@ -61,7 +61,6 @@
    </section>
 
    <section class="comprar">
-      <!-- <div class="contenedor"> -->
          <h3 class="comprar_titulo">¿Por qué rentar con nosotros?</h3>
 
          <div class="bloques">
@@ -88,7 +87,6 @@
                <h3 class="bloque__titulo">Llega siempre a tus destinos</h3>
                <p>Autos equipados con las innovaciones tecnologias del momento</p>
             </div> <!-- .bloque -->
-            </div>
-         <!-- </div> -->
+         </div>
    </section>
 </main>
