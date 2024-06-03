@@ -4,6 +4,7 @@ require __DIR__ . '/../config/app.php';
 
 use Controllers\Paginascontroller;
 use Controllers\Usuarioscontroller;
+use Controllers\VehiculosController;
 use MVC\Router;
 
 $router = new Router();
@@ -20,10 +21,10 @@ $router->get('/ofertas', [Paginascontroller::class, 'ofertas']);
 
 
 $router->get('/login', [Usuarioscontroller::class, 'login']);
-
 $router->get('/registrarse', [Usuarioscontroller::class, 'registrarse']);
+$router->get('/admin', [Usuarioscontroller::class, 'admin']);
 
-$router->get('/registrarAuto', [Usuarioscontroller::class, 'registrarAuto']);
+$router->get('/registrarAuto', [VehiculosController::class, 'registrarAuto']);
 
 
 $router->comprobarRutas();

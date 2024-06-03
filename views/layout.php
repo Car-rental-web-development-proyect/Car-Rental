@@ -10,7 +10,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./build/css/login.css">
 
     <!-- preload -->
     <link rel="preload" href="./build/css/style.css">
@@ -18,6 +17,9 @@
 
     <link rel="preload" href="./build/css/normalize.css">
     <link rel="stylesheet" href="./build/css/normalize.css">
+
+    <link rel="stylesheet" href="./build/css/login.css">
+    <link rel="stylesheet" href="./build/css/auth.css">
 
     <link rel="shortcurt icon" href="#">
     <!-- fonts -->
