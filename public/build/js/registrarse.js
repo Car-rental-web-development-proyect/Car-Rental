@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function(){
    function validar(e) {
     if(e.target.value.trim() === ''){
      mostrarAlerta(`El campo ${e.target.id} es obligatorio`,e.target.parentElement);
-     login[e.target.name] = '';
+     registro[e.target.name] = '';
      
      comprobarLogin();
      return ;

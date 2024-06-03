@@ -19,21 +19,12 @@ class Paginascontroller {
       $router->render('contacto');
     }
 
+    public static function agencias(Router $router) {
+      $router->render('agencias');
+    }
+
     public static function reservas(Router $router) {
       $router->render('reservas');
     }
 
-    public static function condiciones(Router $router){
-      $router->render('condiciones');
-    }
-
-    public static function vehiculo(Router $router) {
-
-      $todosLosVehiculos = Vehiculos::mostrar();
-      
-
-      $router->render('paginas/vehiculos', [
-        'vehiculos' => $todosLosVehiculos
-      ]);
-    }
 }

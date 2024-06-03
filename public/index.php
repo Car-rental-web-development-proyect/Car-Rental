@@ -10,15 +10,15 @@ $router = new Router();
 
 $router->get('/', [Paginascontroller::class, 'index']);
 $router->get('/contacto', [Paginascontroller::class, 'contacto']);
+$router->get('/agencias', [Paginascontroller::class, 'agencias']);
 $router->get('/reservas', [Paginascontroller::class, 'reservas']);
-$router->get('/condiciones', [Paginascontroller::class, 'condiciones']);
-
-$router->get('/vehiculo', [Paginascontroller::class, 'vehiculo']);
 
 $router->get('/login', [Usuarioscontroller::class, 'login']);
 
 $router->get('/registrarse', [Usuarioscontroller::class, 'registrarse']);
 
 $router->get('/registrarAuto', [Usuarioscontroller::class, 'registrarAuto']);
+
+$router->get('/tarjeta', [Usuarioscontroller::class, 'tarjeta']);
 
 $router->comprobarRutas();

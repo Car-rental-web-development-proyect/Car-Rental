@@ -24,6 +24,8 @@ class Tarjeta extends ActiveRecord{
             $this->tar_celular = $args['tar_celular'] ?? '';
             $this->tar_correo = $args['tar_correo'] ?? '';
         }
+
+
     
         public function Registrar(){
             if(!is_null($this->tar_id)){ //Si no es NULL, la accion es actualizar 
