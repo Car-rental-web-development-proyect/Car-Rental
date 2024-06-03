@@ -32,7 +32,7 @@ body {
 
 /* === Globales === */
 .contenedor {
-   width: min(80%, 120rem);
+   width: min(90%, 120rem);
    margin: 0 auto;
 }
 
@@ -297,6 +297,15 @@ p {
    text-align: center;
 }
 
+.cards-autos {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+   
+}
+
 @media(min-width: 860px) {
    .cards-autos {
       display: grid;
@@ -307,13 +316,10 @@ p {
    .cards-autos {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      width: 100%;
    }
 }
 
-.cards-autos {
-   display: grid;
-   gap: 2rem;
-}
 
 .card-auto {
    background-color: white;
@@ -321,6 +327,7 @@ p {
    -moz-box-shadow: 15px 17px 24px -8px rgba(0,0,0,0.41);
    box-shadow: 15px 17px 24px -8px rgba(0,0,0,0.41);
 
+   width: 52rem;
 }
 
 .card-info {
@@ -336,6 +343,7 @@ p {
 .card-info h4 {
    margin: 0;
 }
+
 .card-info button {
    width: 100%;
    border: 0;
@@ -366,6 +374,9 @@ p {
 
 .caracteristicas p {
    margin: 0.5rem 0 0 0;
+   
+   line-height: 2rem;
+   font-size: 1.2rem;
 }
 
 /* === Contacto === */
@@ -412,44 +423,58 @@ p {
 
 
 /* ===== reservas =====  */
+.reservas-bg img {
+   margin: 0 auto;
+} 
 .reservas-bg {
-   background-image: url(../src/img/reserva.webp);
-   height: 60rem;
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center center;
+   background-image: linear-gradient(to right, rgb(0, 63, 194) 50%, rgb(0, 63, 194) 50%);
+}
+ @media (min-width: 800px) {
+    .reservas-bg img {
+      content: url(../src/img/reserva.webp);
+      height: 100%;
+      width: auto;
+    }
+}
+@media (max-width: 1920px) {
+   .reservas-bg img {
+      content: url(../src/img/reserva.webp);
+      width: 100%;
+    }
+}
+@media (max-width: 800px) {
+   .reservas-bg img {
+      content: url(../src/img/reserva02.webp);
+      width: 100%;
+    }
 }
 
 .formulario-Reservas {
    margin: 5rem auto 2rem auto;
-   /* background-color: var(--primario); */
    background-color:  #e5e7e9 ;
    border-radius: 5rem;
    box-shadow: 0px 3px 7px 0px gray;
    padding: 3rem 0;
 
-   @media (min-width: 768px) {
+   @media (min-width: 800px) {
        display: flex;
        justify-content: space-between;
        max-width: 150rem;
        padding: 0;
    }
 }
-
 .formulario-Reservas_campo {
    padding: 1rem 2rem;
    display: flex;
    flex-direction: column;
 }
-@media (min-width: 768px) {
+@media (min-width: 800px) {
    .formulario-Reservas_campo:nth-child(1) {
       padding-left: 5rem;
    }
 }
 
 .formulario-Reservas_campo:hover {
-   /* background-color: #F0F0F0; */
-   /* background-color:  #f4d03f ; */
    background-color:  #d0d3d4 ;
    border-radius: 5rem;
    box-shadow: 0px 6px 20px rgb(0 0 0 / 40%); /* horizontal | 6px arriba-abajo y rgb para transparencia*/
@@ -473,7 +498,6 @@ p {
    height: 4rem;
    border: none;
    border-radius: 2rem;
-   /* background-image: radial-gradient( cicle, lighten(var(--azulFuerte,5%) 0%, var(--azulFuerte 100%))) ; es un gradiant circular */
    background-image: radial-gradient( cicle, rgb(255,56,92) 0%, red) ; /* es un gradiant circular */
    color: black;
    font-weight: bold;
@@ -483,7 +507,8 @@ p {
    font-size: 1.5rem;
 }
 
-@media (min-width: 768px) {
+/* Grid para imagen de promocion y texto */
+@media (min-width: 800px) {
    .detalles-promocion {
       display: grid;
       grid-template-columns: 2fr 1fr;
@@ -499,51 +524,173 @@ p {
       grid-row: 1 / 2;
    }
 }
+
+/* @media (min-width: 468px) {
+    .detalles-promocion{
+      grid-template-columns: 2fr 1fr;
+    }
+} */
+
 img { /* Antes .descuento-img */
    width: 100%;
    display: block;
    height: auto;
 }
 .descuento-texto {
-   margin-top: -2.8rem;
+   margin-top: -2.9rem;
 }
-/* .descuento-img {
-   /* background-image: url(../src/img/descuento_Camioneta.webp); */
-/*   background-image: url(../src/img/destinations.webp);
-   height: 60rem;
-   background-repeat: no-repeat;
-   /* border-radius: 15rem; */
-  /* width:100%;
-} */
 .descuento-texto_parrafo{
    font-weight: bold;
 }
 
+
 /* Seccion de por que rentar con nosotros */
+.comprar {
+   margin-top: 2rem;
+   padding: .02rem;
+   width: min(80%, 180rem);
+   margin: 0 auto;
+   
+}
+.comprar_titulo {
+   text-align: center;
+   font-family: var(--fuenteDecorativa);
+   text-transform: uppercase;
+   margin-top: 10rem;
+   margin-bottom: 5rem;
+}
 .bloques {
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   column-gap: 2rem;
+   grid-template-columns: repeat(1, 1fr);
+   column-gap: 5rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 468px) {
+   .bloques {
+      grid-template-columns: repeat(2, 1fr);
+   } 
+}
+
+@media (min-width: 800px) {
    .bloques {
       grid-template-columns: repeat(4, 1fr);
    }
 }
 .bloque {
    text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   transition: .8s;
+   padding: .9rem 1rem;
+   margin-bottom: 3rem;
+   background: #F0F0F0;
+   box-shadow: 0 0 2rem .2rem rgba(0, 0, 0, .2);
 }
 .bloque__img {
-   width: 50%;
-   margin-left: 7rem;
+   max-width: 50%;
+   margin: 0 auto;
+   padding-top: 1rem;
 }
-.comprar_titulo {
+.bloque:hover {
+   background-color: #FFC940;
+   transform:scale(1.2);
+   z-index: 2;
+}
+.bloque h3 {
+   font-size: 2.5rem;
+}
+.bloque img {
+   width: 30%;
+}
+
+
+
+/** ============= Ofertas =============  **/
+/* .seccion__oferta__img {
+   background-image: url(../src/img/oferta_fin_de_semana.webp);
+   width: 100%;
+   height: 30rem;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center center;
+}
+@media (min-width: 468px) {
+   .seccion__oferta__img {
+      height: 60rem;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+   }
+} */
+
+.ofertas-bg {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 20%;
+   overflow: hidden;
+   margin: 0 auto;
+}
+@media (min-width: 460px) {
+    .ofertas-bg {
+      height: 60vh;
+      align-items: start;
+    }
+}
+@media (min-width: 800px) {
+    .ofertas-bg {
+      height: 60vh;
+      width: auto;  
+      align-items: center; 
+    }
+}
+.ofertas__contenido {
+   background-color: var(--secundario);
+   margin-top: -1rem;
+   padding: 6rem;
+}
+@media (min-width: 800px) {
+   .ofertas__contenido  {
+      margin-top: -4rem;
+   }
+}
+.ofertas__heading {
    text-align: center;
    font-family: var(--fuenteDecorativa);
-   text-transform: uppercase; 
+
+   font-size: 4.2vh;
+   color: red;
+   margin-bottom: 6rem;
+}
+.ofertas__heading--descripcion {
+   font-size: 6rem;
+   text-transform: uppercase;
+   color: rgb(255, 128, 1);
+   font-size: 4.8vh;
+}
+.ofertas__grid {
+   display: grid;
+   column-gap: 5rem;
+   grid-template-columns: repeat(1, 1fr);
+   width: 95%;
 }
 
+@media (min-width: 468px) {
+   .ofertas__grid {
+      width: min(80%, 180rem);
+   }
+}
+@media (min-width: 800px) {
+   .ofertas__grid {
+      grid-template-columns: repeat(2, 1fr);
+      width: min(70%, 180rem);;
+      column-gap: 8rem;
+      grid-template-areas: "oferta2 oferta2 oferta2"
+      "oferta1 oferta3 oferta3";
+   }
 
+<<<<<<< HEAD
 
 
 
@@ -559,37 +706,34 @@ img { /* Antes .descuento-img */
    padding-left: var(--bs-gutter-x, .75rem);
    margin-right: auto;
    margin-left: auto;
+=======
+   .ofertas__oferta:nth-child(1) {
+      grid-area: oferta1;
+   }
+   .ofertas__oferta:nth-child(2) {
+      grid-area: oferta2;
+   }
+   .ofertas__oferta:nth-child(3) {
+      grid-area: oferta3;
+   }
+>>>>>>> da2e218506cbce693133115d71dc03a9fb57b8b8
 }
 
-.h2-condiciones{
-   color: white;
-   font-size: 75px;
-}  
-.page-title-area{
-   position: relative;
-   z-index: 3;
-   padding-top: 100px;
-   padding-bottom: 100px;
+.ofertas__oferta h3, p{
    text-align: center;
 }
-.img-back{
-   background: url(./../src/img/volante-coche.webp);
-   background-position: 50%;
-   background-repeat: no-repeat;
-   background-size: cover;
-   
-}
 
-@media (max-width: 768px) {
-   .page-title-area{
-       height: 430px;
-       
-   }
-   .h2-condiciones {
-      font-size: 50px;
-  }
-
+.ofertas__img {
+   /* transition: transform 300ms ease-in-out; */
+   transition-property: transform;
+   transition-duration: 300ms;
+   margin-bottom: 5rem;
+   max-width: 100%;
 }
+.ofertas__img:hover {
+   transform: rotate(-4deg) scale(1.2);
+}
+<<<<<<< HEAD
 
 @media (max-width: 480px) {
    .h2-condiciones {
@@ -684,3 +828,5 @@ ul{
    font-size: 2rem;
 }
 /*------FIN Condiciones de Renta-----------*/
+=======
+>>>>>>> da2e218506cbce693133115d71dc03a9fb57b8b8
