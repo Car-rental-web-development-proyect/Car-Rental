@@ -25,7 +25,7 @@ INSERT INTO usuarios(usu_nombre, usu_apepaterno,usu_apematerno,usu_correo,usu_pa
 
 CREATE TABLE IF NOT EXISTS vehiculos(
 	veh_id INT NOT NULL AUTO_INCREMENT,
-    veh_modelo VARCHAR(100) NOT NULL, 
+    veh_modelo VARCHAR(100) NOT NULL,
     veh_color VARCHAR(50) NOT NULL,
     veh_pasajeros INT NOT NULL,
     veh_maletas INT NOT NULL,
@@ -57,8 +57,6 @@ CREATE TABLE IF NOT EXISTS tarjeta(
 	tar_numTarjeta VARCHAR(100) NOT NULL,
     tar_expiracion VARCHAR(10) NOT NULL,
     tar_duenio VARCHAR(100) NOT NULL,
-    tar_celular VARCHAR(100) NOT NULL,
-    tar_correo VARCHAR(30) NOT NULL,
     
     PRIMARY KEY (tar_id)     
 );

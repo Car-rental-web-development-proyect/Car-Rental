@@ -4,7 +4,7 @@ namespace Model;
 
 class Tarjeta extends ActiveRecord{
     protected static $tabla = 'tarjeta';
-    protected static $columnasDB = ['tar_id','tar_numTarjeta','tar_expiracion','tar_duenio','tar_celular','tar_correo'];
+    protected static $columnasDB = ['tar_id','tar_numTarjeta','tar_expiracion','tar_duenio'];
 
     
         //Columnas 
@@ -12,17 +12,12 @@ class Tarjeta extends ActiveRecord{
         public $tar_numTarjeta;
         public $tar_expiracion;
         public $tar_duenio;
-        public $tar_celular;
-        public $tar_correo;
-    
-    
+
         public function __construct($args = []){
             $this->tar_id = $args['tar_id'] ?? null;
             $this->tar_numTarjeta = $args['tar_numTarjeta'] ?? '';
             $this->tar_expiracion= $args['tar_expiracion'] ?? '';
             $this->tar_duenio= $args['tar_duenio'] ?? '';
-            $this->tar_celular = $args['tar_celular'] ?? '';
-            $this->tar_correo = $args['tar_correo'] ?? '';
         }
     
         public function Registrar(){
@@ -46,14 +41,6 @@ class Tarjeta extends ActiveRecord{
                 self::$errores[] = "Campo Vacio"; 
             }
     
-            if(!$this->tar_celular){
-                self::$errores[] = "Campo Vacio"; 
-            }
-    
-            if(!$this->tar_correo){
-                self::$errores[] = "Campo Vacio"; 
-            }
-
             return self::$errores;
         }
 } 
