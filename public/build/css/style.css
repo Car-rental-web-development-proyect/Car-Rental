@@ -30,7 +30,6 @@ body {
    line-height: 2;
 }
 
-
 /* === Globales === */
 .contenedor {
    width: min(90%, 120rem);
@@ -397,7 +396,7 @@ p {
    font-size: 1.2rem;
 }
 
-.icono {
+.caracteristicas img {
    height: 3rem;
 }
 
