@@ -29,7 +29,7 @@ class Paginascontroller {
     }
 
     public static function condiciones(Router $router){
-      $router->render('condiciones');
+      $router->render('paginas/condiciones');
     }
 
     public static function vehiculo(Router $router) {
