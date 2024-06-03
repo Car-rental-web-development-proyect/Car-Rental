@@ -43,13 +43,6 @@ a {
    text-decoration: none;
 }
 
-ul{
-   list-style: none;
-   margin: 0;
-   padding: 0;
-   font-size: 2rem;
-}
-
 h1, h2, h3, h4 {
    font-family: var(--fuenteHeading);
    line-height: 1.2;
@@ -554,6 +547,10 @@ img { /* Antes .descuento-img */
 
 
 
+
+
+
+
 /*------INICIO Condiciones de Renta-----------*/
 
 .contenedor-con{
@@ -680,5 +677,10 @@ img { /* Antes .descuento-img */
    }
 }
 
-
+ul{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   font-size: 2rem;
+}
 /*------FIN Condiciones de Renta-----------*/
