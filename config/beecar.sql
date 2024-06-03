@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
     usu_nombre VARCHAR(50) NOT NULL,
     usu_apepaterno VARCHAR(50) NOT NULL,
     usu_apematerno VARCHAR(50) NOT NULL,
+    usu_tipo ENUM('Administrador','Usuario'),
     usu_correo VARCHAR(30) NOT NULL,
     usu_password VARCHAR(1000) NOT NULL,
     
@@ -24,21 +25,32 @@ INSERT INTO usuarios(usu_nombre, usu_apepaterno,usu_apematerno,usu_correo,usu_pa
 
 CREATE TABLE IF NOT EXISTS vehiculos(
 	veh_id INT NOT NULL AUTO_INCREMENT,
-    veh_modelo VARCHAR(100) NOT NULL, # CAMBIAR EN MODULS EL NOMBRE
+    veh_modelo VARCHAR(100) NOT NULL, 
     veh_color VARCHAR(50) NOT NULL,
     veh_pasajeros INT NOT NULL,
     veh_maletas INT NOT NULL,
-    veh_manejo VARCHAR(10) NOT NULL, # Solo estandar o manual
-    veh_combustible VARCHAR(15) NOT NULL,
+    veh_manejo ENUM('Estándar','Automático') NOT NULL,
+    veh_combustible ENUM('Gasolina','Diesel') NOT NULL,
     veh_disponibles INT,
     veh_costodia DECIMAL(10,2) NOT NULL,
-    
+	veh_img TEXT,
     PRIMARY KEY (veh_id),
-    INDEX idx_modelo(veh_modelo)   
+    INDEX idx_modelo(veh_modelo),   
+    INDEX idx_datos(veh_modelo,veh_pasajeros,veh_maletas,veh_manejo),
+    INDEX idx_capacidad(veh_pasajeros,veh_maletas,veh_manejo)   
+    
 );
 
-INSERT INTO vehiculos(veh_modelo,veh_color,veh_pasajeros,veh_maletas,veh_manejo,veh_combustible,veh_disponibles,veh_costodia)
-			VALUES('March','blanco','4','2','estandar','gasolina','4','540');
+INSERT INTO vehiculos(veh_modelo,veh_color,veh_pasajeros,veh_maletas,veh_manejo,veh_combustible,veh_disponibles,veh_costodia,veh_img)
+			VALUES('Nissan Versa','Rojo','3','2','Estándar','Gasolina','5','550',''),
+					('Chevrolet Aveo','Azul Turqueza','3','2','Estándar','Gasolina','5','450',''),
+                    ('Volkswagen Vento','Blanco','3','2','Estándar','Gasolina','9','600',''),
+                    ('Chevrolet Equinox','Blanco','5','4','Automático','Gasolina','7','750',''),
+                    ('Mazda CX-5','Rojo','5','3','Automático','Gasolina','6','800',''),
+                    ('Volkswagen Tiguan','Rojo','5','3','Automático','Gasolina','7','850',''),
+                    ('Ford Ranger','Rojo','4','1','Automático','Diesel','8','1200',''),
+                    ('Ford Explorer','Rojo','5','4','Automático','Diesel','9','950',''),
+                    ('Ford Transist','Blanco','15','6','Estándar','Diesel','9','1500','');
 
 CREATE TABLE IF NOT EXISTS tarjeta(
 	tar_id INT NOT NULL AUTO_INCREMENT,
