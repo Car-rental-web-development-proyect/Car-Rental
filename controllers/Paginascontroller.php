@@ -15,15 +15,15 @@ class Paginascontroller {
     }
     
     public static function contacto(Router $router) {
-      $router->render('contacto');
+      $router->render('paginas/contacto');
     }
 
     public static function reservas(Router $router) {
-      $router->render('reservas');
+      $router->render('paginas/reservas');
     }
 
 
     public static function ofertas(Router $router) {
-      $router->render('ofertas');
+      $router->render('paginas/ofertas');
     }
 }
