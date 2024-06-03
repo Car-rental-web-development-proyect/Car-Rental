@@ -36,4 +36,8 @@ class Usuarioscontroller {
         $router->render('auth/admin');
     }
 
+    public static function tarjeta(Router $router){
+        $router->render('auth/tarjeta');
+    }
+
 }

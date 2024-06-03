@@ -16,29 +16,15 @@ class Paginascontroller {
     }
     
     public static function contacto(Router $router) {
-      $router->render('paginas/contacto');
+      $router->render('contacto');
+    }
+
+    public static function agencias(Router $router) {
+      $router->render('agencias');
     }
 
     public static function reservas(Router $router) {
       $router->render('paginas/reservas');
     }
 
-
-    public static function ofertas(Router $router) {
-      $router->render('paginas/ofertas');
-    }
-
-    public static function condiciones(Router $router){
-      $router->render('condiciones');
-    }
-
-    public static function vehiculo(Router $router) {
-
-      $todosLosVehiculos = Vehiculos::mostrar();
-      
-
-      $router->render('paginas/vehiculos', [
-        'vehiculos' => $todosLosVehiculos
-      ]);
-    }
 }
