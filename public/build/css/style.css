@@ -406,6 +406,26 @@ p {
    line-height: 2rem;
    font-size: 1.2rem;
 }
+.flota_vehiculos {
+   display: flex;
+   justify-content: center;
+}
+.flota_vehiculos__boton {
+   display: block; /* Para que en un dispositivo movil tome TODO el espacio disponible*/
+   font-family: var(--fuenteDecorativa);
+   background-color: #FF5B5B;
+   margin-top: 5rem;
+   height: 6rem;
+   width: 33%;
+
+   border: none;
+   transition: 1s;
+}
+.flota_vehiculos__boton:hover {
+   background-color: #FA3939;
+   transform:scale(1.2);
+   z-index: 1;
+}
 
 /* ==================================================  */
 /*                   C O N T A C T O                   */

@@ -44,8 +44,10 @@
                 </div> 
             </div><!-- .card-auto -->
         <?php endfor; ?>    
-
     </div>
+    <a  href="/flota_vehiculos" class="flota_vehiculos contenedor">
+      <input type="submit" class="flota_vehiculos__boton" value="Descubrir más">
+    </a>
 </section>
 
 <section class="sobrenosotros contenedor">

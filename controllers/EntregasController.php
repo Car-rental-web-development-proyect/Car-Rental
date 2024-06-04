@@ -20,12 +20,11 @@ class Entregascontroller {
             if(empty($errores)){
                 $entrega->Registrar();
             }
-        }        
-        
-        //$router->render('auth/registrarse',[
-        //    'errores' => $errores,
-        //    'entrega' =>$entrega
-        //]);
+        }          
+        $router->render('auth/registrarse',[
+           'errores' => $errores,
+           'entrega' =>$entrega
+        ]);
     }
 
 }
