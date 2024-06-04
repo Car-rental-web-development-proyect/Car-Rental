@@ -26,6 +26,8 @@ INSERT INTO usuarios(usu_nombre, usu_apepaterno,usu_apematerno,usu_correo,usu_pa
 CREATE TABLE IF NOT EXISTS vehiculos(
 	veh_id INT NOT NULL AUTO_INCREMENT,
     veh_modelo VARCHAR(100) NOT NULL,
+    veh_descripcion VARCHAR(250) NOT NULL,
+    veh_cilindro VARCHAR(50) NOT NULL,
     veh_color VARCHAR(50) NOT NULL,
     veh_pasajeros INT NOT NULL,
     veh_maletas INT NOT NULL,
@@ -41,16 +43,16 @@ CREATE TABLE IF NOT EXISTS vehiculos(
     
 );
 
-INSERT INTO vehiculos(veh_modelo,veh_color,veh_pasajeros,veh_maletas,veh_manejo,veh_combustible,veh_disponibles,veh_costodia,veh_img)
-			VALUES('Nissan Versa','Rojo','3','2','Estándar','Gasolina','5','550',''),
-					('Chevrolet Aveo','Azul Turqueza','3','2','Estándar','Gasolina','5','450',''),
-                    ('Volkswagen Vento','Blanco','3','2','Estándar','Gasolina','9','600',''),
-                    ('Chevrolet Equinox','Blanco','5','4','Automático','Gasolina','7','750',''),
-                    ('Mazda CX-5','Rojo','5','3','Automático','Gasolina','6','800',''),
-                    ('Volkswagen Tiguan','Rojo','5','3','Automático','Gasolina','7','850',''),
-                    ('Ford Ranger','Rojo','4','1','Automático','Diesel','8','1200',''),
-                    ('Ford Explorer','Rojo','5','4','Automático','Diesel','9','950',''),
-                    ('Ford Transist','Blanco','15','6','Estándar','Diesel','9','1500','');
+INSERT INTO vehiculos(veh_modelo, veh_descripcion, veh_cilindro, veh_color,veh_pasajeros,veh_maletas,veh_manejo,veh_combustible,veh_disponibles,veh_costodia,veh_img)
+			VALUES('Nissan Versa', 'Sedán, 2022','1.6L 4 Cilindros','Rojo','3','2','Estándar','Gasolina','5','550','versa.webp'),
+					('Chevrolet Aveo', 'Hatchback, 2022','1.5L 4 Cilindros','Azul Turqueza','3','2','Estándar','Gasolina','5','450','aveo.webp'),
+                    ('Volkswagen Vento', 'Sedán, 2024','1.6L 4 Cilindros','Blanco','3','2','Estándar','Gasolina','9','600','vento.webp'),
+                    ('Chevrolet Equinox', 'Hatchback, 2024','1.5L 4 Cilindros','Blanco','5','4','Automático','Gasolina','7','750','Chevrolet-Equinox.webp'),
+                    ('Mazda CX-5', 'CUPE, 2024','1.6L 4 Cilindros','Rojo','5','3','Automático','Gasolina','6','800','Mazda-CX-5.webp'),
+                    ('Volkswagen Tiguan', 'Hatchback, 2024','2.0L 4 Cilindros','Rojo','5','3','Automático','Gasolina','7','850','Volkswagen-Tiguan.webp'),
+                    ('Ford Ranger', 'Pickup, 2023','2.0L 4 Cilindros','Rojo','4','1','Automático','Diesel','8','1200','Frod-Ranger_1.webp'),
+                    ('Ford Explorer', 'Pickup, 2022','2.3L 6 Cilindros','Rojo','5','4','Automático','Diesel','9','950','Ford-Explorer.webp'),
+                    ('Ford Transist', 'SUV, 2024','2.0L 6 Cilindros','Blanco','15','6','Estándar','Diesel','9','1500','Frod-Transit.webp');
 
 CREATE TABLE IF NOT EXISTS tarjeta(
 	tar_id INT NOT NULL AUTO_INCREMENT,
@@ -61,8 +63,8 @@ CREATE TABLE IF NOT EXISTS tarjeta(
     PRIMARY KEY (tar_id)     
 );
 
-INSERT INTO tarjeta(tar_numTarjeta,tar_expiracion,tar_duenio,tar_celular,tar_correo)
-		VALUES('148934872364','13/25','Antonio Castillo','4641161514','ant@gmail.com');
+INSERT INTO tarjeta(tar_numTarjeta,tar_expiracion,tar_duenio)
+		VALUES('148934872364','13/25','Antonio Castillo');
         
         
 CREATE TABLE IF NOT EXISTS agencias(
