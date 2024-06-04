@@ -70,9 +70,11 @@
     </div>
     
     <!--Imagen-->
-    <label for ="imagen">Imagen:</label>
-    <input type="file" id="imagen" name="veh_img" accept="image/jpeg, image/png/webp">
-    
+    <div class="contenedor">
+        <label for ="imagen">Imagen:</label>
+        <input type="file" id="imagen" name="veh_img" accept="image/jpeg, image/png/webp">
+    </div>
+
     <div class="contenedor ">
         <button type="submit" class="boton-primario-block"> Registrar</button>
     </div>
