@@ -52,7 +52,6 @@
           <div class="contenedor">
             <label>Disponibilidad:</label>
             <select class="flex"  id="opciones">
-              <option value="">-- Seleccione --</option>
               <option value="Compra">Disponible</option>
               <option value="Vende">No disponible</option>
             </select>

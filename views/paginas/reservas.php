@@ -5,12 +5,7 @@
 
    <section class="seccion">
       <form action="" class="formulario-Reservas contenedor">
-
-         <!-- <div class="formulario-Reservas_campo">
-            <label class="formulario-Reservas_label" for="estado"">Estado</label>
-            <input class="formulario-Reservas_input" type="option" id="estado" placeholder="Estado">
-         </div> -->
-
+         
          <div class="formulario-Reservas_campo">
             <label class="formulario-Reservas_label" for="estado"">Estado</label>
             <select class="formulario__combobox" id="selecionar_estado">
@@ -21,10 +16,6 @@
             </select>
          </div>
 
-         <!-- <div class="formulario-Reservas_campo">
-            <label class="formulario-Reservas_label" for="ciudad"">Ciudad</label>
-            <input class="formulario-Reservas_input" type="text" id="ciudad" placeholder="Ciudad">
-         </div> -->
 
          <div class="formulario-Reservas_campo">
             <label class="formulario-Reservas_label" for="ciudad"">Ciudad</label>
