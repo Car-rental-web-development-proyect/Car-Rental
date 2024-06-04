@@ -63,44 +63,44 @@
    <h3>¡Conoce todos nuestros vehiculos disponibles!</h3>
 
    <div class="contenedor cards-autos">
-      <?php for($i = 0; $i < 9; $i++) : ?>
+      <?php foreach($vehiculos as $vehiculo) : ?>
          <div class="card-auto">
-               <img src="./build/src/img/coches/vento.webp" alt="img del auto">
+               <img src="./build/src/img/coches/<?php echo $vehiculo->veh_img; ?>" alt="img del auto">
 
                <div class="card-info">
-                  <h4>Volkswagen Vento</h4>
-                  <p>Sedán Compacto, 2024</p>
-                  <p>Vehiculos disponibles </p>
+                  <h4> <?php echo $vehiculo->veh_modelo; ?> </h4>
+                  <p> <?php echo $vehiculo->veh_descripcion; ?></p>
+                  <p>Vehiculos disponibles: <?php echo $vehiculo->veh_disponibles; ?> </p>
                   <ul class="caracteristicas">
                      <li>
                            <img src="./build/src/img/asiento_icono.svg" alt="">
-                           <p>4 Pasajeros</p>
+                           <p> <?php echo $vehiculo->veh_pasajeros; ?> Pasajeros</p>
                      </li>
                      <li>
                            <img src="./build/src/img/maleta_icono.svg" alt="">
-                           <p>4 Maletas</p>
+                           <p><?php echo $vehiculo->veh_maletas; ?> Maletas</p>
                      </li>
                      <li>
                            <img src="./build/src/img/transmision_icono.svg" alt="">
-                           <p>Estandar</p>
+                           <p><?php echo $vehiculo->veh_manejo; ?></p>
                      </li>
                      <li>
                            <img src="./build/src/img/motor_icono.svg" alt="">
-                           <p>1.6L 4 cilindros</p>
+                           <p> <?php echo $vehiculo->veh_cilindro?></p>
                      </li>
                      <li>
                            <img src="./build/src/img/combustible_icono.svg" alt="">
-                           <p>Combustible</p>
+                           <p> <?php echo $vehiculo->veh_combustible; ?> </p>
                      </li>
                      <li>
                            <img src="./build/src/img/precio_icono.svg" alt="">
-                           <p>890</p>
+                           <p> <?php echo $vehiculo->veh_costodia ?> </p>
                      </li>
                   </ul>
                   <button class="boton-secundario-block">Reservar</button>
                </div> 
             </div><!-- .card-auto -->
-      <?php endfor; ?> 
+      <?php endforeach; ?> 
       </div>
    </section>
 </main>
