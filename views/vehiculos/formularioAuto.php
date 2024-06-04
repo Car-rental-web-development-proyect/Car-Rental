@@ -65,13 +65,13 @@
     
     <!--Usuario-->
     <div class="contenedor">
-    <label for="placa">Placa</label>
-    <input class="flex"  type="text" id="placa" name="placa" placeholder="Ingrese la placa del carro" value="">
+    <label for="costoDia">costo por dia</label>
+    <input class="flex"  type="text" id="costoDia" name="veh_costodia" placeholder="Ingrese el costo po rdia" maxlength="5" value="" >
     </div>
     
     <!--Imagen-->
     <label for ="imagen">Imagen:</label>
-    <input type="file" id="imagen" name="veh_img" accept="image/jpeg, image/png">
+    <input type="file" id="imagen" name="veh_img" accept="image/jpeg, image/png/webp">
     
     <div class="contenedor ">
         <button type="submit" class="boton-primario-block"> Registrar</button>
