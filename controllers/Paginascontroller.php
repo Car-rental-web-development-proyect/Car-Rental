@@ -8,10 +8,13 @@ use MVC\Router;
 class Paginascontroller {
     public static function index(Router $router){
 
+        $algunosVehiculos = Vehiculos::some(3);
+
         $inicio = True;
 
         $router->render('paginas/index', [
-            'inicio' => $inicio
+            'inicio' => $inicio,
+            'vehiculos' => $algunosVehiculos
         ]);
     }
     
@@ -35,14 +38,8 @@ class Paginascontroller {
     public static function condiciones(Router $router){
       $router->render('paginas/condiciones');
     }
-   
-    public static function vehiculo_vista(Router $router) {
-      $router->render('paginas/flota_vehiculos');
-    }
+
     public static function vehiculo(Router $router) {
-      $todosLosVehiculos = Vehiculos::mostrar();
-      $router->render('paginas/vehiculos', [
-        'vehiculos' => $todosLosVehiculos
-      ]);
+      $router->render('paginas/vehiculos', []);
     }
 }
