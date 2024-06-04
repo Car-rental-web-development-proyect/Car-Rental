@@ -1,6 +1,7 @@
 <?php
 function connDB() : mysqli {
-    $conn = new mysqli('localhost','root','luis1995','beecar');
+    
+    $conn = new mysqli('localhost','root','mk4ncast','beecar');
     if(!$conn){
         echo "Error: no se logro conectar DB";
         exit;
