@@ -964,3 +964,106 @@ ul{
       width: 100%;
    }
 }
+
+/** Agencias **/
+.no-webp .inicio-agencia {
+   background-image: url(../src/img/imagenBgAgencias.jpg);
+}
+
+.webp .inicio-agencia {
+   background-image: url(../src/img/imagenBgAgencias.webp);
+}
+
+.inicio-agencia{
+   background-image: url(../src/img/imagenBgAgencias.webp);
+   height: 10rem;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   filter: brightness(1);
+}
+
+.margin-zero {
+   margin:0 2rem 0 2rem;
+   padding: 2rem 0 0 0;
+   color: var(--secundario);
+}
+
+.mapa {
+   height: 80rem;
+   /**width: 100%;
+   **/
+   width: min(80%, 120rem);
+}
+
+.h4-naranja{
+   color: var(--primario);
+}
+.h4-amarillo{
+   color:var(--secundario);
+}
+
+/**Cobro**/
+
+.tarjeta {
+   width: 80vw;
+}
+
+.grid-formulario {
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.grid-cobro {
+   display: flex;
+   justify-content: flex-start;
+
+}
+
+.margin-p {
+   margin-left: 1rem;
+}
+
+.size-form {
+   width: 60rem;
+   margin: 0;
+   padding: 0;
+}
+
+.datos-personales {
+   width: 100%;
+}
+
+.bold {
+   font-weight: 700;
+}
+
+.datos-renta {
+   width: min(90%, 90rem);
+}
+
+.tarjeta {
+   width: 90rem ;
+}
+
+.contenedor-pago {
+   width: min(100%, 180rem);
+   margin: 0 auto;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-content: center;
+   justify-content: center;
+}
+
+.tarjeta-fildeset{ 
+   height: 50rem;
+}
+
+.formulario-datos {
+   background-color: var(--blanco);
+   margin: -2rem auto 0 auto;
+   width: 95%;
+   border-radius: .2rem;
+   padding: 5rem;
+}
