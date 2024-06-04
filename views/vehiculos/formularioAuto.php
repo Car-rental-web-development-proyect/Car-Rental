@@ -59,7 +59,7 @@
         <!--Disponibilidad-->
     <div class="contenedor">
     <label for="disponibilidad">Disponibilidad</label>
-    <input class="flex"  type="number" id="disponibilidad" name="veh_maletas" placeholder="Ingrese la cantidad disponibilidad" min="1" max="10" value="">
+    <input class="flex"  type="number" id="disponibilidad" name="veh_disponible" placeholder="Ingrese la cantidad disponibilidad" min="1" max="10" value="">
     </div>
     
     
