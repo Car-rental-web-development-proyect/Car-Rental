@@ -67,6 +67,16 @@ class ActiveRecord {
 
   }
 
+  // Muestra ALGUNOS los registros de la tabla 
+  public static function some($limit){
+    $query = "SELECT * FROM " . static::$tabla . " LIMIT " . $limit;
+
+    $resultado = self::consultarSQL($query);
+
+    return $resultado;
+
+  }
+
   public static function getErrores() { 
     return static::$errores;
   }

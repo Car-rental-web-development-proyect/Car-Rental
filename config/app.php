@@ -7,7 +7,7 @@ require 'funciones.php';
 //Conexion a DB 
 $db = connDB();
 
-use Model\ActiveRecord;
+   use Model\ActiveRecord;
 
 ActiveRecord::setDB($db); // Seteo a DB
 

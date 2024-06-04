@@ -14,36 +14,36 @@
 
     <div class="contenedor cards-autos">
 
-        <?php for($i = 0; $i < 3; $i++) : ?>
+        <?php foreach($vehiculos as $vehiculo) : ?>
             <div class="card-auto">
-                <img src="./build/src/img/coches/vento.webp" alt="img del auto">
+                <img src="./build/src/img/coches/<?php echo $vehiculo->veh_img?>" alt="img del auto">
 
                 <div class="card-info">
-                    <h4>Volkswagen Vento</h4>
-                    <p>Sedán Compacto, 2024</p>
+                    <h4> <?php echo $vehiculo->veh_modelo?> </h4>
+                    <p><?php echo $vehiculo->veh_descripcion?></p>
                     <p></p>
                     <ul class="caracteristicas">
                         <li>
                             <img class="icono" src="./build/src/img/asiento_icono.svg" alt="">
-                            <p>4 Pasajeros</p>
+                            <p><?php echo $vehiculo->veh_pasajeros?> Pasajeros</p>
                         </li>
                         <li>
                             <img class="icono" src="./build/src/img/maleta_icono.svg" alt="">
-                            <p>4 Maletas</p>
+                            <p><?php echo $vehiculo->veh_maletas?> Maletas</p>
                         </li>
                         <li>
                             <img class="icono" src="./build/src/img/transmision_icono.svg" alt="">
-                            <p>Estandar</p>
+                            <p><?php echo $vehiculo->veh_manejo?></p>
                         </li>
                         <li>
                             <img class="icono" class="icono" src="./build/src/img/motor_icono.svg" alt="">
-                            <p>1.6L 4 cilindros</p>
+                            <p><?php echo $vehiculo->veh_cilindro?></p>
                         </li>
                     </ul>
                     <button class="boton-secundario-block">Reservar</button>
                 </div> 
             </div><!-- .card-auto -->
-        <?php endfor; ?>    
+        <?php endforeach; ?>    
     </div>
     <a  href="/flota_vehiculos" class="flota_vehiculos contenedor">
       <input type="submit" class="flota_vehiculos__boton" value="Descubrir más">
