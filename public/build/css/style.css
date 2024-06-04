@@ -1388,7 +1388,16 @@ img { /* Antes .descuento-img */
  /**Cobro**/
 
  .tarjeta {
-   width: 80vw;
+   /* width: 80vw; */
+   display: contents;
+ }
+
+ @media (min-width:768px) {
+   .tarjeta {
+      display: flex;
+      flex-direction: column;
+      width: 80vw;
+   }
  }
 
  .grid-formulario {
@@ -1397,9 +1406,12 @@ img { /* Antes .descuento-img */
  }
 
  .grid-cobro {
-   display: flex;
+   background-color: var(--secundario);
    justify-content: flex-start;
-   
+   display: block;
+   width: 95%;
+   margin: 0 0 0 0;
+   display: none; 
  }
 
  .margin-p {
@@ -1425,7 +1437,8 @@ img { /* Antes .descuento-img */
  }
 
  .tarjeta {
-   width: 90rem ;
+   width: auto ;
+
  }
 
  .contenedor-pago {
@@ -1439,13 +1452,17 @@ img { /* Antes .descuento-img */
 }
 
 .tarjeta-fildeset{ 
-   height: 50rem;
+   margin-top: 5rem
 }
 
 .formulario-datos {
-   background-color: var(--blanco);
+   background-color: var(--secundario);
    margin: -2rem auto 0 auto;
-   width: 95%;
+   width: auto;
    border-radius: .2rem;
    padding: 5rem;
+}
+
+.padding-arriba{
+   padding: 0 1rem 1rem 1rem ;
 }

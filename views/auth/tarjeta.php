@@ -4,31 +4,28 @@
       <div class="tarjeta">
         <div class="datos-personales size-form">
             <div class="formulario-datos ">
-                <fieldset class="tarjeta-fildeset">
-                   <legend><h4>Tus Datos</h4></legend>
-                    <div class="formulario size-form">
+                   <h4>Tus Datos</h4>
+                    <div class="size-form">
                       
                       <div class="grid-cobro">
-                        <p class=""><span class="bold">Nombre:</span></p>
-                        <p class="margin-p"> Juan Hernandez</p>
+                        <p class="flex"><span class="bold">Nombre:</span> Juan Hernandez </p>
                       </div>
 
                       <div class="grid-cobro">
-                        <p class=""><span class="bold">Usuarios: </span></p>
-                        <p class="margin-p ">Juan H</p>
+                        <p class="flex"><span class="bold">Usuarios: </span> Juan H </p>
                       </div>
 
                       <div class="grid-cobro">
-                        <p class=""><span class="bold">telefono: </span></p>
-                        <p class="margin-p ">4772345678</p>
+                        <p class="flex"><span class="bold">telefono: </span> 4772345678</p>
                       </div>
 
                       <div class="grid-cobro">
-                        <p class=""><span class="bold">Correo: </span></p>
-                        <p class="margin-p ">example@gmail.com</p>
+                        <p class="flex"><span class="bold">Correo: </span>example@gmail.com</p>
                       </div>
                     </div>
-                  </fieldset>
+                      <div class="contenedor tarjeta flex-gap">
+                        <button type="submit" class="boton-primario-block  centrar-texto">Iniciar sesion</button>
+                      </div>
               </div>
           </div>
 
@@ -36,10 +33,10 @@
         <!--Formulario tarjeta-->
 
         <div class="tarjeta">
-          <form class="formulario" id="formulario" method="POST" action="login.html">
+          <form class="formulario padding-arriba" id="formulario" method="POST" action="login.html">
 
           
-            <fieldset>
+            <fieldset class="tarjeta-fildeset">
               <legend>Tarjeta</legend>
               <!--numero-->
               <div class="">
@@ -74,7 +71,7 @@
 
                 <div class="ccv" >
                   <label for="imputCVV">CVV</label>
-                  <input type="text" id="imputCVV" maxlength="3">
+                  <input type="password" id="imputCVV" maxlength="3">
                 </div>
               </div>
             <button type="submit" class="boton-primario-block">Enviar</button>
@@ -126,11 +123,11 @@
                   <p><span class="bold">Total:</span> $2600</p>
                   
                   
-              </div> 
+                </div> 
+            </div>
           </div>
         </div>
-      </div>
+    </div>
   </div>
-</div>
     
 </main>
