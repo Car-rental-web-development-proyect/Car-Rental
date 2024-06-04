@@ -1,21 +1,65 @@
 <fieldset>
     <legend>Automóvil</legend>
-    <!--Marca-->
-    <div class="contenedor">
-        <label for="marca">Marca</label>
-    <input class="flex"  type="text" id="marca" name="marca" placeholder="Ingrese la marca de su auto" value="">
-    </div>
-    
-    <!--Linea-->
-    <div class="contenedor">
-    <label for="linea">Linea</label>
-    <input class="flex"  type="text"id="linea" name="linea" placeholder="Ingrese la linea de su auto" value="">
-    </div>
-    
-    <!--Modelo-->
-    <div class="contenedor">
+
+<!--Modelo-->
+<div class="contenedor">
     <label for="modelo">Modelo</label>
-    <input class="flex"  type="text" id="modelo" name="modelo" placeholder="Ingrese el modelo del carro" value="">
+    <input class="flex"  type="text" id="modelo" name="veh_modelo" placeholder="Ingrese el modelo del carro" value="">
+    </div>
+
+    <!--Descripcion-->
+    <div class="contenedor">
+    <label for="descripcion">Descripcion</label>
+    <textarea class="flex"  id="descripcion" name="veh_descripcion"></textarea>            
+    </div>
+
+    <!--Motor-->
+    <div class="contenedor">
+    <label for="motor">Motor</label>
+    <input class="flex"  type="text" id="motor" name="veh_cilindro" placeholder="Ingrese caracteristicas de su motor" value="">
+    </div>
+
+    <!--Color-->
+    <div class="contenedor">
+    <label for="color">Color</label>
+    <input class="flex"  type="text" id="color" name="veh_color" placeholder="Ej. rojo" value="">
+    </div>
+
+
+    <!--Capacidad-->
+    <div class="contenedor">
+    <label for="capacidadPersonas">Capacidad pasajeros</label>
+    <input class="flex"  type="number" id="capacidadPersonas" name="veh_pasajeros" placeholder="Ingrese la cantidad de pasajeros" min="1" max="20" value="">
+    </div>
+
+    <!--Capacidad maletas-->
+    <div class="contenedor">
+    <label for="capacidadMaletas">Capacidad maletas</label>
+    <input class="flex"  type="number" id="capacidadMaletas" name="veh_maletas" placeholder="Ingrese la cantidad de maletas" min="1" max="20" value="">
+    </div>
+
+    <!--Manejo-->
+    <div class="contenedor">
+        <label>Manejo:</label>
+            <select class="flex"  id="manejo" name="veh_manejo">
+                <option >Estandar</option>
+                <option >Automatico</option>
+            </select>
+    </div>
+
+    <!--Combustible-->
+    <div class="contenedor">
+        <label>Combustible:</label>
+            <select class="flex"  id="combustible" name="veh_combustibles">
+                <option >Gasolina</option>
+                <option >Diesel</option>
+            </select>
+    </div>
+    
+        <!--Disponibilidad-->
+    <div class="contenedor">
+    <label for="disponibilidad">Disponibilidad</label>
+    <input class="flex"  type="number" id="disponibilidad" name="veh_maletas" placeholder="Ingrese la cantidad disponibilidad" min="1" max="10" value="">
     </div>
     
     
@@ -25,31 +69,11 @@
     <input class="flex"  type="text" id="placa" name="placa" placeholder="Ingrese la placa del carro" value="">
     </div>
     
+    <!--Imagen-->
+    <label for ="imagen">Imagen:</label>
+    <input type="file" id="imagen" name="veh_img" accept="image/jpeg, image/png">
     
-    <!--Correo-->
-    <div class="contenedor">
-    <label for="capacidad">Capacidad</label>
-    <input class="flex"  type="number" id="capacidad" name="capacidad" placeholder="Ingrese la placa del carro" min="1" max="20" value="">
-    </div>
-    
-
-    <!--Descripcion-->
-    <div class="contenedor">
-    <label for="descripcion">Descripcion</label>
-    <textarea class="flex"  id="descripcion"></textarea>            
-    </div>
-
-
-    <!--Disponibilidad-->
-    <div class="contenedor">
-    <label>Disponibilidad:</label>
-    <select class="flex"  id="opciones">
-        <option value="">-- Seleccione --</option>
-        <option value="Compra">Disponible</option>
-        <option value="Vende">No disponible</option>
-    </select>
-    </div>
     <div class="contenedor ">
-    <button type="submit" class="boton-primario-block"> Registrar</button>
+        <button type="submit" class="boton-primario-block"> Registrar</button>
     </div>
 </fieldset>
