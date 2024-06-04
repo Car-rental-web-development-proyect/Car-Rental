@@ -5,11 +5,13 @@ namespace Model;
 class Vehiculos extends ActiveRecord{
 
     protected static $tabla = 'vehiculos';
-    protected static $columnasDB = ['veh_id','veh_modelo','veh_color','veh_pasajeros','veh_maletas','veh_manejo','veh_combustible','veh_disponibles','veh_costodia','veh_img', 'veh_descripcion'];
+    protected static $columnasDB = ['veh_id','veh_modelo','veh_descripcion','veh_cilindro','veh_color','veh_pasajeros','veh_maletas','veh_manejo','veh_combustible','veh_disponibles','veh_costodia','veh_img'];
 
     //Columnas 
     public $veh_id;
     public $veh_modelo;
+    public $veh_descripcion;
+    public $veh_cilindro;
     public $veh_color;
     public $veh_pasajeros;
     public $veh_maletas;
@@ -18,11 +20,12 @@ class Vehiculos extends ActiveRecord{
     public $veh_disponibles;
     public $veh_costodia;
     public $veh_img;
-    public $veh_descripcion;
 
     public function __construct($args = []){
         $this->veh_id = $args['veh_id'] ?? null;
         $this->veh_modelo = $args['veh_modelo'] ?? '';
+        $this->veh_descripcion = $args['veh_descripcion'] ?? '';
+        $this->veh_cilindro = $args['veh_cilindro'] ?? '';
         $this->veh_color = $args['veh_color'] ?? '';
         $this->veh_pasajeros = $args['veh_pasajeros'] ?? '';
         $this->veh_maletas = $args['veh_maletas'] ?? '';
@@ -31,7 +34,6 @@ class Vehiculos extends ActiveRecord{
         $this->veh_disponibles = $args['veh_disponibles'] ?? '';
         $this->veh_costodia = $args['veh_costodia'] ?? '';
         $this->veh_img = $args['veh_img'] ?? '';
-        $this->veh_descripcion = $args['veh_descripcion'] ?? '';
     }
 
     public function Registrar(){

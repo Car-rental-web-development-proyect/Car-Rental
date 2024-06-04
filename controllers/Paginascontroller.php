@@ -38,8 +38,10 @@ class Paginascontroller {
     public static function condiciones(Router $router){
       $router->render('paginas/condiciones');
     }
-
+   
     public static function vehiculo(Router $router) {
-      $router->render('paginas/vehiculos', []);
+      $todos_los_vehiculos = Vehiculos::mostrar();
+      // debuguear($todos_los_vehiculos);
+      $router->render('/paginas/vehiculos', ['vehiculos' => $todos_los_vehiculos]);
     }
 }
