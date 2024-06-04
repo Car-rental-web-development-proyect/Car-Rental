@@ -1002,6 +1002,17 @@ ul{
    color:var(--secundario);
 }
 
+.ul-block {
+   
+}
+
+.grid-agencia {
+   display: flex;
+   flex-wrap: wrap;
+   align-content: space-between;
+   justify-content: space-evenly;
+}
+
 /**Cobro**/
 
 .tarjeta {
@@ -1066,3 +1077,4 @@ ul{
    border-radius: .2rem;
    padding: 5rem;
 }
+

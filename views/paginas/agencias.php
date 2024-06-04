@@ -15,15 +15,35 @@
    
     <iframe class="mapa" src="https://www.google.com/maps/d/embed?mid=19Jk2SwjyFo4-YyAnNA2suYBNRnsm7ms&ehbc=2E312F"></iframe>
   </main>
-    <div>
-      <h3 >Agencias y sucursales</h3>
-      <ul>
+  <h3 class="centrar-texto">Agencias y sucursales</h3>
+
+  <div class="grid-agencia grid-agencia">
+    <div >
+      <ul >
         <li><h4 class="h4-naranja">Guadalajara</h4></li>
         <li><h4 class="h4-amarillo">Guanajuato</h4></li>
         <li><h4 class="h4-naranja">Ciudada de Mexico</h4></li>
         <li><h4 class="h4-amarillo">Michoacan</h4></li>
       </ul>
     </div>  
+    <div>
+      <ul >
+        <li><h4 class="h4-naranja">Oaxaca</h4></li>
+        <li><h4 class="h4-amarillo">Monterrey</h4></li>
+        <li><h4 class="h4-naranja">Tijuana</h4></li>
+        <li><h4 class="h4-amarillo">Michoacan</h4></li>
+      </ul>
+    </div>  
+    <div>
+      <ul>
+        <li><h4 class="h4-naranja">San Luis potsoi</h4></li>
+        <li><h4 class="h4-amarillo">Sinaloa</h4></li>
+        <li><h4 class="h4-naranja">Cuahuila</h4></li>
+        <li><h4 class="h4-amarillo">Hermosillo</h4></li>
+      </ul>
+    </div>     
+  </div>
+
 
    
     
