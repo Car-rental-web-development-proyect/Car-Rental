@@ -98,14 +98,12 @@ p {
 }
 
 /* -------------------- NAV -----------------------*/
-
-
 .nav-fijo{
    position: fixed;
    z-index: 5;
    transition: 0.7s;
+   top: 0;
 }
-
 
 @media (min-width: 768px) {
    .barra {
@@ -146,7 +144,6 @@ p {
 
 
 /* ----------- SLIDER -------------- */
-
 
 .contenedor-slider {
    width: 100%;
@@ -362,7 +359,7 @@ p {
    border: 0;
 }
 
-.caracteristicas {
+/* .caracteristicas {
    display: flex;
    align-items: start;
    justify-content: center;
@@ -370,8 +367,26 @@ p {
    padding: 0;
    gap: 1rem;
    padding: 2rem 0 2rem 0;
+   flex-wrap: wrap;
 }
 
+@media (min-width: 980px) {
+   .caracteristicas {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+   .caracteristicas li {
+      flex-basis: (33.3% - 1rem);
+      margin-bottom: 1rem;
+      text-align: center;
+   }
+} */
+.caracteristicas {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+
+}
 .caracteristicas li {
    display: flex;
    flex-direction: column;
@@ -391,8 +406,30 @@ p {
    line-height: 2rem;
    font-size: 1.2rem;
 }
+.flota_vehiculos {
+   display: flex;
+   justify-content: center;
+}
+.flota_vehiculos__boton {
+   display: block; /* Para que en un dispositivo movil tome TODO el espacio disponible*/
+   font-family: var(--fuenteDecorativa);
+   background-color: #FF5B5B;
+   margin-top: 5rem;
+   height: 6rem;
+   width: 33%;
 
-/* === Contacto === */
+   border: none;
+   transition: 1s;
+}
+.flota_vehiculos__boton:hover {
+   background-color: #FA3939;
+   transform:scale(1.2);
+   z-index: 1;
+}
+
+/* ==================================================  */
+/*                   C O N T A C T O                   */
+/* ==================================================  */
 .contacto-bg {
    background-image: url(../src/img/contacto.webp);
    height: 60rem;
@@ -435,7 +472,9 @@ p {
 
 
 
-/* ===== reservas =====  */
+/* ==================================================  */
+/*                   R E S E R V A S                   */
+/* ==================================================  */
 .reservas-bg img {
    margin: 0 auto;
 } 
@@ -469,13 +508,16 @@ p {
    box-shadow: 0px 3px 7px 0px gray;
    padding: 3rem 0;
 
-   @media (min-width: 800px) {
-       display: flex;
-       justify-content: space-between;
-       max-width: 150rem;
-       padding: 0;
+}
+@media (min-width: 1200px) {
+   .formulario-Reservas {
+      display: flex;
+      justify-content: space-between;
+      max-width: 150rem;
+      padding: 0;
    }
 }
+
 .formulario-Reservas_campo {
    padding: 1rem 2rem;
    display: flex;
@@ -514,10 +556,12 @@ p {
    background-image: radial-gradient( cicle, rgb(255,56,92) 0%, red) ; /* es un gradiant circular */
    color: black;
    font-weight: bold;
-   padding: 0 2rem 0 2rem;
+   /* padding: 0 2rem 0 2rem; */
+   padding: 0 2rem;
    background-color:  #f8c471;
    text-transform: uppercase;
    font-size: 1.5rem;
+   margin-top: 0.8rem;
 }
 
 .formulario__combobox {
@@ -624,7 +668,7 @@ img { /* Antes .descuento-img */
 
 
 /** =======================================================  **/
-/**                      O f e r t a s                       **/
+/**                      O F E R T A S                       **/
 /** =======================================================  **/
 .card {
    display: flex;
@@ -647,6 +691,7 @@ img { /* Antes .descuento-img */
    text-align: center;
    padding: 2rem;
    width: 100%;
+   flex-direction: column;
 }
 .card__body h4 {
    font-size: 2rem;
@@ -761,49 +806,134 @@ img { /* Antes .descuento-img */
    transform: rotate(-4deg) scale(1.2);
 }
 
-:root {
-   --fuenteHeading: 'Noto Sans';
-   --fuenteDecorativa: 'Poetsen One';
-   
-   --primario: #FF3D00; /* Naranja */
-   --secundario: #FFBC11; /* Amarillo */
-   --azulClaro: #0A837F; /* Azul agua claro */
-   --azulFuerte: #076461; /* Naranja */
-   --verdeFuerte: #002C2B; /* Naranja */
-   --blanco: #ffffff;
-   
-   --delgada: 2.8rem;
-   --regular : 3.2rem;
-   --bold: 4rem;
-   --black: 4.8rem;
+
+
+/*------INICIO Condiciones de Renta-----------*/
+
+
+
+.contenedor-con{
+   width: 100%;
+   padding-right: var(--bs-gutter-x, .75rem);
+   padding-left: var(--bs-gutter-x, .75rem);
+   margin-right: auto;
+   margin-left: auto;
 }
 
-html {
-   box-sizing: border-box;
-   font-size: 62.2%;
-}
-
-*,*::before, *::after {
-   box-sizing: inherit; /* Heredamos elemento padre de border-box*/
-}
-
-body {
-   font-family: var(--fuenteHeading);
-   font-size: 1.6rem;
-   line-height: 2;
-}
-
-/* === Globales === */
-.contenedor {
-   width: min(90%, 120rem);
-   margin: 0 auto;
-}
-
-.centrar-texto {
+.h2-condiciones{
+   color: white;
+   font-size: 75px;
+}  
+.page-title-area{
+   position: relative;
+   z-index: 3;
+   padding-top: 100px;
+   padding-bottom: 100px;
    text-align: center;
 }
-a {
-   text-decoration: none;
+.img-back{
+   background: url(./../src/img/volante-coche.webp);
+   background-position: 50%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+}
+
+@media (max-width: 768px) {
+   .page-title-area{
+       height: 430px;
+       
+   }
+   .h2-condiciones {
+      font-size: 50px;
+  }
+
+}
+
+@media (max-width: 480px) {
+   .h2-condiciones {
+       font-size: 30px;
+   }
+}
+
+.d-table-cell{
+   vertical-align: middle;
+}
+
+.d-table-cell{
+   display: table-cell !important;
+}
+.d-table{
+   display: table !important;
+}
+.d-table{   
+   width: 100%;;
+   height: 100%;
+}
+
+
+.privacy{
+   padding: 3vw 15vw;;
+}
+
+.p-titulo .titulo{
+   font-size: 40px;
+   font-weight: 400;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: normal;
+   letter-spacing: normal;
+   text-align: center;
+   color: #282828;
+   line-height: 1.12;
+   text-transform: none;
+}
+
+.pb-2{
+   padding-bottom: .5rem !important;
+}
+
+.condiciones{
+   margin-bottom: 1rem !important;
+}
+
+.condiciones-p{
+   margin-bottom: 1rem !important;
+}
+
+.sub-condiciones{
+   padding-left: 50px;
+}
+
+.es-letras{
+   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+   .p-titulo .titulo{
+      font-size: 30px;
+   }
+   .condiciones{
+      font-size:18px;
+   }
+   .condiciones-p{
+      font-size:18px;
+   }
+}
+
+@media (max-width: 480px) {
+
+   .p-titulo h1.titulo{
+      font-size: 25px;
+   }
+
+   .condiciones{
+      font-size:15px;
+   }
+   .condiciones-p{
+      font-size:15px;
+   }
 }
 
 ul{
@@ -813,580 +943,249 @@ ul{
    font-size: 2rem;
 }
 
-h1, h2, h3, h4 {
-   font-family: var(--fuenteHeading);
-   line-height: 1.2;
-}
 
-h1 {
-   font-size: 6.8rem;
-}
-
-h2 {
-   font-size: 4rem;
-}
-
-h3 {
-   font-size: 3.2rem;
-}
-
-h4 {
-   font-size: 2.8rem;
-}
-
-img {
-   width: 100%;
-}
-
-p {
-   font-size: 2rem;
-}
-
-.header__texto {
-   text-align: center;
-   color: var(--blanco);
-   margin-top: 5rem;
-   font-family: var(--fuenteDecorativa);
-}
-
-@media (min-width: 768px) {
-   .header__texto {
-      margin-top: 15rem; 
-   }
-}
-.bg {
-   background-color: var(--secundario);
-   width: 100%;
-}
-
-/* Barra de navegacion */
-@media (min-width: 768px) {
-   .barra {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-   }
-}
-.barra {
-   padding-top: 1rem;
-}
-
-.logo {
-   color: var(--verdeFuerte);
-}
-.logo__nombre {
-   text-align: center;
-   font-weight: normal;
-}
-.logo__bold  {
-   font-weight: bold;
-}
-
-
-@media (min-width: 768px) {
-   .navegacion {
-      display: flex;
-      gap: 2rem;
-   }
-}
-
-.navegacion__enlace {
-   display: block;
-   color: var(--verdeFuerte);
-   text-align: center;
-   /* padding-top: 3rem; */
-}
-
-/* ----------- SLIDER -------------- */
-
-
-.contenedor-slider {
-   width: 100%;
-   height: 70rem;
-   display: none;
-}
-
-.inicio {
-   display: block;
-}
-
-.slider {
-   margin: auto;
-   position: relative;
-   height: 100%;
-   overflow: hidden;
-}
-
-.list {
-   position: absolute;
-   display: flex;
-   width: max-content;
-   height: 100%;
-   transition: 1s;
-}
-
-.item {
-   height: 100%;
-   position: relative;
-
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-
-   display: flex;
-   align-items: center;
-}
-
-.shadowbox {
+.contenedor-transparent{
    width: 100%;
    height: 100%;
    background-color: rgba(0, 0, 0, 0.4);
-
-   display: flex;
-   align-items: center;
 }
 
-.info {
-   color: white;
-   width: 60%;
 
-   margin: 0 auto;
-}
+/*------FIN Condiciones de Renta-----------*/
 
-@media(min-width: 860px) {
-   .info {
-      position: absolute;
-      
-      width: 30%;
-      top: 15rem;
-      left: 18rem;
-      color: white;
-   }
 
-   .item {
-      background-position: left;
-   }
-}
 
-.info button {
-   margin: 0;
-   color: white;
+
+.card__btn {
+   display: block; /* Para que en un dispositivo movil tome TODO el espacio disponible*/
    font-family: var(--fuenteHeading);
-   font-weight: bold;
-   border-width: 0;
-}
-
-.buttons {
-   position: absolute;
-   top: 45%;
-   left: 5%;
-   width: 90%;
-   display: flex;
-   justify-content: space-between;
-}
-
-.buttons button {
-   width: 5rem;
-   height: 50px;
-   border-radius: 50%;
-   background-color: rgba(255, 188, 17, 0.6);
-   color: white;
-   border: none;
-   font-family: monospace;
-   font-weight: bold;
-   cursor: pointer;
-}
-
-.dots {
-   position: absolute;
-   bottom: 1rem;
-   color: white;
-   left: 0;
-   width: 100%;
-   margin: 0;
-   padding: 0;
-   display: flex;
-   justify-content: center;
-}
-
-.dots li {
-   list-style: none;
-   width: 10px;
-   height: 10px;
-   background-color: white;
-   margin: 20px;
-   border-radius: 20px;
-   transition: 1s;
-   cursor: pointer;
-}
-.dots li.active {
-   width: 30px;
-}
-
-.item:nth-child(1) { background-image: url('../src/img/slider1.webp');}
-.item:nth-child(2) { background-image: url('../src/img/slider2.webp');}
-.item:nth-child(3) { background-image: url('../src/img/slider3.webp');}
-.item:nth-child(4) { background-image: url('../src/img/slider4.webp'); background-position: top;}
-
-/* === Contenido Principal === */
-
-/* ------------------- QUIENES SOMOS ------------------------------- */
-@media(min-width: 860px) {
-   .quienes-somos {
-      display: flex;
-      gap: 10rem;
-   }
-   .quienessomos_imagen {
-      display: flex;
-      align-items: center;
-   }
-   .quienessomos_info {
-      width: 70%;
-   }
-   
-}
-
-.quienes-somos {
-   padding: 5rem 0 5rem 0;
-}
-.quienessomos_imagen {
-   width: 100%;
-}
-.quienessomos_info {
-   text-align: justify;
-}
-
-/* ------------------- SLIDER DE COCHES -------------------------- */
-
-.contenedor-flota {
-   background-color: #e0e0e0;
-   padding: 5rem 0 10rem 0;
-}
-.contenedor-flota h3 {
+   color: var(--blanco);
+   background-color: #FFD960;
    text-align: center;
-}
-
-@media(min-width: 860px) {
-   .cards-autos {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-   }
-}
-@media(min-width: 1200px) {
-   .cards-autos {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-   }
-}
-
-.cards-autos {
-   display: grid;
-   gap: 2rem;
-}
-
-.card-auto {
-   background-color: white;
-   -webkit-box-shadow: 15px 17px 24px -8px rgba(0,0,0,0.41);
-   -moz-box-shadow: 15px 17px 24px -8px rgba(0,0,0,0.41);
-   box-shadow: 15px 17px 24px -8px rgba(0,0,0,0.41);
-
-}
-
-.card-info {
-   width: 80%;
-   margin: 0 auto;
-   padding: 3rem 0 2rem 0;
-   
-   font-family: var(--fuenteHeading);
-}
-.card-info h4 {
-   font-size: 2.4rem;
-}
-.card-info h4 {
-   margin: 0;
-}
-.card-info button {
-   width: 100%;
-   border: 0;
-}
-
-.caracteristicas {
-   display: flex;
-   align-items: start;
-   justify-content: center;
-   list-style: none;
-   padding: 0;
-   gap: 1rem;
-   padding: 2rem 0 2rem 0;
-}
-
-.caracteristicas li {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   text-align: center;
-   height: 100%;
-   font-size: 1.2rem;
-}
-
-.caracteristicas img {
-   height: 3rem;
-}
-
-.caracteristicas p {
-   margin: 0.5rem 0 0 0;
-}
-
-/* === Contacto === */
-.contacto-bg {
-   background-image: url(../src/img/contacto.webp);
-   height: 60rem;
-   background-size: cover;
-   background-repeat: no-repeat;
-   
-}
-
-.formulario {
-   background-color: var(--blanco);
-   margin: -5rem auto 0 auto;
-   width: 95%;
-   border-radius: .2rem;
-   padding: 5rem;
-}
-
-.campo { /* Bloque */
-   display: flex;
-   margin-bottom: 3.5rem;
-}
-.campo__label { /* BLOQUE: campo | ELEMENTO: __label */
-   flex: 0 0 9rem; /* NO se hace grande, NO se hace pequeño, pero tiene 90pix de BASE*/
-   text-align: right;
-   padding-right: 2rem;
-}
-.campo__field {
-   flex: 1;
-   border: 1px solid #D3D3D3; /* color gris */
-}
-.campo__field--textarea {
-   height: 20rem;
-}
-
-/** footer **/
-.footer {
-   background-color: var(--secundario);
-   padding-bottom: 3rem;
-   margin-top: 4rem;
-}
-
-
-
-/* ===== reservas =====  */
-.reservas-bg {
-   
-}
-
-@media (min-width: 800px) {
-   .formulario-Reservas {
-      display: flex;
-      justify-content: space-between;
-      max-width: 150rem;
-      padding: 0;
-   }
-}
-
-.formulario-Reservas {
-   margin: 5rem auto 2rem auto;
-   /* background-color: var(--primario); */
-   background-color:  #e5e7e9 ;
-   border-radius: 5rem;
-   box-shadow: 0px 3px 7px 0px gray;
-   padding: 3rem 0;
-
-}
-.formulario-Reservas_campo {
-   padding: 1rem 2rem;
-   display: flex;
-   flex-direction: column;
-}
-@media (min-width: 800px) {
-   .formulario-Reservas_campo:nth-child(1) {
-      padding-left: 5rem;
-   }
-}
-
-.formulario-Reservas_campo:hover {
-   /* background-color: #F0F0F0; */
-   /* background-color:  #f4d03f ; */
-   background-color:  #d0d3d4 ;
-   border-radius: 5rem;
-   box-shadow: 0px 6px 20px rgb(0 0 0 / 40%); /* horizontal | 6px arriba-abajo y rgb para transparencia*/
-}
-
-.formulario-Reservas_label {
-   font-size: 1.2rem;
+   padding: 1rem 3rem 1rem 3rem;
+   font-size: 1.8rem;
+   text-transform: uppercase;  /* Mayusculas*/
    font-weight: bold;
-   text-align: center;
-}
+   margin-bottom: 2rem;
 
-.formulario-Reservas_input {
-   border: none;
-   width: 100%;
-   color: gray;
-}
-
-/* boton  */
-.formulario-Reservas_submit {
-   display: block; /* Para tomar todo el espacio que tenga disponible */
-   height: 4rem;
-   border: none;
-   border-radius: 2rem;
-   /* background-image: radial-gradient( cicle, lighten(var(--azulFuerte,5%) 0%, var(--azulFuerte 100%))) ; es un gradiant circular */
-   background-image: radial-gradient( cicle, rgb(255,56,92) 0%, red) ; /* es un gradiant circular */
-   color: black;
-   font-weight: bold;
-   padding: 0 2rem 0 2rem;
-   background-color:  #f8c471;
-   text-transform: uppercase;
-   font-size: 1.5rem;
-}
-
-/* Grid para imagen de promocion y texto */
-@media (min-width: 800px) {
-   .detalles-promocion {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      column-gap: 2rem;
-      padding-top: 4rem;
-   }
-   .descuento-img {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
-   }
-   .descuento-texto {
-      grid-column: 2 / 3;
-      grid-row: 1 / 2;
-   }
-}
-
-/* @media (min-width: 468px) {
-    .detalles-promocion{
-      grid-template-columns: 2fr 1fr;
-    }
-} */
-
-img { /* Antes .descuento-img */
-   width: 100%;
-   display: block;
-   height: auto;
-}
-.descuento-texto {
-   margin-top: -2.9rem;
-}
-.descuento-texto_parrafo{
-   font-weight: bold;
-}
-
-
-/* Seccion de por que rentar con nosotros */
-.comprar {
-   margin-top: 2rem;
-   padding: .02rem;
-   width: min(80%, 180rem);
-   margin: 0 auto;
-   
-}
-.comprar_titulo {
-   text-align: center;
-   font-family: var(--fuenteDecorativa);
-   text-transform: uppercase;
-   margin-top: 10rem;
-   margin-bottom: 5rem;
-}
-.bloques {
-   display: grid;
-   grid-template-columns: repeat(1, 1fr);
-   column-gap: 5rem;
-}
-@media (min-width: 468px) {
-   .bloques {
-      grid-template-columns: repeat(2, 1fr);
-   } 
-}
-
-@media (min-width: 800px) {
-   .bloques {
-      grid-template-columns: repeat(4, 1fr);
-   }
-}
-.bloque {
-   text-align: center;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
    transition: .8s;
-   padding: .9rem 1rem;
-   margin-bottom: 3rem;
-   background: #F0F0F0;
-   box-shadow: 0 0 2rem .2rem rgba(0, 0, 0, .2);
+   /* Para los botones de tipo submit: 
+       Ademas del pointer:*/
+   border: none;
 }
-.bloque__img {
-   max-width: 50%;
-   margin: 0 auto;
-   padding-top: 1rem;
-}
-.bloque:hover {
-   background-color: #FFC940;
+.card__btn:hover {
+   background-color: var(--secundario);
    transform:scale(1.2);
    z-index: 2;
 }
-.bloque h3 {
-   font-size: 2.5rem;
+
+/** =======================================================  **/
+/**        C O N D I C I O N E S   D E  R E N T A            **/
+/** =======================================================  **/
+contenedor-con{
+   width: 100%;
+   padding-right: var(--bs-gutter-x, .75rem);
+   padding-left: var(--bs-gutter-x, .75rem);
+   margin-right: auto;
+   margin-left: auto;
 }
-.bloque img {
-   width: 30%;
+
+.h2-condiciones{
+   color: white;
+   font-size: 75px;
+}  
+.page-title-area{
+   position: relative;
+   z-index: 3;
+   padding-top: 100px;
+   padding-bottom: 100px;
+   text-align: center;
+}
+.img-back{
+   background: url(./../src/img/volante-coche.webp);
+   background-position: 50%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+}
+
+@media (max-width: 768px) {
+   .page-title-area{
+       height: 430px;
+       
+   }
+   .h2-condiciones {
+      font-size: 50px;
+  }
+
+}
+
+@media (max-width: 480px) {
+   .h2-condiciones {
+       font-size: 30px;
+   }
+}
+
+.d-table-cell{
+   vertical-align: middle;
+}
+
+.d-table-cell{
+   display: table-cell !important;
+}
+.d-table{
+   display: table !important;
+}
+.d-table{   
+   width: 100%;;
+   height: 100%;
+}
+
+
+.privacy{
+   padding: 3vw 15vw;;
+}
+
+.p-titulo .titulo{
+   font-size: 40px;
+   font-weight: 400;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: normal;
+   letter-spacing: normal;
+   text-align: center;
+   color: #282828;
+   line-height: 1.12;
+   text-transform: none;
+}
+
+.pb-2{
+   padding-bottom: .5rem !important;
+}
+
+.condiciones{
+   margin-bottom: 1rem !important;
+}
+
+.condiciones-p{
+   margin-bottom: 1rem !important;
+}
+
+.sub-condiciones{
+   padding-left: 50px;
+}
+
+.es-letras{
+   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+   .p-titulo .titulo{
+      font-size: 30px;
+   }
+   .condiciones{
+      font-size:18px;
+   }
+   .condiciones-p{
+      font-size:18px;
+   }
+}
+
+@media (max-width: 480px) {
+
+   .p-titulo h1.titulo{
+      font-size: 25px;
+   }
+
+   .condiciones{
+      font-size:15px;
+   }
+   .condiciones-p{
+      font-size:15px;
+   }
+}
+
+ul{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   font-size: 2rem;
+}
+
+/** =======================================================  **/
+/**               V E H I C U L O S                          **/
+/** =======================================================  **/
+.vistaVehiculos {
+   padding: 0 0 5rem 0;
+}
+.form_vehiculos {
+   margin: 5rem auto !important; 
+   margin: 0 auto !important; 
+   padding: 0 !important;
+}
+@media (min-width: 1200px) {
+   .form-fijo {
+      position: fixed;
+      z-index: 1;
+      transition: .2s;
+      top: 9.2rem;
+      width: 100%;
+   }
 }
 
 /** Agencias **/
 .no-webp .inicio-agencia {
    background-image: url(../src/img/imagenBgAgencias.jpg);
- }
- 
- .webp .inicio-agencia {
+}
+
+.webp .inicio-agencia {
    background-image: url(../src/img/imagenBgAgencias.webp);
- }
- 
- .inicio-agencia{
+}
+
+.inicio-agencia{
    background-image: url(../src/img/imagenBgAgencias.webp);
    height: 10rem;
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center center;
    filter: brightness(1);
- }
+}
 
- .margin-zero {
+.margin-zero {
    margin:0 2rem 0 2rem;
    padding: 2rem 0 0 0;
    color: var(--secundario);
- }
+}
 
- .mapa {
+.mapa {
    height: 80rem;
    /**width: 100%;
    **/
    width: min(80%, 120rem);
- }
+}
 
- .h4-naranja{
+.h4-naranja{
    color: var(--primario);
- }
- .h4-amarillo{
+}
+.h4-amarillo{
    color:var(--secundario);
- }
+}
 
- /**Cobro**/
 
+
+.grid-agencia {
+   display: flex;
+   flex-wrap: wrap;
+   align-content: space-between;
+   justify-content: space-evenly;
+}
+
+/**Cobro**/
+
+.tarjeta {
+   width: 80vw;
+}
  .tarjeta {
    /* width: 80vw; */
    display: contents;
@@ -1400,13 +1199,15 @@ img { /* Antes .descuento-img */
    }
  }
 
- .grid-formulario {
+.grid-formulario {
    display: flex;
    justify-content: space-evenly;
- }
+}
 
  .grid-cobro {
    background-color: var(--secundario);
+.grid-cobro {
+   display: flex;
    justify-content: flex-start;
    display: block;
    width: 95%;
@@ -1414,34 +1215,39 @@ img { /* Antes .descuento-img */
    display: none; 
  }
 
- .margin-p {
-   margin-left: 1rem;
- }
+}
 
- .size-form {
+.margin-p {
+   margin-left: 1rem;
+}
+
+.size-form {
    width: 60rem;
    margin: 0;
    padding: 0;
- }
+}
 
- .datos-personales {
+.datos-personales {
    width: 100%;
- }
+}
 
- .bold {
+.bold {
    font-weight: 700;
- }
+}
 
- .datos-renta {
+.datos-renta {
    width: min(90%, 90rem);
- }
+}
 
  .tarjeta {
    width: auto ;
 
  }
+.tarjeta {
+   width: 90rem ;
+}
 
- .contenedor-pago {
+.contenedor-pago {
    width: min(100%, 180rem);
    margin: 0 auto;
    display: flex;
@@ -1462,6 +1268,8 @@ img { /* Antes .descuento-img */
    border-radius: .2rem;
    padding: 5rem;
 }
+
+
 
 .padding-arriba{
    padding: 0 1rem 1rem 1rem ;

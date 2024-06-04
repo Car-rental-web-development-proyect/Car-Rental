@@ -5,9 +5,11 @@ let prev = document.getElementById('prev')
 let next = document.getElementById('next')
 
 let barra = document.querySelector('.nav')
+let form_fijo = document.querySelector('.section')
 
 window.addEventListener('scroll', () => {
     barra.classList.toggle('nav-fijo', window.scrollY>0)
+    form_fijo.classList.toggle('form-fijo', window.scrollY>0)
 })
 
 let active = 0

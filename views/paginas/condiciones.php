@@ -1,13 +1,15 @@
 <main class="">
- <div class="page-title-area img-back">
-  <div class="d-table">
-    <div class="d-table-cell">
-      <div class="contenedor-con">
-        <h2 class= "h2-condiciones">Condiciones de renta</h2>
+<div class="page-title-area img-back">
+  <div class="contenedor-transparent">
+    <div class="d-table">
+      <div class="d-table-cell">
+        <div class="contenedor-con">
+          <h2 class= "h2-condiciones">Condiciones de renta</h2>
+        </div>
       </div>
     </div>
   </div>  
- </div> 
+</div>
 
  <div class="privacy p-titulo">
   <h1 class="titulo pb-2">Requisitos para rentar un automovil con Beecar México</h1>

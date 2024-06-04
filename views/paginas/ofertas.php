@@ -13,6 +13,7 @@
          <img class="card__img" src="build/src/img/card1.webp" alt="imagen-card-1">
          <div class="card__body">
             <h4>¡Ahorra más en tu próxima renta de auto! Y disfruta más en tus vacaciones en familia</h4>
+            <input class = "card__btn" type="submit" value="Leer más" class="boton">
          </div>
       </div> <!-- .card -->
 
@@ -20,6 +21,7 @@
          <img class="card__img" src="build/src/img/card2.webp" alt="imagen-card-1">
          <div class="card__body">
             <h4>¡Viaja cómodamente sin romper el banco!</h4>
+            <input class = "card__btn" type="submit" value="Leer más" class="boton">
          </div>
       </div> <!-- .card -->
       
@@ -28,6 +30,7 @@
          <img class="card__img" src="build/src/img/card3.webp" alt="imagen-card-1">
          <div class="card__body">
             <h4>¡Grandes promociones en alquiler de autos esta temporada!</h4>
+            <input class = "card__btn" type="submit" value="Leer más" class="boton">
          </div>
       </div> <!-- .card -->
 

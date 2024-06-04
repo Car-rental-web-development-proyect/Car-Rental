@@ -32,8 +32,8 @@ class Usuarioscontroller {
         ]);
     }
 
-    public static function registrarAuto(Router $router){
-        $router->render('auth/registrarAuto');
+    public static function admin(Router $router){
+        $router->render('auth/admin');
     }
 
     public static function tarjeta(Router $router){

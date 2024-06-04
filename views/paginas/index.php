@@ -14,92 +14,40 @@
 
     <div class="contenedor cards-autos">
 
-        <div class="card-auto">
-            <img src="./build/src/img/coches/vento.webp" alt="img del auto">
+        <?php for($i = 0; $i < 3; $i++) : ?>
+            <div class="card-auto">
+                <img src="./build/src/img/coches/vento.webp" alt="img del auto">
 
-            <div class="card-info">
-                <h4>Volkswagen Vento</h4>
-                <p>Sedán Compacto, 2024</p>
-                <p></p>
-                <ul class="caracteristicas">
-                    <li>
-                        <img src="./build/src/img/asiento_icono.svg" alt="">
-                        <p>4 Pasajeros</p>
-                    </li>
-                    <li>
-                        <img src="./build/src/img/maleta_icono.svg" alt="">
-                        <p>4 Maletas</p>
-                    </li>
-                    <li>
-                        <img src="./build/src/img/transmision_icono.svg" alt="">
-                        <p>Estandar</p>
-                    </li>
-                    <li>
-                        <img src="./build/src/img/motor_icono.svg" alt="">
-                        <p>1.6L 4 cilindros</p>
-                    </li>
-                </ul>
-                <button class="boton-secundario-block">Reservar</button>
-            </div> 
-        </div><!-- .card-auto -->
-        <div class="card-auto">
-            <img src="./build/src/img/coches/vento.webp" alt="img del auto">
-
-            <div class="card-info">
-                <h4>Volkswagen Vento</h4>
-                <p>Sedán Compacto, 2024</p>
-                <p></p>
-                <ul class="caracteristicas">
-                    <li>
-                        <img src="./build/src/img/asiento_icono.svg" alt="">
-                        <p>4 Pasajeros</p>
-                    </li>
-                    <li>
-                        <img src="./build/src/img/maleta_icono.svg" alt="">
-                        <p>4 Maletas</p>
-                    </li>
-                    <li>
-                        <img src="./build/src/img/transmision_icono.svg" alt="">
-                        <p>Estandar</p>
-                    </li>
-                    <li>
-                        <img src="./build/src/img/motor_icono.svg" alt="">
-                        <p>1.6L 4 cilindros</p>
-                    </li>
-                </ul>
-                <button class="boton-secundario-block">Reservar</button>
-            </div> 
-        </div><!-- .card-auto -->
-        <div class="card-auto">
-            <img src="./build/src/img/coches/vento.webp" alt="img del auto">
-
-            <div class="card-info">
-                <h4>Volkswagen Vento</h4>
-                <p>Sedán Compacto, 2024</p>
-                <p></p>
-                <ul class="caracteristicas">
-                    <li>
-                        <img src="./build/src/img/asiento_icono.svg" alt="">
-                        <p>4 Pasajeros</p>
-                    </li>
-                    <li>
-                        <img src="./build/src/img/maleta_icono.svg" alt="">
-                        <p>4 Maletas</p>
-                    </li>
-                    <li>
-                        <img src="./build/src/img/transmision_icono.svg" alt="">
-                        <p>Estandar</p>
-                    </li>
-                    <li>
-                        <img src="./build/src/img/motor_icono.svg" alt="">
-                        <p>1.6L 4 cilindros</p>
-                    </li>
-                </ul>
-                <button class="boton-secundario-block">Reservar</button>
-            </div> 
-        </div><!-- .card-auto -->
-
+                <div class="card-info">
+                    <h4>Volkswagen Vento</h4>
+                    <p>Sedán Compacto, 2024</p>
+                    <p></p>
+                    <ul class="caracteristicas">
+                        <li>
+                            <img class="icono" src="./build/src/img/asiento_icono.svg" alt="">
+                            <p>4 Pasajeros</p>
+                        </li>
+                        <li>
+                            <img class="icono" src="./build/src/img/maleta_icono.svg" alt="">
+                            <p>4 Maletas</p>
+                        </li>
+                        <li>
+                            <img class="icono" src="./build/src/img/transmision_icono.svg" alt="">
+                            <p>Estandar</p>
+                        </li>
+                        <li>
+                            <img class="icono" class="icono" src="./build/src/img/motor_icono.svg" alt="">
+                            <p>1.6L 4 cilindros</p>
+                        </li>
+                    </ul>
+                    <button class="boton-secundario-block">Reservar</button>
+                </div> 
+            </div><!-- .card-auto -->
+        <?php endfor; ?>    
     </div>
+    <a  href="/flota_vehiculos" class="flota_vehiculos contenedor">
+      <input type="submit" class="flota_vehiculos__boton" value="Descubrir más">
+    </a>
 </section>
 
 <section class="sobrenosotros contenedor">
