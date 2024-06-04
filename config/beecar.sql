@@ -50,10 +50,9 @@ INSERT INTO vehiculos(veh_modelo, veh_descripcion, veh_cilindro, veh_color,veh_p
                     ('Chevrolet Equinox', 'Hatchback, 2024','1.5L 4 Cilindros','Blanco','5','4','Automático','Gasolina','7','750','Chevrolet-Equinox.webp'),
                     ('Mazda CX-5', 'CUPE, 2024','1.6L 4 Cilindros','Rojo','5','3','Automático','Gasolina','6','800','Mazda-CX-5.webp'),
                     ('Volkswagen Tiguan', 'Hatchback, 2024','2.0L 4 Cilindros','Rojo','5','3','Automático','Gasolina','7','850','Volkswagen-Tiguan.webp'),
-                    ('Ford Ranger', 'Pickup, 2023','2.0L 4 Cilindros','Rojo','4','1','Automático','Diesel','8','1200','Frod-Ranger_1.webp'),
+                    ('Ford Ranger', 'Pickup, 2023','2.0L 4 Cilindros','Rojo','4','1','Automático','Diesel','8','1200','Ford-Ranger_1.webp'),
                     ('Ford Explorer', 'Pickup, 2022','2.3L 6 Cilindros','Rojo','5','4','Automático','Diesel','9','950','Ford-Explorer.webp'),
-                    ('Ford Transist', 'SUV, 2024','2.0L 6 Cilindros','Blanco','15','6','Estándar','Diesel','9','1500','Frod-Transit.webp');
-
+                    ('Ford Transist', 'SUV, 2024','2.0L 6 Cilindros','Blanco','15','6','Estándar','Diesel','9','1500','Ford-Transit.webp');
 CREATE TABLE IF NOT EXISTS tarjeta(
 	tar_id INT NOT NULL AUTO_INCREMENT,
 	tar_numTarjeta VARCHAR(100) NOT NULL,
