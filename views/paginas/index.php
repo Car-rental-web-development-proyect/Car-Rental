@@ -37,7 +37,7 @@
                         </li>
                         <li>
                             <img class="icono" class="icono" src="./build/src/img/motor_icono.svg" alt="">
-                            <p><?php echo $vehiculo->veh_cilindro?> cilindros</p>
+                            <p><?php echo $vehiculo->veh_cilindro?></p>
                         </li>
                     </ul>
                     <button class="boton-secundario-block">Reservar</button>
