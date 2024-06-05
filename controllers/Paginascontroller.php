@@ -28,7 +28,20 @@ class Paginascontroller {
     }
 
     public static function reservas(Router $router) {
-      $router->render('paginas/reservas');
+      $todos_los_vehiculos = Vehiculos::mostrar();
+
+      $seleccionado = '';
+      $seleccionado = $_GET['estado'] ?? null;
+
+      $estados = Agencias::mostrarEstados();
+      $agencias = Agencias::mostrarPorEstado($seleccionado);
+
+      $router->render('paginas/reservas', [
+        'vehiculos' => $todos_los_vehiculos,
+        'estados' => $estados,
+        'agencias' => $agencias,
+        'seleccionado' => $seleccionado
+      ]);
     }
 
 

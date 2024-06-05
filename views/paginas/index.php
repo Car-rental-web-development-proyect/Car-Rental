@@ -40,7 +40,7 @@
                             <p><?php echo $vehiculo->veh_cilindro?></p>
                         </li>
                     </ul>
-                    <button class="boton-secundario-block">Reservar</button>
+                    <button class="boton-secundario-block"><a href="/flota_vehiculos" style="color:black">Reservar</a></button>
                 </div> 
             </div><!-- .card-auto -->
         <?php endforeach; ?>    

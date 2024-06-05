@@ -4,26 +4,32 @@
    </div>   
 
    <section class="seccion">
-      <form action="" class="formulario-Reservas contenedor">
+      <form action="/flota_vehiculos" class="formulario-Reservas contenedor" method="GET">
          
          <div class="formulario-Reservas_campo">
-            <label class="formulario-Reservas_label" for="estado"">Estado</label>
-            <select class="formulario__combobox" id="selecionar_estado">
-               <option value="" disabled selected>Estado</option>
-               <option value="Estado1">Estado 1</option>
-               <option value="Estado2">Estado 2</option>
-               <option value="Estado3">Estado 3</option>
-            </select>
+               <label class="formulario-Reservas_label" for="estado"">Estado</label>
+               <select name="agenciaRecoger[estado]" class="formulario__combobox combobox-estado" id="selecionar_estado">
+                  <option value="" disabled selected>Estado</option>
+                  <?php foreach($estados as $estado):?>
+                     <?php if($seleccionado == $estado): ?>
+                        <option selected value="<?php echo $estado?>"><?php echo $estado?></option>
+                     <?php endif; ?>
+                        <option value="<?php echo $estado?>"><?php echo $estado?></option>
+                  <?php endforeach; ?>
+               </select>
          </div>
 
 
          <div class="formulario-Reservas_campo">
             <label class="formulario-Reservas_label" for="ciudad"">Ciudad</label>
-            <select class="formulario__combobox" id="selecionar_ciudad">
+            <select name="agenciaRecoger[ciudad]" class="formulario__combobox" id="selecionar_ciudad">
                <option value="" disabled selected>Ciudad</option>
-               <option value="Ciudad1">Ciudad 1</option>
-               <option value="Ciudad2">Ciudad 2</option>
-               <option value="Ciudad3">Ciudad 3</option>
+               <?php foreach($agencias as $agencia):?>
+                  <option value="<?php echo $agencia->age_ciudad?>"><?php echo $agencia->age_ciudad?></option>
+               <?php endforeach; ?>
+               <?php if(!$seleccionado): ?>
+                     <option value="" disabled>>--Estado Faltante--<</option>
+               <?php endif; ?>
             </select>
          </div>
 
