@@ -4,6 +4,7 @@ namespace Controllers;
 
 use MVC\Router;
 use Model\Usuarios;
+use Model\Vehiculos;
 
 class Usuarioscontroller {
 
@@ -13,27 +14,32 @@ class Usuarioscontroller {
 
     public static function registrarse(Router $router){
 
-        $usuarios = new Usuarios();     
         $errores = Usuarios::getErrores(); 
-
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            $usuarios = new Usuarios($_POST['usuarios']);
-            
-            $errores = $usuarios->ValidarCampos();
+            //debuguear($_POST);
 
-            if(empty($errores)){
-                $usuarios->Registrar();
+            $usuario = new Usuarios($_POST['usuario']);
+            $errores = $usuario->ValidarCampos();
+            //debuguear($errores);
+            if(empty($errores)){ 
+                //debuguear('mario');
+                $usuario->Registrar();
+                
             }
+            
         }        
         
         $router->render('auth/registrarse',[
-            'errores' => $errores,
-            'usuarios' =>$usuarios
+            'errores' => $errores
         ]);
     }
 
     public static function admin(Router $router){
-        $router->render('auth/admin');
+        $vehiculos = Vehiculos::mostrar();
+
+        $router->render('auth/admin', [
+            'vehiculos' => $vehiculos
+        ]);
     }
 
     public static function tarjeta(Router $router){

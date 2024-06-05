@@ -15,10 +15,11 @@ class ActiveRecord {
 
   // Funciones "ideales" para cada tipo de consulta 
   // Registrar Datos 
-  public function registrar(){
+  public function Crear(){
 
-    $atributos = $this->sanitizarDatos();
+    $atributos = $this->atributos();
 
+    // INSERT INTO tabla ()
     $query = "INSERT INTO " . static::$tabla . " ( "; //Referencia a la clase 
     $query .= join(', ', array_keys($atributos)); // separa con , cada columna de la tabla 
     $query .= " ) VALUES ('"; 
@@ -27,9 +28,14 @@ class ActiveRecord {
 
     $resultado = self::$db->query($query);
 
-    //if($resultado){
-    //  header('Location: /admin?resultado=1');
-    //}
+    if($resultado){
+      echo "<script>
+        alert('Registrado Correctamente');
+        window.location.href = '/reservas';
+        </script>";
+      exit(); // termina el script 
+    
+    }
 
   }
 
@@ -37,7 +43,7 @@ class ActiveRecord {
   public function actualizar() {
     
     // Sanitizar los datos
-    $atributos = $this->sanitizarDatos();
+    $atributos = $this->atributos();
 
     $valores = [];
     foreach($atributos as $key => $value) {

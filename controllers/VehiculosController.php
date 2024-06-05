@@ -8,9 +8,8 @@ use Model\Vehiculos;
 class VehiculosController{
 
     public static function registrarAuto(Router $router){
-
-        // $vehiculos = new Vehiculos();     
-        // $errores = Vehiculos::getErrores(); 
+   
+        $errores = Vehiculos::getErrores(); 
 
         // if($_SERVER['REQUEST_METHOD'] === 'POST'){
         //     $vehiculos = new Vehiculos($_POST['vehiculos']);
@@ -22,7 +21,8 @@ class VehiculosController{
         //     }
         // }        
 
-        $router->render('vehiculos/registrarAuto',[
+        $router->render('vehiculos/registrarAuto', [
+            'errores' => $errores
         ]);
     }
 

@@ -3,6 +3,7 @@
 namespace Controllers;
 
 use Model\Vehiculos;
+use Model\Agencias;
 use MVC\Router;
 
 class Paginascontroller {
@@ -41,7 +42,23 @@ class Paginascontroller {
    
     public static function vehiculo(Router $router) {
       $todos_los_vehiculos = Vehiculos::mostrar();
+
+      $seleccionado = '';
+      $seleccionado = $_GET['estado'] ?? null;
+
+      $estados = Agencias::mostrarEstados();
+      $agencias = Agencias::mostrarPorEstado($seleccionado);
+
+      if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        debuguear($_POST);
+      }
+
       // debuguear($todos_los_vehiculos);
-      $router->render('/paginas/vehiculos', ['vehiculos' => $todos_los_vehiculos]);
+      $router->render('/paginas/vehiculos', [
+        'vehiculos' => $todos_los_vehiculos,
+        'estados' => $estados,
+        'agencias' => $agencias,
+        'seleccionado' => $seleccionado
+      ]);
     }
 }
