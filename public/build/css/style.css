@@ -523,11 +523,6 @@ p {
    display: flex;
    flex-direction: column;
 }
-@media (min-width: 800px) {
-   .formulario-Reservas_campo:nth-child(1) {
-      padding-left: 5rem;
-   }
-}
 
 .formulario-Reservas_campo:hover {
    background-color:  #d0d3d4;

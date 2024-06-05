@@ -4,6 +4,7 @@ namespace Controllers;
 
 use MVC\Router;
 use Model\Usuarios;
+use Model\Vehiculos;
 
 class Usuarioscontroller {
 
@@ -33,7 +34,11 @@ class Usuarioscontroller {
     }
 
     public static function admin(Router $router){
-        $router->render('auth/admin');
+        $vehiculos = Vehiculos::mostrar();
+
+        $router->render('auth/admin', [
+            'vehiculos' => $vehiculos
+        ]);
     }
 
     public static function tarjeta(Router $router){

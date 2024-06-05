@@ -3,11 +3,11 @@
       
     
       <a href="/admin" class="boton-secundario-block boton-margin">Volver</a>
-      <form class="contenedor" id="formulario" method="POST" action="login.html">
+      <form class="contenedor" id="formulario" method="POST" action="/registrarAuto">
 
         <?php include_once __DIR__ . '/formularioAuto.php'; ?>
         
-     </form>
+      </form>
 
 
   </main>

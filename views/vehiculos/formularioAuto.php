@@ -50,6 +50,6 @@
     </select>
     </div>
     <div class="contenedor ">
-    <button type="submit" class="boton-primario-block"> Registrar</button>
+    <button type="submit" class="boton-primario-block">Registrar</button>
     </div>
 </fieldset>
