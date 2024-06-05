@@ -105,7 +105,7 @@
    <footer class="footer">
       <div class="contenedor bg">
          <div class="barra">
-            <a href="./index.html" class="logo">
+            <a href="/" class="logo">
                <h1 class="logo__nombre">Bee<span class="logo__bold">Car</span></h1>
             </a>
 
