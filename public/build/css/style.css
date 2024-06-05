@@ -1255,7 +1255,7 @@ ul{
    justify-content: space-around;
 }
 
-@media (min-width: 800px ) {
+@media (min-width: 1200px ) {
    .grid-pago{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
