@@ -11,17 +11,17 @@ class VehiculosController{
    
         $errores = Vehiculos::getErrores(); 
 
-        // if($_SERVER['REQUEST_METHOD'] === 'POST'){
-        //     $vehiculos = new Vehiculos($_POST['vehiculos']);
-            
-        //     $errores = $vehiculos->ValidarCampos();
+         if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
-        //     if(empty($errores)){
-        //         $vehiculos->Registrar();
-        //     }
-        // }        
+             $vehiculo = new Vehiculos($_POST['vehiculo']);      
+             $errores = $vehiculo->ValidarCampos();
 
-        $router->render('vehiculos/registrarAuto', [
+             if(empty($errores)){
+                 $vehiculo->Registrar();
+             }
+         }        
+
+        $router->render('vehiculos/registrarAuto', [ 
             'errores' => $errores
         ]);
     }

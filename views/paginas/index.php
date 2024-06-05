@@ -51,25 +51,27 @@
 </section>
 
 <section class="sobrenosotros contenedor">
-         <h3 class="comprar_titulo">¿Por qué rentar con nosotros?</h3>
+         <h3 class="comprar_titulo">Caracteristicas de nuestros automóviles</h3>
 
          <div class="bloques">
-            <div class="bloque">
-               <img class ="bloque__img" src="/build/src/img/icon/icono1.png" alt="por que comprar con nosotros">
-               <h3 class="bloque__titulo">Seguridad en todo momento</h3>
-               <p>Tu seguridad y la de los tuyos es nuestra prioridad, te cuidamos en todos los detalles</p>
+            <div class="bloque sobrenosotros__bloque">
+               <img class ="bloque__img" src="/build/src/img/icon/bolsa-de-aire.webp" alt="imagen descripcion de carro 1">
+               <h3 class="bloque__titulo">Bolsas de Aire</h3>
             </div> <!-- .bloque -->
 
-            <div class="bloque">
-               <img class ="bloque__img" src="/build/src/img/icon/icono2.png" alt="por que comprar con nosotros">
-               <h3 class="bloque__titulo">Autos confiables y rápidos</h3>
-               <p>Contamos con una amplia gama de vehículos recientes</p>
+            <div class="bloque sobrenosotros__bloque">
+               <img class ="bloque__img" src="/build/src/img/icon/sensor.webp" alt="imagen descripcion de carro 2">
+               <h3 class="bloque__titulo">Sensores y Sistema Eléctrico</h3>
             </div> <!-- .bloque -->
 
-            <div class="bloque">
-               <img class ="bloque__img" src="/build/src/img/icon/icono3.png" alt="por que comprar con nosotros">
-               <h3 class="bloque__titulo">Reserva eficaz, con garantia</h3>
-               <p>Puedes hacer tu reservación en Linea y gestionar detalles desde la web</p>
+            <div class="bloque sobrenosotros__bloque">
+               <img class ="bloque__img" src="/build/src/img/icon/disco-del-freno.webp" alt="imagen descripcion de carro 3">
+               <h3 class="bloque__titulo">Frenos de disco</h3>
+            </div> <!-- .bloque -->
+
+            <div class="bloque sobrenosotros__bloque">
+               <img class ="bloque__img" src="/build/src/img/icon/disco-del-freno.webp" alt="imagen descripcion de carro 3">
+               <h3 class="bloque__titulo">Dirección Hidraulica</h3>
             </div> <!-- .bloque -->
          </div>
    </section>

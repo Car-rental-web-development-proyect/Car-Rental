@@ -45,27 +45,27 @@ class Reservacion extends ActiveRecord{
 
     public function validar() {     // errores existentes
         if (!$this->res_oficinaRenta) {
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "Seleccione una Oficina disponible"; 
         }
 
         if (!$this->res_oficinaEntrega) {
-            self::$errores[] = "Campo Vacio";
+            self::$errores[] = "Seleccione una Oficina disponible";
         }
 
         if (!$this->res_fechaRenta) {
-            self::$errores[] = "Campo Vacio";
+            self::$errores[] = "Seleccione una fecha valida";
         }
 
         if ($this->res_horaRenta) {
-            self::$errores[] = "Campo Vacio";
+            self::$errores[] = "Seleccione una hora disponible";
         }
 
         if (!$this->res_fechaEntrega) {
-            self::$errores[] = "Campo Vacio";
+            self::$errores[] = "Seleccione una fecha valida";
         }
 
         if (!$this->res_horaEntrega) {
-            self::$errores[] = "Campo Vacio";
+            self::$errores[] = "Seleccione una hora disponible";
         }
 
         if (!$this->res_costo) {
@@ -73,20 +73,16 @@ class Reservacion extends ActiveRecord{
         }
 
         if (!$this->res_usu_id) {
-            self::$errores[] = "Campo Vacio";
+            self::$errores[] = "Vehiculo no seleccionado";
         }
 
         if (!$this->res_veh_id) {
-            self::$errores[] = "Campo Vacio";
+            self::$errores[] = "Vehiculo no seleccionado";
         }
 
         if (!$this->res_tar_id) {
-            self::$errores[] = "Campo Vacio";
+            self::$errores[] = "Tarjeta no registrada";
         }
-
-
-
-
 
         return self::$errores;
     }

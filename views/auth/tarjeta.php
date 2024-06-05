@@ -1,42 +1,42 @@
 <main class="">
   <h1 class="centrar-texto">Transaccion</h1>
-  <div class="contenedor-pago">
-      <div class="tarjeta">
-        <div class="datos-personales size-form">
-            <div class="formulario-datos ">
-                   <h4>Tus Datos</h4>
-                    <div class="size-form">
+  <div class="grid-pago">
+      <div class="">
+        <div class="">
+            <div class="tamaño-datos">
+                   <h4 class="centrar-texto no-margin">Tus Datos</h4>
+                    <div class="contenedor-datos">
                       
-                      <div class="grid-cobro">
-                        <p class="flex"><span class="bold">Nombre:</span> Juan Hernandez </p>
+                      <div class="grid-datos">
+                        <p class=""><span class="bold">Nombre:</span> Juan Hernandez </p>
                       </div>
 
-                      <div class="grid-cobro">
-                        <p class="flex"><span class="bold">Usuarios: </span> Juan H </p>
+                      <div class="grid-datos">
+                        <p class=""><span class="bold">Usuarios: </span> Juan H </p>
                       </div>
 
-                      <div class="grid-cobro">
+                      <div class="grid-datos">
                         <p class="flex"><span class="bold">telefono: </span> 4772345678</p>
                       </div>
 
-                      <div class="grid-cobro">
+                      <div class="grid-datos">
                         <p class="flex"><span class="bold">Correo: </span>example@gmail.com</p>
                       </div>
+                      <button type="submit" class="boton-primario-block  centrar-texto contenedor-datos">Iniciar sesion</button>
                     </div>
-                      <div class="contenedor tarjeta flex-gap">
-                        <button type="submit" class="boton-primario-block  centrar-texto">Iniciar sesion</button>
-                      </div>
+                     
+                      
               </div>
           </div>
 
 
         <!--Formulario tarjeta-->
 
-        <div class="tarjeta">
-          <form class="formulario padding-arriba" id="formulario" method="POST" action="login.html">
+        <div class="tamaño-tarjeta">
+          <form class="" id="formulario" method="POST" action="login.html">
 
           
-            <fieldset class="tarjeta-fildeset">
+            <fieldset class="">
               <legend>Tarjeta</legend>
               <!--numero-->
               <div class="">
@@ -50,27 +50,25 @@
                 <input class="flex" type="text" id="nombre" name="apellido"  maxlength="19"  name="nombre" autocomplete="off">        
               </div>
 
-              <div class="grid-formulario ">
-                <div class="expira">
+              <div class="expiracion">
+                <div class="expiracion">
                   <label for="selectMes">Expiracion</label>
-                  <div class="grid-formulario">
-                    <div class="grid-formulario ">
+                  <div class="expiracion">
+                    <div class="">
                       <select name="mes" id="selectedMes">
                         <option disabled selected>Mes</option>
                       </select>
-                      <i class="fas fa-angle-down"></i>
                     </div>
-                    <div class="grid-formulario">
+                    <div class="">
                       <select name="year" id="selectedyear">
                         <option disabled selected>Año</option>
                       </select>
-                      <i class="fas fa-angle-down"></i>
                     </div>
                   </div>
                 </div>
 
-                <div class="ccv" >
-                  <label for="imputCVV">CVV</label>
+                <div class="" >
+                  <label for="imputCVV">CVV:</label>
                   <input type="password" id="imputCVV" maxlength="3">
                 </div>
               </div>

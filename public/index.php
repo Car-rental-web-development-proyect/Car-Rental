@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . './../config/app.php';
+require __DIR__ . '/../config/app.php';
 
 use Controllers\Paginascontroller;
 use Controllers\Usuarioscontroller;
@@ -25,11 +25,15 @@ $router->get('/ofertas', [Paginascontroller::class, 'ofertas']);
 
 
 $router->get('/login', [Usuarioscontroller::class, 'login']);
+$router->post('/login', [Usuarioscontroller::class, 'login']);
+
 $router->get('/registrarse', [Usuarioscontroller::class, 'registrarse']);
+$router->post('/registrarse', [Usuarioscontroller::class, 'registrarse']);
 $router->get('/admin', [Usuarioscontroller::class, 'admin']);
 
 $router->get('/registrarAuto', [VehiculosController::class, 'registrarAuto']);
 $router->get('/actualizarAuto', [VehiculosController::class, 'actualizarAuto']);
+$router->post('/registrarAuto', [VehiculosController::class, 'registrarAuto']);
 
 $router->get('/tarjeta', [Usuarioscontroller::class, 'tarjeta']);
 

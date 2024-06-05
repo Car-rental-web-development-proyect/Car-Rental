@@ -32,15 +32,15 @@ class Tarjeta extends ActiveRecord{
     
         public function ValidarCampos(){
             if(!$this->tar_numTarjeta){
-                self::$errores[] = "Campo Vacio"; 
+                self::$errores[] = "Numero de tarjeta invalido"; 
             }
     
             if(!$this->tar_expiracion){
-                self::$errores[] = "Campo Vacio"; 
+                self::$errores[] = "Fecha de expiración invalida"; 
             }
     
             if(!$this->tar_duenio){
-                self::$errores[] = "Campo Vacio"; 
+                self::$errores[] = "Ingrese un nombre valido"; 
             }
     
             return self::$errores;

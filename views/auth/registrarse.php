@@ -1,9 +1,13 @@
 <main class="contenedor" >
     <h1 class="centrar-texto">Registrarse</h1>
-      
+    <?php foreach($errores as $error): ?>
+        <div class="alerta error">
+            <?php echo $error; ?>
+        </div>
+    <?php endforeach; ?>
     
       <input type="submit" value="Volver" class="boton-secundario-block boton-margin">
-      <form class="contenedor" id="formulario" method="POST" action="login.html">
+      <form class="contenedor" id="formulario" method="POST">
 
     
       <fieldset>
@@ -11,30 +15,36 @@
         <!--nombre-->
         <div class="contendor">
           <label for="nombre">Nombre</label>
-          <input class="flex" type="text" id="nombre" name="nombre" placeholder="Ingrese su Nombre" value="">
+          <input class="flex" 
+          type="text" 
+          id="nombre" 
+          name="usuario[usu_nombre]" 
+          placeholder="Ingrese su Nombre" 
+          value="">
         </div>
         
         <!--apellido-->
         <div class="contendor">
-          <label for="apellido">Apellido</label>
-          <input class="flex" type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" value="">        
+          <label for="apellidoPaterno">Apellido Paterno</label>
+          <input class="flex" type="text" id="apellidoPaterno" name="usuario[usu_apepaterno]" placeholder="Ingrese su apellido paterno" value="">        
         </div>
-        <!--Usuario-->
+
+                <!--apellido-->
         <div class="contendor">
-          <label for="usuario">Usuario</label>
-          <input class="flex" type="text" id="usuario" name="usuario" placeholder="Ingrese su Usuario" value="">
+          <label for="apellidoMaterno">Apellido Materno</label>
+          <input class="flex" type="text" id="apellidoMaterno" name="usuario[usu_apematerno]" placeholder="Ingrese su apellido materno" value="">        
         </div>
         
         <!--Correo-->
         <div class="contendor">
            <label for="correo">Correo</label>
-            <input class="flex" type="email" id="correo" name="correo" placeholder="example@example.com" value="">
+            <input class="flex" type="email" id="correo" name="usuario[usu_correo]" placeholder="example@example.com" value="">
         </div>
        
         <!--Password-->
         <div class="contendor">
           <label for="password">Contraseña</label>
-          <input class="flex" type="password" id="password" name="password" value="">          
+          <input class="flex" type="password" id="password" name="usuario[usu_password]" value="">          
         </div>
 
         <div class="contenedor">

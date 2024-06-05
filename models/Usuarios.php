@@ -26,45 +26,73 @@ class Usuarios extends ActiveRecord {
     }
 
     public function Registrar(){
-        if(!is_null($this->usu_id)){ //Si no es NULL, la accion es actualizar 
 
-        }else{
-            $this->registrar(); //Si es NULL, la accion es registrar 
-        }
+        $this->Crear(); //Si es NULL, la accion es registrar 
     }
 
     public function ValidarCampos(){
         if(!$this->usu_nombre){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "Ingrese un nombre valido"; 
         }
 
         if(!$this->usu_apepaterno){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "Ingrese un apellido valido"; 
         }
 
         if(!$this->usu_apematerno){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "Ingrese un apellido valido"; 
         }
 
         if(!$this->usu_correo){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "ingrese un correo valido"; 
         }
 
         if(!$this->usu_password){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "Ingrese una contraseña valida"; 
         }
         
         return self::$errores;
 
     }
+     // Muestra todos los registros de la tabla 
+   public function buscar_usuario(){
+      $query = "SELECT * FROM " . self::$tabla . " WHERE usu_correo = '" . $this->usu_correo . "' LIMIT 1";
+        $resultado = self::$db->query($query);
+        if(!$resultado->num_rows) {
+            self::$errores[] = 'El Usuario no existe';
+            return;
+        }
+        return $resultado;
+      }
 
+      public function autenticar($usuario) {
+         // debuguear($usuario);
+         // debuguear($encontrado);
+         session_start();
+ 
+         // Llenar el arreglo de sesion
+         $_SESSION['usuario'] = $usuario;
+         $_SESSION['login'] = true;
+ 
+         header('Location: /');
+     }
 
+   public function comprobarPassword($resultado) {
+      $usuario = $resultado->fetch_object();
+      $autenticado = False;
+      if($usuario->usu_password == $this->usu_password) {
+         $autenticado = True;
+      }
 
-    
+      if(!$autenticado) {
+            self::$errores[] = 'El Password es Incorrecto';
+            return;
+      }
+      if($autenticado) {
+         return $usuario;
+      }
+   }
 
-
-
-
-}
+   }
 
 ?>
