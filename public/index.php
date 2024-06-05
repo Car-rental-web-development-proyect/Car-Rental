@@ -3,6 +3,7 @@
 require __DIR__ . '/../config/app.php';
 
 use Controllers\Paginascontroller;
+use Controllers\TarjetasController;
 use Controllers\Usuarioscontroller;
 use Controllers\VehiculosController;
 use MVC\Router;
@@ -37,6 +38,6 @@ $router->post('/registrarAuto', [VehiculosController::class, 'registrarAuto']);
 $router->post('/vehiculos/eliminar', [VehiculosController::class, 'eliminar']);
 
 
-$router->get('/tarjeta', [Usuarioscontroller::class, 'tarjeta']);
+$router->post('/tarjeta', [TarjetasController::class, 'tarjeta']);
 
 $router->comprobarRutas();

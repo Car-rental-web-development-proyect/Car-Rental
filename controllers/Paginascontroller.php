@@ -49,10 +49,6 @@ class Paginascontroller {
       $estados = Agencias::mostrarEstados();
       $agencias = Agencias::mostrarPorEstado($seleccionado);
 
-      if($_SERVER['REQUEST_METHOD'] === 'POST') {
-        debuguear($_POST);
-      }
-
       // debuguear($todos_los_vehiculos);
       $router->render('/paginas/vehiculos', [
         'vehiculos' => $todos_los_vehiculos,

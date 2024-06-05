@@ -66,6 +66,15 @@ class Agencias extends ActiveRecord {
         return $resultado;
     
       }
+
+    public static function mostrarPorEstadoAndCiudad($estado, $ciudad){
+        $query = "SELECT * FROM " . self::$tabla . " WHERE age_estado = '" . $estado . "'" . " AND age_ciudad = '" . $ciudad . "'";
+    
+        $resultado = static::consultarSQL($query);
+    
+        return $resultado;
+    
+      }
 }
 
 ?>
