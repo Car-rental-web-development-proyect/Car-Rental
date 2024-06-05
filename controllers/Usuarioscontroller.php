@@ -60,13 +60,12 @@ class Usuarioscontroller {
         ]);
     }
 
-    public static function tarjeta(Router $router){
-       $seleccionado = '';
-       $seleccionado = $_GET['estado'] ?? null;
-       $estados = Agencias::mostrarEstados();
-       $agencias = Agencias::mostrarPorEstado($seleccionado);
+    public static function logout() {
+        session_start();
 
-       $router->render('auth/tarjeta',['estados' => $estados, 'agencias' => $agencias, 'seleccionado' => $seleccionado]);
+        $_SESSION = [];
+
+        header('Location: /');
     }
 
 }

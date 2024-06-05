@@ -31,13 +31,18 @@ use Model\Vehiculos;
                     $reservacion = new Reservacion($_POST['reserva']);
                     $reservacion->guardar();
                 } else {
+
+                    $seleccionado = '';
+                    $seleccionado = $_GET['estado'] ?? null;
+                    $estados = Agencias::mostrarEstados();
+                    $agencias = Agencias::mostrarPorEstado($seleccionado);
                     $agenciaSeleecionada = Agencias::mostrarPorEstadoAndCiudad($_POST['agenciaRecoger']['estado'], $_POST['agenciaRecoger']['ciudad'])[0];
                     $reserva = $_POST['reserva'];
                     $cocheSeleccionado = Vehiculos::find($_POST['coche']);
                 }
             }
 
-            $router->render('auth/tarjeta', [
+            $router->render('auth/tarjeta', [ 'estados' => $estados, 'agencias' => $agencias, 'seleccionado' => $seleccionado,
                 'vehiculo' => $cocheSeleccionado,
                 'reserva' => $reserva,
                 'agencia' => $agenciaSeleecionada

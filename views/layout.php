@@ -50,6 +50,9 @@
                <a href="/ofertas" class="navegacion__enlace">Ofertas</a>
                <a href="#" class="navegacion__enlace">Agencias</a>
                <a href="/contacto" class="navegacion__enlace">Contacto</a>
+               <?php if($auth): ?>
+                  <a href="/logout" class="navegacion__enlace">Cerrar Sesión</a>
+               <?php endif; ?>
             </nav>
          </div>
       </div> <!-- .contenedor -->
