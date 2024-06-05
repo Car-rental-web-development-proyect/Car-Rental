@@ -1201,7 +1201,7 @@ ul{
 
 .grid-datos {
    width:100%;
-   /* display: none; */
+   display: none; 
 }
 
 .no-margin {
