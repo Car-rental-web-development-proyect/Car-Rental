@@ -1261,6 +1261,8 @@ ul{
    .datos-renta {
       width: 70%;
    }
+}
+
 .formulario-datos {
    background-color: var(--secundario);
    margin: -2rem auto 0 auto;
