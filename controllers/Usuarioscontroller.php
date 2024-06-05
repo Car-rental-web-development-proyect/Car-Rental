@@ -5,6 +5,7 @@ namespace Controllers;
 use MVC\Router;
 use Model\Usuarios;
 use Model\Vehiculos;
+use Model\Agencias;
 
 class Usuarioscontroller {
 
@@ -60,7 +61,12 @@ class Usuarioscontroller {
     }
 
     public static function tarjeta(Router $router){
-        $router->render('auth/tarjeta');
+       $seleccionado = '';
+       $seleccionado = $_GET['estado'] ?? null;
+       $estados = Agencias::mostrarEstados();
+       $agencias = Agencias::mostrarPorEstado($seleccionado);
+
+       $router->render('auth/tarjeta',['estados' => $estados, 'agencias' => $agencias, 'seleccionado' => $seleccionado]);
     }
 
 }

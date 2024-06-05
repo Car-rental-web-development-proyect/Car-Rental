@@ -31,7 +31,6 @@
 
 
         <!--Formulario tarjeta-->
-
         <div class="tamaño-tarjeta">
           <form class="" id="formulario" method="POST" action="login.html">
 
@@ -119,8 +118,39 @@
                   <p><span class="bold">Dias:</span> 7 dias</p>
                   <p><span class="bold">Extras:</span> $200</p>
                   <p><span class="bold">Total:</span> $2600</p>
-                  
-                  
+                  <p><span class="bold">Lugar de devolución de la unidad</span></p>
+
+                  <section class="seccion">
+                     <form class="formulario-Reservas contenedor form_tarjeta" action="" method="POST">
+
+                     <div class="formulario-Reservas_campo">
+                        <label class="formulario-Reservas_label" for="estado"">Estado</label>
+                        <select class="formulario__combobox combobox-estado" id="selecionar_estado">
+                           <option value="" disabled selected>Estado</option>
+                           <?php foreach($estados as $estado):?>
+                              <?php if($seleccionado == $estado): ?>
+                                 <option selected value="<?php echo $estado?>"><?php echo $estado?></option>
+                              <?php endif; ?>
+                                 <option value="<?php echo $estado?>"><?php echo $estado?></option>
+                           <?php endforeach; ?>
+                        </select>
+                     </div>
+                        
+                     <div class="formulario-Reservas_campo">
+                        <label class="formulario-Reservas_label" for="ciudad"">Ciudad</label>
+                        <select class="formulario__combobox" id="selecionar_ciudad">
+                           <option value="" disabled selected>Ciudad</option>
+                           <?php foreach($agencias as $agencia):?>
+                              <option value="<?php echo $agencia->age_ciudad?>"><?php echo $agencia->age_ciudad?></option>
+                           <?php endforeach; ?>
+                           <?php if(!$seleccionado): ?>
+                                 <option value="" disabled>>--Selecciona un estado--<</option>
+                           <?php endif; ?>
+                        </select>
+                     </div>
+
+                     </form>
+                  </section>
                 </div> 
             </div>
           </div>

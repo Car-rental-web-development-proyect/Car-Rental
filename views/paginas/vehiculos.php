@@ -9,7 +9,7 @@
                <label class="formulario-Reservas_label" for="estado"">Estado</label>
                <select class="formulario__combobox combobox-estado" id="selecionar_estado">
                   <option value="" disabled selected>Estado</option>
-                  <?php foreach($estados as $estado):?>
+                  <?php foreach($estado as $estado):?>
                      <?php if($seleccionado == $estado): ?>
                         <option selected value="<?php echo $estado?>"><?php echo $estado?></option>
                      <?php endif; ?>
@@ -23,7 +23,7 @@
                <label class="formulario-Reservas_label" for="ciudad"">Ciudad</label>
                <select class="formulario__combobox" id="selecionar_ciudad">
                   <option value="" disabled selected>Ciudad</option>
-                  <?php foreach($agencias as $agencia):?>
+                  <?php foreach($agencia as $agencia):?>
                      <option value="<?php echo $agencia->age_ciudad?>"><?php echo $agencia->age_ciudad?></option>
                   <?php endforeach; ?>
                   <?php if(!$seleccionado): ?>
