@@ -34,6 +34,8 @@ $router->get('/admin', [Usuarioscontroller::class, 'admin']);
 $router->get('/registrarAuto', [VehiculosController::class, 'registrarAuto']);
 $router->get('/actualizarAuto', [VehiculosController::class, 'actualizarAuto']);
 $router->post('/registrarAuto', [VehiculosController::class, 'registrarAuto']);
+$router->post('/vehiculos/eliminar', [VehiculosController::class, 'eliminar']);
+
 
 $router->get('/tarjeta', [Usuarioscontroller::class, 'tarjeta']);
 

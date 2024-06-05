@@ -39,6 +39,28 @@ class ActiveRecord {
 
   }
 
+  public function eliminar() {
+    // Eliminar la propiedad
+    $query = "DELETE FROM " . static::$tabla; // "static" hace referencia sobre que clase se esta llamando, ya sea vendedores o propiedades
+    if(static::$tabla == 'vehiculos') {
+        $query .= " WHERE veh_id = " . self::$db->escape_string($this->veh_id);
+    } else if (static::$tabla == 'propiedades') {
+        $query .= " WHERE pro_id = " . self::$db->escape_string($this->pro_id);
+    }
+    $query .= " LIMIT 1 ";  
+
+    $resultado = self::$db->query($query);
+
+    if($resultado){
+      echo "<script>
+        alert('Vehiculo Eliminado Correctamente');
+        window.location.href = '/admin';
+        </script>";
+      exit(); // termina el script 
+    
+    }
+  }
+
   //Actualizar 1 registro 
   public function actualizar() {
     

@@ -30,12 +30,27 @@ class VehiculosController{
         $errores = Vehiculos::getErrores(); 
         
         $vehiculo = Vehiculos::find($_GET['id']);
-
+        
         $router->render('vehiculos/actualizarAuto', [
             'errores' => $errores,
             'vehiculo' => $vehiculo
         ]);
     }
+
+    public static function eliminar(){
+        if($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $id = $_POST['id'];
+            $id = filter_var($id, FILTER_VALIDATE_INT);
+            //debuguear($id);
+            if($id) {
+                //$tipo = $_POST['tipo']; // En los botones de eliminar mandamos dos datos, ya sea "id" y "tipo", que este ultimo puede ser 'propiedad' u 'vendedor'
+                    $vehiculo = Vehiculos::find($id);
+                    $vehiculo->eliminar();
+
+            }
+        }
+    }       
+
 
 }
 
