@@ -1,9 +1,8 @@
 <main class="contenedor" >
     <h1 class="centrar-texto">Registrar Automóvil</h1>
-      
     
       <input type="submit" value="Volver" class="boton-secundario-block boton-margin">
-      <form class="contenedor" id="formulario" method="POST" action="login.html">
+      <form class="contenedor" id="formulario" method="POST" action="">
 
     
         <fieldset>
@@ -11,13 +10,13 @@
           <!--Marca-->
           <div class="contenedor">
              <label for="marca">Marca</label>
-            <input class="flex"  type="text" id="marca" name="marca" placeholder="Ingrese la marca de su auto" value="">
+            <input class="flex"  type="text" id="marca" name="vehiculo[veh_modelo]" placeholder="Ingrese la marca de su auto" value="">
           </div>
          
           <!--Linea-->
           <div class="contenedor">
             <label for="linea">Linea</label>
-            <input class="flex"  type="text"id="linea" name="linea" placeholder="Ingrese la linea de su auto" value="">
+            <input class="flex"  type="text"id="linea" name="vehiculo[veh_descripcion]" placeholder="Ingrese la linea de su auto" value="">
           </div>
           
           <!--Modelo-->

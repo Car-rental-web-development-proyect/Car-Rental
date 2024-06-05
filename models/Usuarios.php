@@ -32,23 +32,23 @@ class Usuarios extends ActiveRecord {
 
     public function ValidarCampos(){
         if(!$this->usu_nombre){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "Ingrese un nombre valido"; 
         }
 
         if(!$this->usu_apepaterno){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "Ingrese un apellido valido"; 
         }
 
         if(!$this->usu_apematerno){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "Ingrese un apellido valido"; 
         }
 
         if(!$this->usu_correo){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "ingrese un correo valido"; 
         }
 
         if(!$this->usu_password){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "Ingrese una contraseña valida"; 
         }
         
         return self::$errores;

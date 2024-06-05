@@ -36,15 +36,12 @@ class Usuarioscontroller {
 
         $errores = Usuarios::getErrores(); 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            //debuguear($_POST);
 
             $usuario = new Usuarios($_POST['usuario']);
             $errores = $usuario->ValidarCampos();
-            //debuguear($errores);
-            if(empty($errores)){ 
-                //debuguear('mario');
-                $usuario->Registrar();
-                
+    
+            if(empty($errores)){             
+                $usuario->Registrar();                
             }
             
         }        
