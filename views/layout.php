@@ -42,7 +42,7 @@
                <a href="/reservas" class="navegacion__enlace">Realiza tu reserva</a>
                <a href="/condiciones" class="navegacion__enlace">Condiciones de renta</a>
                <a href="/ofertas" class="navegacion__enlace">Ofertas</a>
-               <a href="#" class="navegacion__enlace">Agencias</a>
+               <a href="/agencias" class="navegacion__enlace">Agencias</a>
                <a href="/contacto" class="navegacion__enlace">Contacto</a>
             </nav>
          </div>
