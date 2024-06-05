@@ -54,14 +54,45 @@ class Usuarios extends ActiveRecord {
         return self::$errores;
 
     }
+     // Muestra todos los registros de la tabla 
+   public function buscar_usuario(){
+      $query = "SELECT * FROM " . self::$tabla . " WHERE usu_correo = '" . $this->usu_correo . "' LIMIT 1";
+        $resultado = self::$db->query($query);
+        if(!$resultado->num_rows) {
+            self::$errores[] = 'El Usuario no existe';
+            return;
+        }
+        return $resultado;
+      }
 
+      public function autenticar($usuario) {
+         // debuguear($usuario);
+         // debuguear($encontrado);
+         session_start();
+ 
+         // Llenar el arreglo de sesion
+         $_SESSION['usuario'] = $usuario;
+         $_SESSION['login'] = true;
+ 
+         header('Location: /');
+     }
 
+   public function comprobarPassword($resultado) {
+      $usuario = $resultado->fetch_object();
+      $autenticado = False;
+      if($usuario->usu_password == $this->usu_password) {
+         $autenticado = True;
+      }
 
-    
+      if(!$autenticado) {
+            self::$errores[] = 'El Password es Incorrecto';
+            return;
+      }
+      if($autenticado) {
+         return $usuario;
+      }
+   }
 
-
-
-
-}
+   }
 
 ?>
