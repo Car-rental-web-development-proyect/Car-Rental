@@ -24,6 +24,8 @@ $router->get('/ofertas', [Paginascontroller::class, 'ofertas']);
 
 
 $router->get('/login', [Usuarioscontroller::class, 'login']);
+$router->post('/login', [Usuarioscontroller::class, 'login']);
+
 $router->get('/registrarse', [Usuarioscontroller::class, 'registrarse']);
 $router->get('/admin', [Usuarioscontroller::class, 'admin']);
 

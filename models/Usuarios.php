@@ -57,14 +57,16 @@ class Usuarios extends ActiveRecord {
         return self::$errores;
 
     }
-
-
-
-    
-
-
-
-
-}
+     // Muestra todos los registros de la tabla 
+   public function buscar_usuario(){
+      $query = "SELECT * FROM " . self::$tabla . " WHERE usu_correo = '" . $this->usu_correo . "' LIMIT 1";
+        $resultado = self::$db->query($query);
+        if(!$resultado->num_rows) {
+            self::$errores[] = 'El Usuario no existe';
+            return;
+        }
+        return $resultado;
+      }
+   }
 
 ?>

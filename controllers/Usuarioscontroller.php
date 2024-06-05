@@ -7,7 +7,14 @@ use Model\Usuarios;
 
 class Usuarioscontroller {
 
-    public static function login(Router $router){    
+    public static function login(Router $router){
+        if($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $usuario = new Usuarios($_POST['usuario']);
+            $resultado_query = $usuario->buscar_usuario();
+            debuguear($resultado_query);
+
+        }
+
         $router->render('auth/login');
     }
 

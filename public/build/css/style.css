@@ -625,7 +625,7 @@ img { /* Antes .descuento-img */
       grid-template-columns: repeat(2, 1fr);
    }
    .sobrenosotros .bloques {
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(2, 1fr);
    }
 }
 
@@ -634,7 +634,7 @@ img { /* Antes .descuento-img */
       grid-template-columns: repeat(4, 1fr);
    }
    .sobrenosotros .bloques {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
    }
 }
 .bloque {
@@ -665,6 +665,11 @@ img { /* Antes .descuento-img */
    width: 30%;
 }
 
+.sobrenosotros__bloque:hover {
+   background-color: #DEDEDE;
+   transform:scale(1.2);
+   z-index: 2;
+}
 
 
 /** =======================================================  **/
