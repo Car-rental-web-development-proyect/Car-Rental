@@ -65,3 +65,14 @@ dots.forEach((li, key) => {
 })
 
 let cambiarAutoSlider = setInterval(() => {next.click()}, 4000)
+
+
+let estado = document.querySelector('.combobox-estado')
+
+estado.addEventListener('change', (e) => {
+    console.log(estado.value);
+
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set('estado', estado.value);
+    window.location.search = urlParams;
+})

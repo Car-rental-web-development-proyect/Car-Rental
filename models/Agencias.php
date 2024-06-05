@@ -1,8 +1,7 @@
 <?php
-
 namespace Model;
 
-class Entrega extends ActiveRecord{
+class Agencias extends ActiveRecord {
 
     protected static $tabla = 'agencias';
     protected static $columnasDB = ['age_id','age_agencia','age_ciudad','age_estado'];
@@ -44,6 +43,29 @@ class Entrega extends ActiveRecord{
         return self::$errores;
 
     }
+
+    public static function mostrarEstados() {
+        $query = "SELECT age_estado FROM agencias GROUP BY age_estado";
+
+        $resultado = self::$db->query($query);
+
+        $estados = [];
+
+        while($registro = $resultado->fetch_assoc()) {  // Mientras registro tenga datos existentes en la db 
+            $estados[] = $registro["age_estado"];
+        }
+
+        return $estados;
+    }
+
+    public static function mostrarPorEstado($estado){
+        $query = "SELECT * FROM " . self::$tabla . " WHERE age_estado = '" . $estado . "'";
+    
+        $resultado = static::consultarSQL($query);
+    
+        return $resultado;
+    
+      }
 }
 
 ?>

@@ -1,19 +1,20 @@
 <main>
-   <section>
 
-   </section>
-
+<form action="/flota_vehiculos" method="POST">
    <section class="contenedor-flota vistaVehiculos">
       <section class="section">
-         <form action="" class="formulario-Reservas form_vehiculos contenedor">
+         <div class="formulario-Reservas form_vehiculos contenedor">
             
             <div class="formulario-Reservas_campo">
                <label class="formulario-Reservas_label" for="estado"">Estado</label>
-               <select class="formulario__combobox" id="selecionar_estado">
+               <select class="formulario__combobox combobox-estado" id="selecionar_estado">
                   <option value="" disabled selected>Estado</option>
-                  <option value="Estado1">Estado 1</option>
-                  <option value="Estado2">Estado 2</option>
-                  <option value="Estado3">Estado 3</option>
+                  <?php foreach($estados as $estado):?>
+                     <?php if($seleccionado == $estado): ?>
+                        <option selected value="<?php echo $estado?>"><?php echo $estado?></option>
+                     <?php endif; ?>
+                        <option value="<?php echo $estado?>"><?php echo $estado?></option>
+                  <?php endforeach; ?>
                </select>
             </div>
 
@@ -22,15 +23,18 @@
                <label class="formulario-Reservas_label" for="ciudad"">Ciudad</label>
                <select class="formulario__combobox" id="selecionar_ciudad">
                   <option value="" disabled selected>Ciudad</option>
-                  <option value="Ciudad1">Ciudad 1</option>
-                  <option value="Ciudad2">Ciudad 2</option>
-                  <option value="Ciudad3">Ciudad 3</option>
+                  <?php foreach($agencias as $agencia):?>
+                     <option value="<?php echo $agencia->age_ciudad?>"><?php echo $agencia->age_ciudad?></option>
+                  <?php endforeach; ?>
+                  <?php if(!$seleccionado): ?>
+                        <option value="" disabled>>--Selecciona un estado--<</option>
+                  <?php endif; ?>
                </select>
             </div>
 
             <div class="formulario-Reservas_campo">
                <label class="formulario-Reservas_label" for="recoleccion"">Recoleccion</label>
-               <input class="formulario-Reservas_input" type="date" id="recoleccion">
+               <input class="formulario-Reservas_input" type="date" id="recoleccion" min=<?php $hoy=date("Y-m-d"); echo $hoy;?>>
             </div>
 
             <div class="formulario-Reservas_campo">
@@ -40,7 +44,7 @@
 
             <div class="formulario-Reservas_campo">
                <label class="formulario-Reservas_label" for="devolucion"">Devolucion</label>
-               <input class="formulario-Reservas_input" type="date" id="devolucion">
+               <input class="formulario-Reservas_input" type="date" id="devolucion" min=<?php $hoy=date("Y-m-d"); echo $hoy;?>>
             </div>
 
             <div class="formulario-Reservas_campo">
@@ -52,11 +56,7 @@
                <label class="formulario-Reservas_label" for="pasajeros"">Pasajeros</label>
                <input class="formulario-Reservas_input" type="number" id="pasajeros" min="1">
             </div>
-
-            <div class="formulario-Reservas_campo">
-               <input class="formulario-Reservas_submit" type="submit" value="Buscar">
-            </div>
-         </form>
+         </div>
    </section>
 
 
@@ -97,10 +97,12 @@
                            <p> <?php echo $vehiculo->veh_costodia ?> </p>
                      </li>
                   </ul>
-                  <button class="boton-secundario-block">Reservar</button>
+                  <button type="submit" name="coche" value="<?php echo $vehiculo->veh_id ?>" class="boton-secundario-block">Reservar</button>
                </div> 
             </div><!-- .card-auto -->
       <?php endforeach; ?> 
       </div>
    </section>
+
+</form>
 </main>
