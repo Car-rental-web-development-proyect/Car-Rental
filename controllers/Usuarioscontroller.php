@@ -62,5 +62,4 @@ class Usuarioscontroller {
     public static function tarjeta(Router $router){
         $router->render('auth/tarjeta');
     }
-
 }

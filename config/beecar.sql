@@ -79,43 +79,36 @@ CREATE TABLE IF NOT EXISTS agencias(
     INDEX idx_estado(age_estado)
 );
             
-
 INSERT INTO agencias (age_agencia, age_ciudad, age_estado)
 VALUES
-    ('Aeropuerto de puebla', 'Tlachichuca', 'Puebla'),
-    ('Plaza del Cielo Abierto', 'Atzitzintla', 'Puebla'),
+    ('Aeropuerto de la Ciudad de México', 'Ciudad de México', 'Ciudad de México'),
+    ('Plaza del Zócalo', 'Ciudad de México', 'Ciudad de México'),
     ('Aeropuerto de Cancún', 'Cancún', 'Quintana Roo'),
     ('Aeropuerto de Guadalajara', 'Guadalajara', 'Jalisco'),
     ('Plaza Andares', 'Guadalajara', 'Jalisco'),
     ('Aeropuerto de Monterrey', 'Monterrey', 'Nuevo León'),
-    ('Plaza Fiesta San Agustín', 'Apodaca', 'Nuevo León'),
+    ('Plaza Fiesta San Agustín', 'Monterrey', 'Nuevo León'),
     ('Aeropuerto de Tijuana', 'Tijuana', 'Baja California'),
     ('Aeropuerto de Puerto Vallarta', 'Puerto Vallarta', 'Jalisco'),
     ('Aeropuerto de Mérida', 'Mérida', 'Yucatán'),
     ('Aeropuerto de Cozumel', 'Cozumel', 'Quintana Roo'),
     ('Aeropuerto de León', 'León', 'Guanajuato'),
-    ('Plaza Cibeles', 'Irapuato', 'Guanajuato'),
+    ('Plaza Mayor', 'León', 'Guanajuato'),
     ('Aeropuerto de Hermosillo', 'Hermosillo', 'Sonora'),
-    ('Plaza Sendero', 'Nogales', 'Sonora'),
-    ('Aeropuerto de Culiacán', 'Guamúchil', 'Sinaloa'),
-    ('Plaza Forum', 'Los mochis', 'Sinaloa'),
+    ('Plaza Sendero', 'Hermosillo', 'Sonora'),
+    ('Aeropuerto de Culiacán', 'Culiacán', 'Sinaloa'),
+    ('Plaza Forum', 'Culiacán', 'Sinaloa'),
     ('Aeropuerto de Mazatlán', 'Mazatlán', 'Sinaloa'),
-    ('Plaza Galerías', 'Guasave', 'Sinaloa'),
+    ('Plaza Galerías Mazatlán', 'Mazatlán', 'Sinaloa'),
     ('Aeropuerto de Querétaro', 'Querétaro', 'Querétaro'),
-    ('Plaza Antea', 'San Juan del Rio', 'Querétaro'),
+    ('Plaza Antea', 'Querétaro', 'Querétaro'),
     ('Aeropuerto de Villahermosa', 'Villahermosa', 'Tabasco'),
-    ('Plaza Altabrisa', 'Cunduacán', 'Tabasco'),
+    ('Plaza Altabrisa', 'Villahermosa', 'Tabasco'),
     ('Aeropuerto de Chihuahua', 'Chihuahua', 'Chihuahua'),
     ('Aeropuerto de San Luis Potosí', 'San Luis Potosí', 'San Luis Potosí'),
     ('Aeropuerto de Aguascalientes', 'Aguascalientes', 'Aguascalientes'),
     ('Aeropuerto de Toluca', 'Toluca', 'Estado de México'),
     ('Aeropuerto de Oaxaca', 'Oaxaca', 'Oaxaca');
-
-
-
-
-
-
 
 CREATE TABLE IF NOT EXISTS reservacion(
 	res_id INT NOT NULL AUTO_INCREMENT,
