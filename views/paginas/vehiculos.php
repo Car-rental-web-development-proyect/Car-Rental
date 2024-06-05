@@ -1,13 +1,13 @@
 <main>
 
-<form action="/flota_vehiculos" method="POST">
+<form action="/tarjeta" method="POST">
    <section class="contenedor-flota vistaVehiculos">
       <section class="section">
          <div class="formulario-Reservas form_vehiculos contenedor">
             
             <div class="formulario-Reservas_campo">
                <label class="formulario-Reservas_label" for="estado"">Estado</label>
-               <select class="formulario__combobox combobox-estado" id="selecionar_estado">
+               <select name="agenciaRecoger[estado]" class="formulario__combobox combobox-estado" id="selecionar_estado">
                   <option value="" disabled selected>Estado</option>
                   <?php foreach($estado as $estado):?>
                      <?php if($seleccionado == $estado): ?>
@@ -21,7 +21,7 @@
 
             <div class="formulario-Reservas_campo">
                <label class="formulario-Reservas_label" for="ciudad"">Ciudad</label>
-               <select class="formulario__combobox" id="selecionar_ciudad">
+               <select name="agenciaRecoger[ciudad]" class="formulario__combobox" id="selecionar_ciudad">
                   <option value="" disabled selected>Ciudad</option>
                   <?php foreach($agencia as $agencia):?>
                      <option value="<?php echo $agencia->age_ciudad?>"><?php echo $agencia->age_ciudad?></option>
@@ -34,27 +34,27 @@
 
             <div class="formulario-Reservas_campo">
                <label class="formulario-Reservas_label" for="recoleccion"">Recoleccion</label>
-               <input class="formulario-Reservas_input" type="date" id="recoleccion" min=<?php $hoy=date("Y-m-d"); echo $hoy;?>>
+               <input name="reserva[res_fechaRenta]'" class="formulario-Reservas_input" type="date" id="recoleccion" min=<?php $hoy=date("Y-m-d"); echo $hoy;?>>
             </div>
 
             <div class="formulario-Reservas_campo">
                <label class="formulario-Reservas_label" for="horario"">Horario</label>
-               <input class="formulario-Reservas_input" type="time" id="horario">
+               <input name="reserva[res_horaRenta]'" class="formulario-Reservas_input" type="time" id="horario">
             </div>
 
             <div class="formulario-Reservas_campo">
                <label class="formulario-Reservas_label" for="devolucion"">Devolucion</label>
-               <input class="formulario-Reservas_input" type="date" id="devolucion" min=<?php $hoy=date("Y-m-d"); echo $hoy;?>>
+               <input name="reserva[res_fechaEntrega]'" class="formulario-Reservas_input" type="date" id="devolucion" min=<?php $hoy=date("Y-m-d"); echo $hoy;?>>
             </div>
 
             <div class="formulario-Reservas_campo">
                <label class="formulario-Reservas_label" for="horario"">Horario</label>
-               <input class="formulario-Reservas_input" type="time" id="horario">
+               <input name="reserva[res_horaEntrega]'" class="formulario-Reservas_input" type="time" id="horario">
             </div>
 
             <div class="formulario-Reservas_campo">
-               <label class="formulario-Reservas_label" for="pasajeros"">Pasajeros</label>
-               <input class="formulario-Reservas_input" type="number" id="pasajeros" min="1">
+               <label class="formulario-Reservas_label" for="pasajeros"">Dias</label>
+               <input name="reserva[res_dias]'" class="formulario-Reservas_input" type="number" id="pasajeros" min="1">
             </div>
          </div>
    </section>
@@ -64,7 +64,8 @@
 
    <div class="contenedor cards-autos">
       <?php foreach($vehiculos as $vehiculo) : ?>
-         <div class="card-auto">
+         <?php if($vehiculo->veh_disponibles != 0): ?>
+            <div class="card-auto">
                <img src="./build/src/img/coches/<?php echo $vehiculo->veh_img; ?>" alt="img del auto">
 
                <div class="card-info">
@@ -100,6 +101,7 @@
                   <button type="submit" name="coche" value="<?php echo $vehiculo->veh_id ?>" class="boton-secundario-block">Reservar</button>
                </div> 
             </div><!-- .card-auto -->
+         <?php endif; ?>
       <?php endforeach; ?> 
       </div>
    </section>

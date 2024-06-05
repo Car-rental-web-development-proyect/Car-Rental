@@ -1201,7 +1201,10 @@ ul{
 
 .grid-datos {
    width:100%;
-   /* display: none; */
+}
+
+.sinlogeado, .logeado {
+   display: none;
 }
 
 .no-margin {

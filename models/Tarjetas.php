@@ -2,7 +2,7 @@
 
 namespace Model;
 
-class Tarjeta extends ActiveRecord{
+class Tarjetas extends ActiveRecord{
     protected static $tabla = 'tarjeta';
     protected static $columnasDB = ['tar_id','tar_numTarjeta','tar_expiracion','tar_duenio'];
 
@@ -23,11 +23,16 @@ class Tarjeta extends ActiveRecord{
 
     
         public function Registrar(){
-            if(!is_null($this->tar_id)){ //Si no es NULL, la accion es actualizar 
-    
-            }else{
-                $this->registrar(); //Si es NULL, la accion es registrar 
-            }
+            $atributos = $this->atributos();
+
+            // INSERT INTO tabla ()
+            $query = "INSERT INTO " . static::$tabla . " ( "; //Referencia a la clase 
+            $query .= join(', ', array_keys($atributos)); // separa con , cada columna de la tabla 
+            $query .= " ) VALUES ('"; 
+            $query .= join("' , '", array_values($atributos)); // agrega  'atributo' para cada valor entrante de la tabla
+            $query .= "' ) "; // cierra query 
+
+            $resultado = self::$db->query($query);
         }
     
         public function ValidarCampos(){
@@ -44,6 +49,17 @@ class Tarjeta extends ActiveRecord{
             }
     
             return self::$errores;
+        }
+
+        public static function findPorNumero($numero) {
+
+            $query = "SELECT * FROM " . static::$tabla . " WHERE tar_numTarjeta  = $numero";
+        
+            $resultado = self::$db->query($query);
+            $tarjeta = $resultado->fetch_object();
+
+        
+            return $tarjeta->tar_id;
         }
 } 
 

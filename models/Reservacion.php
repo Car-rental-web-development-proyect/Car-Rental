@@ -36,10 +36,24 @@ class Reservacion extends ActiveRecord{
     }
 
     public function guardar() {
-        if( !is_null($this->tar_id) ) {    
-            $this->actualizar();
-        } else {               
-            $this->crear();
+        $atributos = $this->atributos();
+
+        // INSERT INTO tabla ()
+        $query = "INSERT INTO " . static::$tabla . " ( "; //Referencia a la clase 
+        $query .= join(', ', array_keys($atributos)); // separa con , cada columna de la tabla 
+        $query .= " ) VALUES ('"; 
+        $query .= join("' , '", array_values($atributos)); // agrega  'atributo' para cada valor entrante de la tabla
+        $query .= "' ) "; // cierra query 
+
+        $resultado = self::$db->query($query);
+
+        if($resultado){
+        echo "<script>
+            alert('Reserva realizada Correctamente');
+            window.location.href = '/';
+            </script>";
+        exit(); // termina el script 
+        
         }
     }
 

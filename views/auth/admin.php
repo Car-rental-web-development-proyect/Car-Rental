@@ -8,6 +8,7 @@
             <tr>
                 <th>ID</th>
                 <th>Modelo</th>
+                <th>Descripción</th>
                 <th>Color</th>
                 <th>Pasajeros</th>
                 <th>Maletas</th>
@@ -25,6 +26,7 @@
             <tr> <!-- Este es solo un renglon de la tabla -->
                 <td><?php echo $vehiculo->veh_id?></td>
                 <td><?php echo $vehiculo->veh_modelo?></td>
+                <td><?php echo $vehiculo->veh_descripcion?></td>
                 <td><?php echo $vehiculo->veh_color?></td>
                 <td> 
                     <div class="info-icono">
@@ -54,12 +56,13 @@
                 <td>$<?php echo $vehiculo->veh_costodia?></td>
                 <td><img class="imagen-tabla" src="./build/src/img/coches/<?php echo $vehiculo->veh_img?>" alt="img del auto"></td>
                 <td>
-                    <form method="POST" class="" action=""> <!-- Para eliminar una propiedad, es necesario redireccionar, al presionar el boton eliminar se redigira y ara su accion en el controlador-->
-                            <input type="hidden" name="id" value="">    <!-- Debido a que para mandar datos por el POST del formulario necesitamos un dato, lo mandamos por aqui-->
+                    <form method="POST" class="" action="vehiculos/eliminar"> <!-- Para eliminar una propiedad, es necesario redireccionar, al presionar el boton eliminar se redigira y ara su accion en el controlador-->
+                            <input type="hidden" name="id" value="<?php echo $vehiculo->veh_id; ?>">    <!-- Debido a que para mandar datos por el POST del formulario necesitamos un dato, lo mandamos por aqui-->
+                            <input type="hidden" name="tipo" value="vehiculo">
                             <input type="submit" class="boton-primario-block" value="Eliminar">
                     </form>
 
-                    <a href="/actualizarAuto?id=<?php echo $vehiculo->veh_id?>" class="boton-secundario-block">Actualizar</a>
+                    <a href="actualizarAuto?id=<?php echo $vehiculo->veh_id?>" class="boton-secundario-block">Actualizar</a>
                 </td>
             </tr>
             <?php endforeach; ?>
