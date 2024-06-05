@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . './../config/app.php';
+require __DIR__ . '/../config/app.php';
 
 use Controllers\Paginascontroller;
 use Controllers\Usuarioscontroller;
@@ -30,6 +30,7 @@ $router->post('/registrarse', [Usuarioscontroller::class, 'registrarse']);
 $router->get('/admin', [Usuarioscontroller::class, 'admin']);
 
 $router->get('/registrarAuto', [VehiculosController::class, 'registrarAuto']);
+$router->post('/registrarAuto', [VehiculosController::class, 'registrarAuto']);
 
 $router->get('/tarjeta', [Usuarioscontroller::class, 'tarjeta']);
 

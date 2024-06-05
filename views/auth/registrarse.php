@@ -1,6 +1,10 @@
 <main class="contenedor" >
     <h1 class="centrar-texto">Registrarse</h1>
-      
+    <?php foreach($errores as $error): ?>
+        <div class="alerta error">
+            <?php echo $error; ?>
+        </div>
+    <?php endforeach; ?>
     
       <input type="submit" value="Volver" class="boton-secundario-block boton-margin">
       <form class="contenedor" id="formulario" method="POST">

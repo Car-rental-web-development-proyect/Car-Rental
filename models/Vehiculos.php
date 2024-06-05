@@ -37,40 +37,36 @@ class Vehiculos extends ActiveRecord{
     }
 
     public function Registrar(){
-        if(!is_null($this->veh_id)){ //Si no es NULL, la accion es actualizar 
-
-        }else{
-            $this->registrar(); //Si es NULL, la accion es registrar 
-        }
+            $this->Crear(); //Si es NULL, la accion es registrar 
     }
 
     public function ValidarCampos(){
         if(!$this->veh_modelo){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "Modelo de Vehiculo Invalido"; 
         }
         if(!$this->veh_color){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "Color de Vehiculo Invalido"; 
         }
         if(!$this->veh_pasajeros){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "Numero de Pasajeros Invalido"; 
         }
         if(!$this->veh_maletas){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "Numero de Maletas Invalido"; 
         }
         if(!$this->veh_manejo){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "Modo de Manejo Invalido"; 
         }
         if(!$this->veh_combustible){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "Tipo de Combustivle Invalido"; 
         }
         if(!$this->veh_disponibles){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "Numero de Vehiculos Invalido"; 
         }
         if(!$this->veh_costodia){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "Costo de Dia Invalido"; 
         }
         if(!$this->veh_img){
-            self::$errores[] = "Campo Vacio"; 
+            self::$errores[] = "Imagen invalida"; 
         }
         return self::$errores;
     }
