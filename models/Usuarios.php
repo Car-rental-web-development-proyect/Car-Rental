@@ -26,11 +26,8 @@ class Usuarios extends ActiveRecord {
     }
 
     public function Registrar(){
-        if(!is_null($this->usu_id)){ //Si no es NULL, la accion es actualizar 
 
-        }else{
-            $this->registrar(); //Si es NULL, la accion es registrar 
-        }
+        $this->Crear(); //Si es NULL, la accion es registrar 
     }
 
     public function ValidarCampos(){

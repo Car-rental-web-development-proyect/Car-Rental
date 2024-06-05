@@ -13,22 +13,23 @@ class Usuarioscontroller {
 
     public static function registrarse(Router $router){
 
-        $usuarios = new Usuarios();     
         $errores = Usuarios::getErrores(); 
-
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            $usuarios = new Usuarios($_POST['usuarios']);
-            
-            $errores = $usuarios->ValidarCampos();
+            //debuguear($_POST);
 
-            if(empty($errores)){
-                $usuarios->Registrar();
+            $usuario = new Usuarios($_POST['usuario']);
+            $errores = $usuario->ValidarCampos();
+            //debuguear($errores);
+            if(empty($errores)){ 
+                //debuguear('mario');
+                $usuario->Registrar();
+                
             }
+            
         }        
         
         $router->render('auth/registrarse',[
-            'errores' => $errores,
-            'usuarios' =>$usuarios
+            'errores' => $errores
         ]);
     }
 
