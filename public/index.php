@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . './../config/app.php';
+require __DIR__ . '/../config/app.php';
 
 use Controllers\Paginascontroller;
 use Controllers\Usuarioscontroller;

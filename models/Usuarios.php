@@ -64,6 +64,35 @@ class Usuarios extends ActiveRecord {
         }
         return $resultado;
       }
+
+      public function autenticar($usuario) {
+         // debuguear($usuario);
+         // debuguear($encontrado);
+         session_start();
+ 
+         // Llenar el arreglo de sesion
+         $_SESSION['usuario'] = $usuario;
+         $_SESSION['login'] = true;
+ 
+         header('Location: /');
+     }
+
+   public function comprobarPassword($resultado) {
+      $usuario = $resultado->fetch_object();
+      $autenticado = False;
+      if($usuario->usu_password == $this->usu_password) {
+         $autenticado = True;
+      }
+
+      if(!$autenticado) {
+            self::$errores[] = 'El Password es Incorrecto';
+            return;
+      }
+      if($autenticado) {
+         return $usuario;
+      }
+   }
+
    }
 
 ?>
