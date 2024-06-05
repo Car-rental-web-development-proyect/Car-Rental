@@ -29,6 +29,7 @@ $router->get('/registrarse', [Usuarioscontroller::class, 'registrarse']);
 $router->get('/admin', [Usuarioscontroller::class, 'admin']);
 
 $router->get('/registrarAuto', [VehiculosController::class, 'registrarAuto']);
+$router->get('/actualizarAuto', [VehiculosController::class, 'actualizarAuto']);
 
 $router->get('/tarjeta', [Usuarioscontroller::class, 'tarjeta']);
 

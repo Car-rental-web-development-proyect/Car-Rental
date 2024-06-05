@@ -77,6 +77,21 @@ class ActiveRecord {
 
   }
 
+  public static function find($id) {
+
+    $query = "SELECT * FROM " . static::$tabla;
+
+    if(static::$tabla == 'vehiculos') {
+        $query .= " WHERE veh_id ";
+    }
+    
+    $query .= "= $id";
+
+    $resultado = self::consultarSQL($query);
+
+    return array_shift($resultado);
+}
+
   public static function getErrores() { 
     return static::$errores;
   }
@@ -134,6 +149,7 @@ class ActiveRecord {
 
     return $objeto;
   }
+  
 
 }
 

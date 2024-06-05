@@ -25,6 +25,17 @@ class VehiculosController{
             'errores' => $errores
         ]);
     }
+    public static function actualizarAuto(Router $router){
+   
+        $errores = Vehiculos::getErrores(); 
+        
+        $vehiculo = Vehiculos::find($_GET['id']);
+
+        $router->render('vehiculos/actualizarAuto', [
+            'errores' => $errores,
+            'vehiculo' => $vehiculo
+        ]);
+    }
 
 }
 

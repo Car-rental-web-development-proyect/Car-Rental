@@ -21,48 +21,48 @@
         </thead>
 
         <tbody> <!-- Mostrar los datos de la base de datos -->
-            <?php for($i = 0; $i < 5; $i++) : ?>
+            <?php foreach($vehiculos as $vehiculo) : ?>
             <tr> <!-- Este es solo un renglon de la tabla -->
-                <td> 1 </td>
-                <td> Modelo</td>
-                <td> Color </td>
+                <td><?php echo $vehiculo->veh_id?></td>
+                <td><?php echo $vehiculo->veh_modelo?></td>
+                <td><?php echo $vehiculo->veh_color?></td>
                 <td> 
                     <div class="info-icono">
                         <img class="icono" src="./build/src/img/asiento_icono.svg" alt="">
-                        <p>4</p>
+                        <p><?php echo $vehiculo->veh_pasajeros?></p>
                     </div>
                 </td>
                 <td>
                     <div class="info-icono">
                         <img class="icono" src="./build/src/img/maleta_icono.svg" alt="">
-                        <p>2</p>
+                        <p><?php echo $vehiculo->veh_maletas?></p>
                     </div>
                 </td>
                 <td>
                     <div class="info-icono">
                         <img class="icono" src="./build/src/img/transmision_icono.svg" alt="">
-                        <p>Estandar</p>
+                        <p><?php echo $vehiculo->veh_manejo?></p>
                     </div>
                 </td>
                 <td>
                     <div class="info-icono">
                         <img class="icono" src="./build/src/img/motor_icono.svg" alt="">
-                        <p>Premium</p>
+                        <p><?php echo $vehiculo->veh_combustible?></p>
                     </div>
                 </td>
-                <td> 4 </td>
-                <td>$3232</td>
-                <td><img class="imagen-tabla" src="./build/src/img/coches/vento.webp" alt="img del auto"></td>
+                <td><?php echo $vehiculo->veh_disponibles?></td>
+                <td>$<?php echo $vehiculo->veh_costodia?></td>
+                <td><img class="imagen-tabla" src="./build/src/img/coches/<?php echo $vehiculo->veh_img?>" alt="img del auto"></td>
                 <td>
                     <form method="POST" class="" action=""> <!-- Para eliminar una propiedad, es necesario redireccionar, al presionar el boton eliminar se redigira y ara su accion en el controlador-->
                             <input type="hidden" name="id" value="">    <!-- Debido a que para mandar datos por el POST del formulario necesitamos un dato, lo mandamos por aqui-->
                             <input type="submit" class="boton-primario-block" value="Eliminar">
                     </form>
 
-                    <a href="" class="boton-secundario-block">Actualizar</a>
+                    <a href="/actualizarAuto?id=<?php echo $vehiculo->veh_id?>" class="boton-secundario-block">Actualizar</a>
                 </td>
             </tr>
-            <?php endfor; ?>
+            <?php endforeach; ?>
         </tbody>
     </table>
 

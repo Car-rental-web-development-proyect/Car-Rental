@@ -4,7 +4,7 @@
 <!--Modelo-->
 <div class="contenedor">
     <label for="modelo">Modelo</label>
-    <input class="flex"  type="text" id="modelo" name="veh_modelo" placeholder="Ingrese el modelo del carro" value="">
+    <input class="flex"  type="text" id="modelo" name="veh_modelo" value='<?php echo $vehiculo->veh_modelo?>' placeholder="Ingrese el modelo del carro" value="">
     </div>
 
     <!--Descripcion-->
